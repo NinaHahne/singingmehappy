@@ -63,7 +63,12 @@
 </script>
 
 <svelte:head>
-  <title>SvelteKit Starter</title>
+  <title>Singing Me Happy - Jazzchor Berlin</title>
+  <meta property="og:title" content="Singing me Happy - Jazzchor Berlin" />
+  <meta property="og:type" content="website" />
+  <meta name="description" content="Singing me Happy - Jazzchor Berlin" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <!-- TODO: ergänzen -->
 </svelte:head>
 
 <div
@@ -72,10 +77,10 @@
   class:overflowing={isBodyOverflowing}
   class:show-menu={showMenu}
 >
-  <header class="fixed top-0 z-50 flex h-16 w-full justify-between bg-slate-100 p-4">
+  <header class="fixed top-0 z-50 flex h-16 w-full justify-between p-4">
     <nav class="relative flex h-full items-center justify-center gap-4">
-      <a href="/">Home</a>
-      <a href="/about">About</a>
+      <!-- <a href="/">Home</a>
+      <a href="/about">About</a> -->
     </nav>
   </header>
 
@@ -84,10 +89,15 @@
   </main>
 
   <footer class="relative">
-    <div class="flex items-center bg-slate-100 p-4">
-      <p class="flex-1 text-left">renderedWithCare</p>
+    <div class="flex items-center justify-end bg-black p-4 text-white">
+      <!-- <p class="flex-1 text-left">renderedWithCare</p>
       <div class="h-5 w-5 flex-none text-center">🌻</div>
-      <p class="flex-1 text-right">&copy; 2025 Erin Example</p>
+      <p class="flex-1 text-right">"Singing me happy" e.V.</p> -->
+
+      <div class="flex flex-col items-center gap-1 text-right">
+        <img src="/favicon.png" alt="Singing me happy Logo" class="h-10 w-auto" />
+        <p>"Singing me happy" e.V.</p>
+      </div>
     </div>
   </footer>
 </div>

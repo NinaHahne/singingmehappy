@@ -10,7 +10,7 @@
 </script>
 
 <svelte:head>
-  <title>About Us | SvelteKit Starter</title>
+  <!-- <title>About Us | SvelteKit Starter</title> -->
 </svelte:head>
 
 <section class="relative flex flex-col items-center gap-4 pt-24">

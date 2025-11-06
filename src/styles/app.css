@@ -1,3 +1,4 @@
+@import './fonts.css';
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
@@ -14,6 +15,12 @@ body {
   scroll-behavior: smooth;
 }
 
+body {
+  font-family: 'Dosis', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 /* Prevent body scrolling when menu is open */
 body:has(.show-menu.overflowing) {
   overflow: hidden;
@@ -22,4 +29,46 @@ body:has(.show-menu.overflowing) {
 
 body:has(.show-menu.overflowing) #toggle_menu {
   right: var(--scrollbar-width);
+}
+
+@layer base {
+  /* Typography */
+  h1 {
+    @apply text-4xl font-bold;
+    @apply mb-4;
+  }
+  h2 {
+    @apply text-3xl font-bold;
+    @apply mb-4;
+  }
+  h3 {
+    @apply text-2xl font-bold;
+    @apply mb-2;
+  }
+  h4 {
+    @apply text-xl font-bold;
+  }
+  h5 {
+    @apply text-lg font-semibold;
+  }
+  h6 {
+    @apply text-lg font-semibold;
+  }
+
+  blockquote {
+    @apply text-xl font-semibold;
+  }
+
+  p,
+  li {
+    @apply text-base;
+  }
+
+  /* a {
+    @apply text-link underline underline-offset-4 transition active:text-link/80 hoverable:hover:text-link/80;
+  }
+
+  footer a {
+    @apply text-link-contrast underline underline-offset-4 transition active:text-link-active hoverable:hover:text-link-hover;
+  } */
 }
