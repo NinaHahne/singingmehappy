@@ -1,11 +1,26 @@
 <!-- Homepage / Landing page / index -->
 
+<script lang="ts">
+  import HeroSlider from '$lib/components/HeroSlider.svelte';
+
+  const heroImages = [
+    { src: '/images/hero/JAZZCHOR_1.jpg', alt: 'Jazzchor Singing me happy' },
+    { src: '/images/hero/JAZZCHOR_2.jpg', alt: 'Jazzchor Singing me happy' },
+    { src: '/images/hero/JAZZCHOR_3.jpg', alt: 'Jazzchor Singing me happy' },
+    { src: '/images/hero/JAZZCHOR_4.jpg', alt: 'Jazzchor Singing me happy' },
+  ];
+</script>
+
 <svelte:head>
   <!-- <title>Home | SvelteKit Starter</title> -->
 </svelte:head>
 
-<section class="relative flex flex-col items-center gap-4 whitespace-nowrap py-16">
-  <div class="flex gap-2 text-4xl">
+<section class="w-full">
+  <HeroSlider images={heroImages} interval={4000} />
+</section>
+
+<section class="relative flex flex-col items-center gap-4 p-2 py-16 md:whitespace-nowrap">
+  <div class="flex flex-col gap-2 text-4xl md:flex-row">
     <div class="mr-6 flex flex-col items-end gap-2">
       <h1 class="font-medium underline">Schriftarten-Vorschläge</h1>
       <div class="font-dosis">Jazzchor "Singing me happy" 2025</div>

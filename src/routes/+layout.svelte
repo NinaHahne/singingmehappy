@@ -84,7 +84,7 @@
     </nav>
   </header>
 
-  <main class="relative flex flex-col p-4">
+  <main class="relative flex flex-col">
     {@render children()}
   </main>
 
