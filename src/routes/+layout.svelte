@@ -2,6 +2,7 @@
 <script lang="ts">
   import { onDestroy, onMount } from 'svelte';
   import '../styles/app.css';
+  import RotatingBurgerMenuButton from '$lib/components/RotatingBurgerMenuButton.svelte';
 
   let { children } = $props();
 
@@ -31,9 +32,10 @@
 
   const toggleMenu = () => {
     // Check screen size before toggling
-    if (window.matchMedia('(max-width: 1023px)').matches) {
-      showMenu = !showMenu;
-    }
+    // if (window.matchMedia('(max-width: 1023px)').matches) {
+    //   showMenu = !showMenu;
+    // }
+    showMenu = !showMenu;
   };
 
   const toggleMenuIfOpen = () => {
@@ -44,9 +46,10 @@
     getScrollbarWidth();
 
     resizeObserver = new ResizeObserver(() => {
-      // console.log("Layout changed!");
+      // console.log('Layout changed!');
 
       // Handle layout changes here
+      getScrollbarWidth(); //necessary because scrollbar with also changes when zooming
       checkBodyOverflow();
     });
     if (container) {
@@ -81,8 +84,13 @@
     <nav class="relative flex h-full items-center justify-center gap-4">
       <!-- <a href="/">Home</a>
       <a href="/about">About</a> -->
+      <a href={`/`} class="btn-shadow hoverable:hover:btn-shadow-hover" onclick={toggleMenuIfOpen}>
+        <img draggable="false" src="/favicon.png" alt="Home Icon" class="pointer-events-none h-10 w-auto" />
+      </a>
     </nav>
   </header>
+
+  <RotatingBurgerMenuButton isOpen={showMenu} onToggle={toggleMenu} />
 
   <main class="relative flex flex-col">
     {@render children()}

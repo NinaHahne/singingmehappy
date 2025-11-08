@@ -72,3 +72,20 @@ body:has(.show-menu.overflowing) #toggle_menu {
     @apply text-link-contrast underline underline-offset-4 transition active:text-link-active hoverable:hover:text-link-hover;
   } */
 }
+
+@layer utilities {
+  .logo-shadow {
+    filter: drop-shadow(-4px 8px 8px theme('colors.black / 0.25'));
+  }
+  .btn-shadow {
+    filter: drop-shadow(0 3px 6px theme('colors.black / 0.25'));
+    @apply transition;
+    transition-timing-function: ease-in-out;
+  }
+  .btn-shadow-hover {
+    filter: drop-shadow(0 3px 6px theme('colors.black / 0.4'));
+  }
+  .menu-shadow {
+    filter: drop-shadow(0 8px 16px theme('colors.softwhite / 0.25'));
+  }
+}
