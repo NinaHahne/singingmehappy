@@ -1,5 +1,6 @@
 <!-- Global layout for all pages -->
 <script lang="ts">
+  import { page } from '$app/state';
   import { onDestroy, onMount } from 'svelte';
   import '../styles/app.css';
   import RotatingBurgerMenuButton from '$lib/components/RotatingBurgerMenuButton.svelte';
@@ -29,6 +30,18 @@
 
   let showMenu: boolean = $state(false);
   let showNavigation = $state(false);
+
+  let navigation = {
+    navLinks: [
+      { title: 'Start', url: '/' },
+      { title: 'Über Uns', url: '/about' },
+      { title: 'Was wir singen', url: '/songs' },
+      { title: 'Nächste Konzerte', url: '/concerts' },
+      { title: 'Aktuelles', url: '/news' },
+      { title: 'Bildergalerie', url: '/gallery' },
+      { title: 'Kontakt', url: '/contact' },
+    ],
+  };
 
   const toggleMenu = () => {
     // Check screen size before toggling
@@ -82,8 +95,6 @@
 >
   <header class="fixed top-0 z-50 flex h-16 w-full justify-between p-4">
     <nav class="relative flex h-full items-center justify-center gap-4">
-      <!-- <a href="/">Home</a>
-      <a href="/about">About</a> -->
       <a href={`/`} class="btn-shadow hoverable:hover:btn-shadow-hover" onclick={toggleMenuIfOpen}>
         <img draggable="false" src="/favicon.png" alt="Home Icon" class="pointer-events-none h-10 w-auto" />
       </a>
@@ -91,6 +102,46 @@
   </header>
 
   <RotatingBurgerMenuButton isOpen={showMenu} onToggle={toggleMenu} />
+
+  <nav class="menu pointer-events-none fixed inset-0 z-30 flex h-auto min-h-dvh w-full justify-end overflow-hidden">
+    <button
+      class="absolute right-0 top-0 h-full w-full cursor-pointer text-inherit"
+      class:pointer-events-auto={showMenu}
+      onclick={toggleMenu}
+      aria-label="Close menu"
+    >
+      <span
+        class="relative block h-full w-full opacity-0 backdrop-blur-[4px] transition-opacity duration-300"
+        class:opacity-100={showMenu}
+      ></span>
+    </button>
+    <div class="relative flex h-full w-64">
+      <div
+        class=" pointer-events-auto relative -right-full flex h-full w-full flex-col gap-10 overflow-auto p-6 text-softblack transition-transform duration-300"
+        class:-translate-x-full={showMenu}
+      >
+        <!-- Navigation Links -->
+        <ul
+          class="flex flex-none flex-col items-center justify-between gap-[min(3vh,1.5rem)] text-[33px] leading-none transition-opacity duration-1000"
+        >
+          {#each navigation?.navLinks ?? [] as { title, url }}
+            {@const isActive = page.url.pathname === `${url}`}
+
+            <li>
+              <a
+                href={url}
+                class="center inline-block origin-center transition-all duration-300"
+                class:active={isActive}
+                onclick={toggleMenu}
+              >
+                {title}
+              </a>
+            </li>
+          {/each}
+        </ul>
+      </div>
+    </div>
+  </nav>
 
   <main class="relative flex flex-col">
     {@render children()}
