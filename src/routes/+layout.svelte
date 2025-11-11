@@ -93,9 +93,14 @@
   class:overflowing={isBodyOverflowing}
   class:show-menu={showMenu}
 >
-  <header class="fixed top-0 z-50 flex h-16 w-full justify-between p-4">
+  <header class="fixed top-0 z-50 flex h-[70px] w-full justify-between px-6 py-4">
     <nav class="relative flex h-full items-center justify-center gap-4">
-      <a href={`/`} class="btn-shadow hoverable:hover:btn-shadow-hover" onclick={toggleMenuIfOpen}>
+      <a
+        href={`/`}
+        class="btn-shadow hoverable:hover:btn-shadow-hover"
+        class:hidden={page.url.pathname === '/'}
+        onclick={toggleMenuIfOpen}
+      >
         <img draggable="false" src="/favicon.png" alt="Home Icon" class="pointer-events-none h-10 w-auto" />
       </a>
     </nav>
@@ -115,14 +120,14 @@
         class:opacity-100={showMenu}
       ></span>
     </button>
-    <div class="relative flex h-full w-64">
+    <div class="relative flex h-full w-auto min-w-64 md:min-w-80">
       <div
-        class=" pointer-events-auto relative -right-full flex h-full w-full flex-col gap-10 overflow-auto p-6 text-softblack transition-transform duration-300"
+        class="pointer-events-auto relative -right-full flex h-full w-full flex-col gap-10 overflow-auto bg-white py-20 text-black transition-transform duration-300"
         class:-translate-x-full={showMenu}
       >
         <!-- Navigation Links -->
         <ul
-          class="flex flex-none flex-col items-center justify-between gap-[min(3vh,1.5rem)] text-[33px] leading-none transition-opacity duration-1000"
+          class="flex h-full flex-none flex-col items-end justify-between gap-6 p-6 text-3xl leading-none transition-opacity duration-1000 md:px-[calc(6rem+var(--scrollbar-width))]"
         >
           {#each navigation?.navLinks ?? [] as { title, url }}
             {@const isActive = page.url.pathname === `${url}`}
@@ -130,8 +135,10 @@
             <li>
               <a
                 href={url}
-                class="center inline-block origin-center transition-all duration-300"
+                class="center inline-block origin-center text-right underline decoration-transparent decoration-1 underline-offset-4 transition-all duration-300 hoverable:hover:decoration-black hoverable:hover:opacity-80 md:whitespace-nowrap"
                 class:active={isActive}
+                class:decoration-black={isActive}
+                class:opacity-80={isActive}
                 onclick={toggleMenu}
               >
                 {title}

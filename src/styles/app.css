@@ -31,6 +31,10 @@ body:has(.show-menu.overflowing) #toggle_menu {
   right: var(--scrollbar-width);
 }
 
+body:has(.show-menu) .menu > div > div {
+  padding-right: var(--scrollbar-width);
+}
+
 @layer base {
   /* Typography */
   h1 {
@@ -59,8 +63,7 @@ body:has(.show-menu.overflowing) #toggle_menu {
     @apply text-xl font-semibold;
   }
 
-  p,
-  li {
+  p {
     @apply text-base;
   }
 
