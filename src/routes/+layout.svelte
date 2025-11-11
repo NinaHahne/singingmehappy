@@ -135,9 +135,10 @@
             <li>
               <a
                 href={url}
-                class="center inline-block origin-center text-right underline decoration-transparent decoration-1 underline-offset-4 transition-all duration-300 hoverable:hover:decoration-black hoverable:hover:opacity-80 md:whitespace-nowrap"
+                class="center inline-block origin-center text-right underline decoration-1 underline-offset-4 transition-all duration-300 hoverable:hover:decoration-black hoverable:hover:opacity-80 md:whitespace-nowrap"
                 class:active={isActive}
                 class:decoration-black={isActive}
+                class:decoration-transparent={!isActive}
                 class:opacity-80={isActive}
                 onclick={toggleMenu}
               >
