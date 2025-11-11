@@ -2,4 +2,4 @@
   import UnderConstruction from '$lib/components/UnderConstruction.svelte';
 </script>
 
-<UnderConstruction title="Über Uns" />
+<UnderConstruction title="Kontakt" />
