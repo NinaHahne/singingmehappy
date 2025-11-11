@@ -6,7 +6,7 @@
     alt?: string;
   };
 
-  let { images = [] as HeroImage[], interval = 6000 } = $props();
+  let { images = [] as HeroImage[], interval = 4500 } = $props();
 
   let currentIndex = $state(0);
   let isPaused = $state(false);
@@ -69,7 +69,7 @@
         <img
           src={image.src}
           alt={image.alt ?? ''}
-          class="absolute inset-0 h-full w-full object-cover transition-opacity duration-[2s] ease-in-out"
+          class="absolute inset-0 h-full w-full object-cover transition-opacity duration-[2.5s] ease-linear"
           style:opacity={index === currentIndex ? 1 : 0}
           aria-hidden={index !== currentIndex}
           loading={index === currentIndex ? 'eager' : 'lazy'}
