@@ -16,7 +16,7 @@
 </svelte:head>
 
 <section class="w-full">
-  <HeroSlider images={heroImages} interval={4000} />
+  <HeroSlider images={heroImages} interval={4500} firstInterval={1000} />
 </section>
 
 <section class="relative flex flex-col items-center gap-4 p-2 py-16 md:whitespace-nowrap">

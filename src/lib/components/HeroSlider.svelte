@@ -6,25 +6,45 @@
     alt?: string;
   };
 
-  let { images = [] as HeroImage[], interval = 4500 } = $props();
+  let { images = [] as HeroImage[], interval = 4500, firstInterval = interval } = $props();
 
   let currentIndex = $state(0);
   let isPaused = $state(false);
 
-  let timer: ReturnType<typeof setInterval> | null = null;
+  // let timer: ReturnType<typeof setInterval> | null = null;
+  // Zahl reicht im Browser-Kontext
+  let timer: number | null = null;
 
   function startTimer() {
-    if (timer) return;
-    timer = setInterval(() => {
+    if (timer !== null) return;
+    timer = window.setInterval(() => {
       if (!isPaused && images.length > 1) {
         next();
       }
     }, interval);
   }
 
+  function startFirstTimer() {
+    if (timer !== null) return;
+
+    timer = window.setTimeout(() => {
+      if (!isPaused && images.length > 1) {
+        next();
+      }
+
+      // nach dem ersten Wechsel zum normalen Interval wechseln
+      stopTimer();
+      if (images.length > 1) {
+        startTimer();
+      }
+    }, firstInterval);
+  }
+
   function stopTimer() {
-    if (timer) {
-      clearInterval(timer);
+    if (timer !== null) {
+      // sicherheitshalber beides clearen, egal ob timeout oder interval
+      window.clearTimeout(timer);
+      window.clearInterval(timer);
       timer = null;
     }
   }
@@ -41,7 +61,7 @@
 
   onMount(() => {
     if (images.length > 1) {
-      startTimer();
+      startFirstTimer();
     }
 
     return () => {
