@@ -14,6 +14,7 @@ export default {
       colors: {
         softwhite: '#fefcfb', // Soft White
         softblack: '#0d0d0d', // Soft Black
+        lipstick: '#a30000', // Lipstick
       },
     },
   },

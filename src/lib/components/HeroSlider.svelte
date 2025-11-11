@@ -86,9 +86,8 @@
         {#each images as _image, index}
           <button
             type="button"
-            class="pointer-events-auto h-3 w-3 rounded-full border border-white/70 transition-transform duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-300"
-            class:bg-black={index === currentIndex}
-            class:bg-white={index !== currentIndex}
+            class="focus-visible:ring-lipstick pointer-events-auto h-3 w-3 rounded-full border border-white/70 bg-white transition-transform duration-150 focus-visible:outline-none focus-visible:ring-2"
+            class:opacity-50={index !== currentIndex}
             class:scale-110={index === currentIndex}
             aria-label={`Bild ${index + 1} anzeigen`}
             aria-current={index === currentIndex ? 'true' : 'false'}
