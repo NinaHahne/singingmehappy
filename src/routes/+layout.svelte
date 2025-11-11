@@ -93,7 +93,7 @@
   class:overflowing={isBodyOverflowing}
   class:show-menu={showMenu}
 >
-  <header class="fixed top-0 z-50 flex h-[70px] w-full justify-between px-6 py-4">
+  <header class="fixed top-0 z-50 flex h-[74px] w-full justify-between px-6 py-4">
     <nav class="relative flex h-full items-center justify-center gap-4">
       <a
         href={`/`}
