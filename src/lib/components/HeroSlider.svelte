@@ -85,8 +85,12 @@
 </script>
 
 <!--TODO: add option to pause animation -->
-<div class="relative w-full overflow-hidden" aria-roledescription="Karussell" aria-label="Chor-Fotos">
-  <div class="relative h-dvh">
+<div
+  class="relative aspect-video min-h-dvh w-full overflow-hidden"
+  aria-roledescription="Karussell"
+  aria-label="Chor-Fotos"
+>
+  <div class="relative h-full w-full">
     {#if images.length === 0}
       <!-- Fallback, if no images have been configured -->
       <div class="flex h-full items-center justify-center bg-neutral-200">
