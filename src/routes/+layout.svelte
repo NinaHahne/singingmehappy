@@ -41,6 +41,11 @@
       { title: 'Bildergalerie', url: '/gallery' },
       { title: 'Kontakt', url: '/contact' },
     ],
+    footerLinks: [
+      { title: 'Impressum', url: '/imprint' },
+      { title: 'Kontakt', url: '/contact' },
+      { title: 'Datenschutz', url: '/privacy' },
+    ],
   };
 
   const toggleMenu = () => {
@@ -156,10 +161,21 @@
   </main>
 
   <footer class="relative">
-    <div class="flex items-center justify-end bg-black p-4 text-white">
+    <div class="flex items-end justify-between bg-black p-4 text-white">
       <!-- <p class="flex-1 text-left">renderedWithCare</p>
       <div class="h-5 w-5 flex-none text-center">🌻</div>
       <p class="flex-1 text-right">"Singing me happy" e.V.</p> -->
+
+      <div class="flex flex-col items-start gap-2 text-left md:flex-row md:gap-4">
+        {#each navigation?.footerLinks ?? [] as { title, url }}
+          <a
+            href={url}
+            class="underline decoration-transparent decoration-1 underline-offset-4 transition-all duration-300 hoverable:hover:decoration-white hoverable:hover:opacity-80 md:whitespace-nowrap"
+          >
+            {title}
+          </a>
+        {/each}
+      </div>
 
       <div class="flex flex-col items-center gap-1 text-right">
         <img src="/favicon.png" alt="Singing me happy Logo" class="h-10 w-auto" />
