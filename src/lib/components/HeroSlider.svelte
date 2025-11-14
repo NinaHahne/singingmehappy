@@ -16,7 +16,6 @@
   let timer: number | null = null;
 
   function startTimer() {
-    // TODO: fix jerky transitions on iPad Safari
     if (timer !== null) return;
     timer = window.setInterval(() => {
       if (!isPaused && images.length > 1) {
@@ -98,8 +97,8 @@
         <img
           src={image.src}
           alt={image.alt ?? ''}
-          class="absolute inset-0 h-full w-full object-cover object-bottom transition-opacity duration-[2.5s] ease-linear"
-          style:opacity={index === currentIndex ? 1 : 0}
+          class="absolute inset-0 h-full w-full object-cover object-bottom transition-opacity duration-[2.5s] ease-in-out"
+          style="opacity: {index === currentIndex ? 1 : 0}; will-change: opacity; transform: translateZ(0);"
           aria-hidden={index !== currentIndex}
           loading={index === currentIndex ? 'eager' : 'lazy'}
           decoding="async"
@@ -112,7 +111,7 @@
     <!-- Indicator dots -->
     <div class="pointer-events-none absolute bottom-4 left-0 right-0 flex justify-center">
       <div class="flex gap-2 rounded-full px-3 py-1">
-        {#each images as _image, index}
+        {#each images as _, index}
           <button
             type="button"
             class="pointer-events-auto h-3 w-3 rounded-full border border-white/70 bg-white transition-transform duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lipstick"
