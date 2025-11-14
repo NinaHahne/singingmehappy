@@ -97,7 +97,7 @@
         <img
           src={image.src}
           alt={image.alt ?? ''}
-          class="absolute inset-0 h-full w-full object-cover object-bottom transition-opacity duration-[2.5s] ease-linear"
+          class="absolute inset-0 h-full w-full object-cover object-bottom transition-opacity duration-[2.5s] ease-[cubic-bezier(0.25,0.25,0.75,0.75)] will-change-[opacity] [transform:translateZ(0)]"
           style:opacity={index === currentIndex ? 1 : 0}
           aria-hidden={index !== currentIndex}
           loading={index === currentIndex ? 'eager' : 'lazy'}
