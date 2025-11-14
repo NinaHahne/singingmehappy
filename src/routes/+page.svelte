@@ -18,7 +18,7 @@
 
 <HeaderAbsolute />
 
-<section class="relative w-full">
+<section class="relative mt-20 w-full md:mt-auto">
   <HeroSlider images={heroImages} interval={4500} firstInterval={1000} />
   <div class="pointer-events-none absolute inset-0 [container-type:size]">
     <!-- <p
