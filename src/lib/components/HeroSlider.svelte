@@ -16,6 +16,7 @@
   let timer: number | null = null;
 
   function startTimer() {
+    // TODO: fix jerky transitions on iPad Safari
     if (timer !== null) return;
     timer = window.setInterval(() => {
       if (!isPaused && images.length > 1) {
