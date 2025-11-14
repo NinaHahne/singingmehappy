@@ -63,8 +63,9 @@ body:has(.show-menu) .menu > div > div {
     @apply text-xl font-semibold;
   }
 
-  p {
-    @apply text-base;
+  p,
+  a {
+    @apply text-base lg:text-lg xl:text-xl;
   }
 
   /* a {

@@ -4,6 +4,7 @@
   import { onDestroy, onMount } from 'svelte';
   import '../styles/app.css';
   import RotatingBurgerMenuButton from '$lib/components/RotatingBurgerMenuButton.svelte';
+  import LogoLink from '$lib/components/LogoLink.svelte';
 
   let { children } = $props();
 
@@ -37,8 +38,8 @@
       { title: 'Über Uns', url: '/about' },
       { title: 'Was wir singen', url: '/songs' },
       { title: 'Nächste Konzerte', url: '/concerts' },
-      { title: 'Aktuelles', url: '/news' },
       { title: 'Bildergalerie', url: '/gallery' },
+      { title: 'Aktuelles', url: '/news' },
       { title: 'Kontakt', url: '/contact' },
     ],
     footerLinks: [
@@ -98,16 +99,17 @@
   class:overflowing={isBodyOverflowing}
   class:show-menu={showMenu}
 >
-  <header class="fixed top-0 z-50 flex h-[74px] w-full justify-between px-6 py-4">
-    <nav class="relative flex h-full items-center justify-center gap-4">
-      <a
+  <header class="pointer-events-none fixed top-0 z-50 flex h-[74px] w-full justify-between px-6 py-4">
+    <nav class="pointer-events-auto relative flex h-full items-center justify-center gap-4">
+      <!-- <a
         href={`/`}
         class="btn-shadow hoverable:hover:btn-shadow-hover"
         class:hidden={page.url.pathname === '/'}
         onclick={toggleMenuIfOpen}
       >
-        <img draggable="false" src="/favicon.png" alt="Home Icon" class="pointer-events-none h-10 w-auto" />
-      </a>
+        <img draggable="false" src="/favicon.png" alt="Logo / Home Icon" class="pointer-events-none h-12 w-auto" />
+      </a> -->
+      <LogoLink {toggleMenuIfOpen} />
     </nav>
   </header>
 
@@ -132,7 +134,7 @@
       >
         <!-- Navigation Links -->
         <ul
-          class="flex h-full flex-none flex-col items-end justify-between gap-6 p-6 text-3xl leading-none transition-opacity duration-1000 md:px-[calc(6rem+var(--scrollbar-width))]"
+          class="flex h-full flex-none flex-col items-end justify-between gap-6 p-6 transition-opacity duration-1000 md:px-[calc(6rem+var(--scrollbar-width))]"
         >
           {#each navigation?.navLinks ?? [] as { title, url }}
             {@const isActive = page.url.pathname === `${url}`}
@@ -140,7 +142,7 @@
             <li>
               <a
                 href={url}
-                class="center inline-block origin-center text-right underline decoration-1 underline-offset-4 transition-all duration-300 hoverable:hover:decoration-black hoverable:hover:opacity-80 md:whitespace-nowrap"
+                class="center inline-block origin-center text-right text-3xl leading-none underline decoration-1 underline-offset-4 transition-all duration-300 hoverable:hover:decoration-black hoverable:hover:opacity-80 md:whitespace-nowrap"
                 class:active={isActive}
                 class:decoration-black={isActive}
                 class:decoration-transparent={!isActive}
@@ -170,7 +172,7 @@
         {#each navigation?.footerLinks ?? [] as { title, url }}
           <a
             href={url}
-            class="underline decoration-transparent decoration-1 underline-offset-4 transition-all duration-300 hoverable:hover:decoration-white hoverable:hover:opacity-80 md:whitespace-nowrap"
+            class="text-base underline decoration-transparent decoration-1 underline-offset-4 transition-all duration-300 hoverable:hover:decoration-white hoverable:hover:opacity-80 md:whitespace-nowrap"
           >
             {title}
           </a>
@@ -178,8 +180,8 @@
       </div>
 
       <div class="flex flex-col items-center gap-1 text-right">
-        <img src="/favicon.png" alt="Singing me happy Logo" class="h-10 w-auto" />
-        <p>"Singing me happy" e.V.</p>
+        <LogoLink {toggleMenuIfOpen} hideOnHome={false} />
+        <p class="text-base">"Singing me happy" e.V.</p>
       </div>
     </div>
   </footer>

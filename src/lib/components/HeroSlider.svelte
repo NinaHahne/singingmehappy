@@ -85,11 +85,7 @@
 </script>
 
 <!--TODO: add option to pause animation -->
-<div
-  class="relative aspect-video min-h-dvh w-full overflow-hidden"
-  aria-roledescription="Karussell"
-  aria-label="Chor-Fotos"
->
+<div class="relative aspect-[15/9] w-full overflow-hidden" aria-roledescription="Karussell" aria-label="Chor-Fotos">
   <div class="relative h-full w-full">
     {#if images.length === 0}
       <!-- Fallback, if no images have been configured -->
@@ -101,7 +97,7 @@
         <img
           src={image.src}
           alt={image.alt ?? ''}
-          class="absolute inset-0 h-full w-full object-cover transition-opacity duration-[2.5s] ease-linear"
+          class="absolute inset-0 h-full w-full object-cover object-bottom transition-opacity duration-[2.5s] ease-linear"
           style:opacity={index === currentIndex ? 1 : 0}
           aria-hidden={index !== currentIndex}
           loading={index === currentIndex ? 'eager' : 'lazy'}
