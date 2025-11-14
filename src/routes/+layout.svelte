@@ -142,7 +142,7 @@
             <li>
               <a
                 href={url}
-                class="center inline-block origin-center text-right text-3xl font-normal leading-none underline decoration-1 underline-offset-4 transition-all duration-300 hoverable:hover:decoration-black hoverable:hover:opacity-80 md:whitespace-nowrap"
+                class="center inline-block origin-center text-right text-3xl font-normal leading-none text-black underline decoration-1 underline-offset-4 transition-all duration-300 hoverable:hover:decoration-black hoverable:hover:opacity-80 md:whitespace-nowrap"
                 class:active={isActive}
                 class:decoration-black={isActive}
                 class:decoration-transparent={!isActive}
@@ -170,10 +170,7 @@
 
       <div class="flex flex-col items-start gap-2 text-left md:flex-row md:gap-4">
         {#each navigation?.footerLinks ?? [] as { title, url }}
-          <a
-            href={url}
-            class="text-base underline decoration-transparent decoration-1 underline-offset-4 transition-all duration-300 hoverable:hover:decoration-white hoverable:hover:opacity-80 md:whitespace-nowrap"
-          >
+          <a href={url} class="">
             {title}
           </a>
         {/each}

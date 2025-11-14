@@ -60,21 +60,21 @@ body:has(.show-menu) .menu > div > div {
   }
 
   blockquote {
-    @apply text-xl font-medium;
+    @apply text-2xl font-light leading-snug md:text-3xl md:leading-snug;
   }
 
   p,
   a {
-    @apply text-base font-extralight md:text-lg xl:text-xl;
+    @apply text-lg font-extralight leading-normal md:text-xl xl:text-2xl;
   }
 
-  /* a {
-    @apply text-link underline underline-offset-4 transition active:text-link/80 hoverable:hover:text-link/80;
+  a {
+    @apply text-black/70 underline decoration-black/50 decoration-1 underline-offset-4 transition active:decoration-transparent hoverable:hover:decoration-transparent;
   }
 
   footer a {
-    @apply text-link-contrast underline underline-offset-4 transition active:text-link-active hoverable:hover:text-link-hover;
-  } */
+    @apply text-base text-white underline decoration-transparent decoration-1 underline-offset-4 transition-all duration-300 hoverable:hover:decoration-white/60 hoverable:hover:opacity-80 md:whitespace-nowrap;
+  }
 }
 
 @layer utilities {
