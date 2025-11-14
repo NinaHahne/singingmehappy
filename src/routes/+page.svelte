@@ -28,11 +28,13 @@
     </p>
     <p class="pointer-events-auto absolute bottom-[8%] right-[4%] text-[clamp(14px,2.2vw,22px)]">innen und außen</p> -->
 
-    <p class="pointer-events-auto absolute left-1/2 top-[17%] -ml-[5.8cqw] -translate-x-1/2 text-center text-[2.8cqw]">
+    <p
+      class="pointer-events-auto absolute left-1/2 top-[17%] -ml-[5.8cqw] -translate-x-1/2 text-center text-[2.8cqw] font-normal"
+    >
       Musik bewegt
     </p>
 
-    <p class="pointer-events-auto absolute bottom-[8%] left-1/2 ml-[9.8cqw] -translate-x-1/2 text-[2.4cqw]">
+    <p class="pointer-events-auto absolute bottom-[8%] left-1/2 ml-[9.8cqw] -translate-x-1/2 text-[2.4cqw] font-normal">
       innen und außen
     </p>
   </div>
@@ -47,7 +49,7 @@
   <div class="pointer-events-none absolute inset-0 [container-type:size]">
     <p
       id="uns-bewegt-jazz"
-      class="pointer-events-auto absolute bottom-[7%] left-1/2 ml-[1cqw] -translate-x-1/2 text-[2.7cqw] leading-tight"
+      class="pointer-events-auto absolute bottom-[7%] left-1/2 ml-[1cqw] -translate-x-1/2 text-[2.7cqw] font-normal leading-tight"
     >
       Uns bewegt <span>Ja</span><span>z</span><span>z</span>
     </p>
@@ -58,7 +60,7 @@
   <img src="/images/home/decke.jpg" alt="Decke" class="block w-full object-contain" />
   <div class="pointer-events-none absolute inset-0 [container-type:size]">
     <p
-      class="pointer-events-auto absolute left-1/2 top-[23.5cqw] ml-[17cqw] -translate-x-1/2 whitespace-nowrap text-[2.4cqw] leading-tight"
+      class="pointer-events-auto absolute left-1/2 top-[23.5cqw] ml-[17cqw] -translate-x-1/2 whitespace-nowrap text-[2.4cqw] font-normal leading-tight"
     >
       Wenn es um den gemeinsamen Klang unserer Stimmen geht...
     </p>
@@ -72,7 +74,9 @@
     class="block w-full object-contain"
   />
   <div class="pointer-events-none absolute inset-0 [container-type:size]">
-    <p class="pointer-events-auto absolute left-[4.5cqw] top-[17.5cqw] whitespace-nowrap text-[2.4cqw] leading-tight">
+    <p
+      class="pointer-events-auto absolute left-[4.5cqw] top-[17.5cqw] whitespace-nowrap text-[2.4cqw] font-normal leading-tight"
+    >
       ...stecken wir alle <br /> unter einer Decke
     </p>
   </div>

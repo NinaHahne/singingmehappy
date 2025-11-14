@@ -6,6 +6,6 @@
 
 <HeaderAbsolute />
 <section class="flex flex-col items-center justify-center pt-20 text-center">
-  <h1 class="text-dusty-brown mb-2 text-3xl font-semibold">{title}</h1>
-  <p class="text-lg italic text-gray-600">Diese Seite ist noch in Arbeit.</p>
+  <h1 class="text-black">{title}</h1>
+  <p class="text-xl font-light italic text-gray-600 md:text-2xl">Diese Seite ist noch in Arbeit.</p>
 </section>
