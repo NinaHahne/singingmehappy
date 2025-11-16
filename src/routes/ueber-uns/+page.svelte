@@ -41,7 +41,7 @@
       <p>
         So finden sich viele Jazzstandards in ungewöhnlichen Arrangements in unserem Repertoire. Für uns muss Musik
         grooven, swingen oder direkt ins Herz gehen. Wir haben Spaß an der Feinarbeit zu jedem Stück, ob es in den
-        Proben zu Hause oder bei Workshops ist. <br /><br />
+        Proben, zu Hause oder bei Workshops ist. <br /><br />
         3-4 Mal im Jahr stellen wir unser a cappella Programm mit großer Freude dem Publikum vor.<br /><br />
       </p>
     </div>
