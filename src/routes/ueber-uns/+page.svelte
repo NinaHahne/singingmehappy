@@ -16,9 +16,13 @@
     </blockquote>
     <div class="my-12 max-w-4xl">
       <picture>
-        <source srcset="/images/about/intro_Gruppenfoto_mobile.webp" media="(max-width: 640px)" />
-        <source srcset="/images/about/intro_Gruppenfoto_desktop.webp" media="(min-width: 641px)" />
-        <img src="/images/about/intro_Gruppenfoto_desktop.webp" alt="Jazzchor Gruppe" class="w-full object-contain" />
+        <source srcset="/images/ueber-uns/intro_Gruppenfoto_mobile.webp" media="(max-width: 640px)" />
+        <source srcset="/images/ueber-uns/intro_Gruppenfoto_desktop.webp" media="(min-width: 641px)" />
+        <img
+          src="/images/ueber-uns/intro_Gruppenfoto_desktop.webp"
+          alt="Jazzchor Gruppe"
+          class="w-full object-contain"
+        />
       </picture>
     </div>
   </div>
@@ -30,7 +34,7 @@
     class="flex h-full flex-col leading-normal md:min-w-[220px] md:items-end md:self-center md:text-right lg:min-w-[300px]"
   >
     <!-- <picture>
-      <img src="/images/about/about-2.webp" alt="#TODO" class="w-28 max-w-full object-contain md:w-[180px]" />
+      <img src="/images/ueber-uns/ueber-uns-2.webp" alt="#TODO" class="w-28 max-w-full object-contain md:w-[180px]" />
     </picture> -->
   </div>
   <div class="">
@@ -47,7 +51,7 @@
         class="float-start mr-[0.5lh] mt-[0.25lh] h-[5.2lh] w-auto md:absolute md:-left-[180px] md:-ml-4 md:mb-auto md:mr-auto md:h-auto md:w-[180px] lg:-ml-8"
       >
         <img
-          src="/images/about/portrait_Biggi.webp"
+          src="/images/ueber-uns/portrait_Biggi.webp"
           alt="Portrait von Brigitte Asche"
           class="h-full w-auto object-cover"
         />
@@ -86,7 +90,7 @@
   <div class="relative flex h-auto flex-col items-end md:min-w-[220px] md:items-start md:self-end lg:min-w-[300px]">
     <picture class="max-h-full w-[75%] min-w-[180px] object-contain md:mb-0 md:h-[8lh] md:w-auto">
       <img
-        src="/images/about/portrait_Tobias_Foto_Dovile Sermokas.webp"
+        src="/images/ueber-uns/portrait_Tobias_Foto_Dovile Sermokas.webp"
         alt="Portrait von Tobias Christl"
         class="h-full w-full object-cover"
       />

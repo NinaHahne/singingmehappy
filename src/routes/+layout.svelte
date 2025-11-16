@@ -37,17 +37,17 @@
   let navigation = {
     navLinks: [
       { title: 'Start', url: '/' },
-      { title: 'Über Uns', url: '/about' },
-      { title: 'Was wir singen', url: '/songs' },
-      { title: 'Nächste Konzerte', url: '/concerts' },
-      { title: 'Bildergalerie', url: '/gallery' },
-      { title: 'Aktuelles', url: '/news' },
-      { title: 'Kontakt', url: '/contact' },
+      { title: 'Über Uns', url: '/ueber-uns' },
+      { title: 'Was wir singen', url: '/was-wir-singen' },
+      { title: 'Nächste Konzerte', url: '/konzerte' },
+      { title: 'Bildergalerie', url: '/bildergalerie' },
+      { title: 'Aktuelles', url: '/aktuelles' },
+      { title: 'Kontakt', url: '/kontakt' },
     ],
     footerLinks: [
-      { title: 'Impressum', url: '/imprint' },
-      { title: 'Kontakt', url: '/contact' },
-      { title: 'Datenschutz', url: '/privacy' },
+      { title: 'Impressum', url: '/impressum' },
+      { title: 'Kontakt', url: '/kontakt' },
+      { title: 'Datenschutz', url: '/datenschutz' },
     ],
   };
 
