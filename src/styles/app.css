@@ -90,6 +90,11 @@ body:has(.show-menu) .menu > div > div {
     filter: drop-shadow(0 3px 6px theme('colors.black / 0.4'));
   }
   .menu-shadow {
-    filter: drop-shadow(0 8px 16px theme('colors.softwhite / 0.25'));
+    filter: drop-shadow(0 3px 6px theme('colors.white / 0.4')) drop-shadow(0 6px 12px theme('colors.white / 0.4'))
+      drop-shadow(0 12px 24px theme('colors.white / 0.4'));
+  }
+  .menu-shadow:hover {
+    filter: drop-shadow(0 3px 6px theme('colors.white / 0.3')) drop-shadow(0 6px 12px theme('colors.white / 0.3'))
+      drop-shadow(0 12px 24px theme('colors.white / 0.3'));
   }
 }

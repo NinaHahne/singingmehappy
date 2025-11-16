@@ -6,7 +6,9 @@
   import RotatingBurgerMenuButton from '$lib/components/RotatingBurgerMenuButton.svelte';
   import LogoLink from '$lib/components/LogoLink.svelte';
 
-  let { children } = $props();
+  let { children } = $props<{
+    children: (args: { toggleMenuIfOpen: () => void }) => unknown;
+  }>();
 
   const getScrollbarWidth = () => {
     // Scrollbar-Breite ermitteln
@@ -99,16 +101,8 @@
   class:overflowing={isBodyOverflowing}
   class:show-menu={showMenu}
 >
-  <header class="pointer-events-none fixed top-0 z-50 flex h-[74px] w-full justify-between px-6 py-4">
+  <header class="pointer-events-none fixed top-0 z-50 flex h-[74px] w-full justify-between px-4 py-4">
     <nav class="pointer-events-auto relative flex h-full items-center justify-center gap-4">
-      <!-- <a
-        href={`/`}
-        class="btn-shadow hoverable:hover:btn-shadow-hover"
-        class:hidden={page.url.pathname === '/'}
-        onclick={toggleMenuIfOpen}
-      >
-        <img draggable="false" src="/favicon.png" alt="Logo / Home Icon" class="pointer-events-none h-12 w-auto" />
-      </a> -->
       <LogoLink {toggleMenuIfOpen} />
     </nav>
   </header>
@@ -159,7 +153,7 @@
   </nav>
 
   <main class="relative flex flex-col">
-    {@render children()}
+    {@render children({ toggleMenuIfOpen })}
   </main>
 
   <footer class="relative">

@@ -17,7 +17,7 @@
 
 <button
   id="toggle_menu"
-  class="menu-shadow fixed right-0 top-0 z-50 flex items-end justify-center p-[24px]"
+  class="fixed right-0 top-0 z-50 flex items-end justify-center p-6"
   onclick={onToggle}
   aria-label={isOpen ? 'Close menu' : 'Open menu'}
   style="
@@ -28,7 +28,7 @@
   "
 >
   <div
-    class="relative flex h-[var(--h)] w-[var(--w)] flex-col items-center justify-between transition-transform duration-300"
+    class="menu-shadow hoverable:hover:menu-shadow-hover relative flex h-[var(--h)] w-[var(--w)] flex-col items-center justify-between transition duration-300"
     class:rotate-180={isOpen}
   >
     <span

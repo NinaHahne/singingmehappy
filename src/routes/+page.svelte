@@ -4,6 +4,10 @@
   import HeaderAbsolute from '$lib/components/HeaderAbsolute.svelte';
   import HeroSlider from '$lib/components/HeroSlider.svelte';
 
+  let { toggleMenuIfOpen } = $props<{
+    toggleMenuIfOpen: () => void;
+  }>();
+
   const heroImages = [
     { src: '/images/hero/JAZZCHOR_1.jpg', alt: 'Jazzchor Singing me happy' },
     { src: '/images/hero/JAZZCHOR_2.jpg', alt: 'Jazzchor Singing me happy' },
@@ -16,7 +20,7 @@
   <!-- <title>Home | SvelteKit Starter</title> -->
 </svelte:head>
 
-<HeaderAbsolute />
+<HeaderAbsolute {toggleMenuIfOpen} showAbsoluteLogoLink={true} />
 
 <section class="relative mt-20 w-full md:mt-auto">
   <HeroSlider images={heroImages} interval={4500} firstInterval={1000} />

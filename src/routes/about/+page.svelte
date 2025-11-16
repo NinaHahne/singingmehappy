@@ -4,7 +4,7 @@
 </script>
 
 <!-- <UnderConstruction title="Über Uns" /> -->
-<HeaderAbsolute />
+<HeaderAbsolute toggleMenuIfOpen={() => {}} />
 
 <section class="flex flex-col gap-4 px-4 pt-28 md:flex-row md:items-start lg:gap-8">
   <div class="md:min-w-[220px] md:text-right lg:min-w-[300px]">
