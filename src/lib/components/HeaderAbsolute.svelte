@@ -1,8 +1,8 @@
 <script lang="ts">
   import LogoLink from './LogoLink.svelte';
 
-  let { toggleMenuIfOpen, showAbsoluteLogoLink = false } = $props<{
-    toggleMenuIfOpen: () => void;
+  let { toggleMenuIfOpen = () => {}, showAbsoluteLogoLink = false } = $props<{
+    toggleMenuIfOpen?: () => void;
     showAbsoluteLogoLink?: boolean;
   }>();
 </script>
