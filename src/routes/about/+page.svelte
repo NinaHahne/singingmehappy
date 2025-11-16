@@ -1,6 +1,5 @@
 <script lang="ts">
   import HeaderAbsolute from '$lib/components/HeaderAbsolute.svelte';
-  import UnderConstruction from '$lib/components/UnderConstruction.svelte';
 </script>
 
 <!-- <UnderConstruction title="Über Uns" /> -->
@@ -17,17 +16,19 @@
     </blockquote>
     <div class="my-12 max-w-4xl">
       <picture>
-        <source srcset="/images/about/about-intro_mobile.webp" media="(max-width: 640px)" />
-        <source srcset="/images/about/about-intro_desktop.webp" media="(min-width: 641px)" />
-        <img src="/images/about/about-intro_desktop.webp" alt="Jazzchor Gruppe" class="w-full object-contain" />
+        <source srcset="/images/about/intro_Gruppenfoto_mobile.webp" media="(max-width: 640px)" />
+        <source srcset="/images/about/intro_Gruppenfoto_desktop.webp" media="(min-width: 641px)" />
+        <img src="/images/about/intro_Gruppenfoto_desktop.webp" alt="Jazzchor Gruppe" class="w-full object-contain" />
       </picture>
     </div>
   </div>
 </section>
 
 <!-- TODO: section erst bei Klick auf "Mehr erfahren" anzeigen -->
-<section class="relative flex flex-col gap-4 px-4 pb-20 md:flex-row lg:gap-8">
-  <div class="flex h-full flex-col md:min-w-[220px] md:items-end md:self-center md:text-right lg:min-w-[300px]">
+<section class="relative flex flex-col px-4 pb-20 md:flex-row lg:gap-8">
+  <div
+    class="flex h-full flex-col leading-normal md:min-w-[220px] md:items-end md:self-center md:text-right lg:min-w-[300px]"
+  >
     <!-- <picture>
       <img src="/images/about/about-2.webp" alt="#TODO" class="w-28 max-w-full object-contain md:w-[180px]" />
     </picture> -->
@@ -41,12 +42,15 @@
         3-4 Mal im Jahr stellen wir unser a cappella Programm mit großer Freude dem Publikum vor.<br /><br />
       </p>
     </div>
-    <div class="relative max-w-3xl leading-normal">
+    <div class="relative max-w-3xl">
       <picture
-        class="float-start my-[0.25lh] mr-4 md:absolute md:-left-[180px] md:-ml-4 md:mb-auto md:mr-auto lg:-ml-8"
+        class="float-start mr-[0.5lh] mt-[0.25lh] h-[5.2lh] w-auto md:absolute md:-left-[180px] md:-ml-4 md:mb-auto md:mr-auto md:h-auto md:w-[180px] lg:-ml-8"
       >
-        <!-- TODO: Bild austauschen -->
-        <img src="/images/about/about-2.webp" alt="#TODO" class="w-28 max-w-full object-contain md:w-[180px]" />
+        <img
+          src="/images/about/portrait_Biggi.webp"
+          alt="Portrait von Brigitte Asche"
+          class="h-full w-auto object-cover"
+        />
       </picture>
       <p>
         “Singing me happy“ wurde 2015 von unserer Sopranistin Brigitte Asche gegründet, die das Glücksgefühl, das viele
@@ -67,27 +71,27 @@
 
 <hr class="border-8 border-t border-black" />
 
-<section class="relative flex flex-col gap-4 px-8 py-20 md:flex-row md:justify-between lg:gap-8">
+<section class="relative flex flex-col gap-4 px-4 py-20 md:flex-row md:justify-between md:px-8 lg:gap-8">
   <div class="flex w-full flex-col items-start justify-start">
     <div class="max-w-2xl md:ml-[104px]">
-      <!-- TODO: Text & Bild austauschen -->
       <h1>Der Chorleiter</h1>
+      <!-- TODO: Text austauschen -->
       <p>
-        Martin Hagen ist seit 2018 musikalischer Leiter. Er ist mit viel Humor, Leib und Seele in den Proben bei der
-        Sache und hat sich zum Ziel gesetzt, unseren musikalischen Wachstumsprozeß zu fördern und zu unterstützen. <br
-        /><br />
-        Darüber hinaus ist Martin Sänger, Songwriter und Gesangscoach – unter anderem nach dem Estill Voice Training SystemTM.
-        Er hat Jazz-Gesang in Amsterdam (Conservatory) und Philadelphia studiert. In der Vergangenheit war er 10 Jahre lang
-        Mitglied der a cappella Gruppe muSix sowie einige Jahre bei `Klangbezirk ́.
+        Tobias Christl <br /><br />
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis numquam voluptates autem distinctio facere tempore
+        aliquam, ullam eius est unde? Nesciunt quibusdam iusto incidunt suscipit atque, tempora odit corporis repudiandae.
       </p>
     </div>
   </div>
-  <div class="flex h-full flex-col items-end md:min-w-[220px] md:items-start md:self-center lg:min-w-[300px]">
-    <picture>
-      <!-- TODO: Bild austauschen -->
-      <img src="/images/about/about-3.webp" alt="#TODO" class="mb-2 max-h-full w-28 object-contain md:w-48" />
+  <div class="relative flex h-auto flex-col items-end md:min-w-[220px] md:items-start md:self-end lg:min-w-[300px]">
+    <picture class="max-h-full w-[75%] min-w-[180px] object-contain md:mb-0 md:h-[8lh] md:w-auto">
+      <img
+        src="/images/about/portrait_Tobias_Foto_Dovile Sermokas.webp"
+        alt="Portrait von Tobias Christl"
+        class="h-full w-full object-cover"
+      />
     </picture>
-    <p>Martin Hagen</p>
+    <p class="mt-2 md:absolute md:left-0 md:top-full">Tobias Christl</p>
   </div>
 </section>
 
