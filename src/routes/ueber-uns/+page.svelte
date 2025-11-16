@@ -31,11 +31,7 @@
 <section class="relative flex flex-col px-4 pb-20 md:flex-row lg:gap-8">
   <div
     class="flex h-full flex-col leading-normal md:min-w-[220px] md:items-end md:self-center md:text-right lg:min-w-[300px]"
-  >
-    <!-- <picture>
-      <img src="/images/ueber-uns/ueber-uns-2.webp" alt="#TODO" class="w-28 max-w-full object-contain md:w-[180px]" />
-    </picture> -->
-  </div>
+  ></div>
   <div class="">
     <div class="max-w-3xl">
       <p>
