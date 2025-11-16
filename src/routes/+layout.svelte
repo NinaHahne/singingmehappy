@@ -124,7 +124,7 @@
       aria-label="Close menu"
     >
       <span
-        class="relative block h-full w-full opacity-0 backdrop-blur-[4px] transition-opacity duration-300"
+        class="relative block h-full w-full bg-black/50 opacity-0 transition-opacity duration-300"
         class:opacity-100={showMenu}
       ></span>
     </button>
