@@ -88,7 +88,7 @@
     </div>
   </div>
   <div class="relative flex h-auto flex-col items-end md:min-w-[220px] md:items-start md:self-end lg:min-w-[300px]">
-    <picture class="max-h-full w-[75%] min-w-[180px] object-contain md:mb-0 md:h-[8lh] md:w-auto">
+    <picture class="max-h-full w-[75%] min-w-[180px] object-contain md:mb-0 md:h-[8lh] md:w-full">
       <img
         src="/images/ueber-uns/portrait_Tobias_Foto_Dovile Sermokas.webp"
         alt="Portrait von Tobias Christl"
