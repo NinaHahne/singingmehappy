@@ -20,18 +20,11 @@
   <!-- <title>Home | SvelteKit Starter</title> -->
 </svelte:head>
 
-<HeaderAbsolute {toggleMenuIfOpen} showAbsoluteLogoLink={true} />
+<HeaderAbsolute showAbsoluteLogoLink={true} />
 
 <section class="relative mt-20 w-full md:mt-auto">
   <HeroSlider images={heroImages} interval={4500} firstInterval={1000} />
   <div class="pointer-events-none absolute inset-0 [container-type:size]">
-    <!-- <p
-      class="pointer-events-auto absolute left-1/2 top-[18%] -translate-x-1/2 text-center text-[clamp(24px,4.2vw,46px)]"
-    >
-      Musik bewegt
-    </p>
-    <p class="pointer-events-auto absolute bottom-[8%] right-[4%] text-[clamp(14px,2.2vw,22px)]">innen und außen</p> -->
-
     <p
       class="pointer-events-auto absolute left-1/2 top-[17%] -ml-[5.8cqw] -translate-x-1/2 text-center text-[2.8cqw] font-normal"
     >

@@ -2,8 +2,7 @@
   import HeaderAbsolute from '$lib/components/HeaderAbsolute.svelte';
 </script>
 
-<!-- <UnderConstruction title="Über Uns" /> -->
-<HeaderAbsolute toggleMenuIfOpen={() => {}} />
+<HeaderAbsolute />
 
 <section class="flex flex-col gap-4 px-4 pt-28 md:flex-row md:items-start lg:gap-8">
   <div class="md:min-w-[220px] md:text-right lg:min-w-[300px]">

@@ -1,14 +1,16 @@
 <!-- Global layout for all pages -->
 <script lang="ts">
   import { page } from '$app/state';
-  import { onDestroy, onMount } from 'svelte';
+  import { onDestroy, onMount, setContext } from 'svelte';
   import '../styles/app.css';
   import RotatingBurgerMenuButton from '$lib/components/RotatingBurgerMenuButton.svelte';
   import LogoLink from '$lib/components/LogoLink.svelte';
 
-  let { children } = $props<{
-    children: (args: { toggleMenuIfOpen: () => void }) => unknown;
-  }>();
+  type MenuContext = {
+    toggleMenuIfOpen: () => void;
+  };
+
+  let { children } = $props();
 
   const getScrollbarWidth = () => {
     // Scrollbar-Breite ermitteln
@@ -63,6 +65,11 @@
     !showMenu || toggleMenu();
   };
 
+  // Provide the toggleMenuIfOpen function to child components via context
+  setContext<MenuContext>('menu', {
+    toggleMenuIfOpen,
+  });
+
   onMount(() => {
     getScrollbarWidth();
 
@@ -103,7 +110,7 @@
 >
   <header class="pointer-events-none fixed top-0 z-50 flex h-[74px] w-full justify-between px-4 py-4">
     <nav class="pointer-events-auto relative flex h-full items-center justify-center gap-4">
-      <LogoLink {toggleMenuIfOpen} />
+      <LogoLink />
     </nav>
   </header>
 
@@ -113,7 +120,7 @@
     <button
       class="absolute right-0 top-0 h-full w-full cursor-pointer text-inherit"
       class:pointer-events-auto={showMenu}
-      onclick={toggleMenu}
+      onclick={toggleMenuIfOpen}
       aria-label="Close menu"
     >
       <span
@@ -153,7 +160,7 @@
   </nav>
 
   <main class="relative flex flex-col">
-    {@render children({ toggleMenuIfOpen })}
+    {@render children()}
   </main>
 
   <footer class="relative">
@@ -171,7 +178,7 @@
       </div>
 
       <div class="flex flex-col items-center gap-1 text-right">
-        <LogoLink {toggleMenuIfOpen} hideOnHome={false} />
+        <LogoLink hideOnHome={false} />
         <p class="text-base">"Singing me happy" e.V.</p>
       </div>
     </div>

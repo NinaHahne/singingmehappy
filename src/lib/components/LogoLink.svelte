@@ -1,17 +1,20 @@
 <script lang="ts">
   import { page } from '$app/state';
+  import { getContext } from 'svelte';
 
-  let {
-    toggleMenuIfOpen,
-    hideOnHome = true,
-    invisible = false,
-  } = $props<{
+  type MenuContext = {
     toggleMenuIfOpen: () => void;
+  };
+
+  const { toggleMenuIfOpen } = getContext<MenuContext>('menu');
+
+  let { hideOnHome = true, invisible = false } = $props<{
     hideOnHome?: boolean;
     invisible?: boolean;
   }>();
 </script>
 
+<!-- onclick={toggleMenuIfOpen} -->
 <a
   href={`/`}
   class="btn-shadow hoverable:hover:btn-shadow-hover flex-shrink-0"

@@ -1,7 +1,9 @@
 <script lang="ts">
   import HeaderAbsolute from '$lib/components/HeaderAbsolute.svelte';
 
-  let { title = 'Seite in Arbeit' } = $props();
+  let { title = 'Seite in Arbeit' } = $props<{
+    title?: string;
+  }>();
 </script>
 
 <HeaderAbsolute />
