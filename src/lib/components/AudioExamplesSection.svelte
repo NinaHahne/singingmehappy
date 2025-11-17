@@ -23,18 +23,14 @@
       url: 'https://soundcloud.com/sining-me-happy/autumn-leaves',
     },
   ];
-
-  const splitIndex = Math.ceil(tracks.length / 2);
-  const leftColumn = tracks.slice(0, splitIndex);
-  const rightColumn = tracks.slice(splitIndex);
 </script>
 
 <section id="hoerbeispiele">
-  <div class="mb-4 text-3xl font-normal md:mb-6">
+  <div class="mb-4 text-3xl font-normal md:mb-6 lg:mb-8">
     <hr class="border-t border-black/50 md:mt-[0.6lh]" />
   </div>
 
-  <div class="flex flex-col flex-wrap items-center gap-4 md:flex-row md:items-start md:gap-x-12">
+  <div class="flex flex-col flex-wrap items-center gap-4 md:flex-row md:items-start md:justify-start md:gap-6 lg:gap-8">
     {#each tracks as track, i}
       <AudioExampleRow index={i + 1} title={track.title} trackUrl={track.url} />
     {/each}
