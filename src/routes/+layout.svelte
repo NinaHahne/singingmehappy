@@ -128,7 +128,7 @@
         class:opacity-100={showMenu}
       ></span>
     </button>
-    <div class="relative flex h-full w-auto min-w-64 md:min-w-80">
+    <div class="relative flex h-full w-auto min-w-[75%] md:min-w-80">
       <div
         class="pointer-events-auto relative -right-full flex h-full w-full flex-col gap-10 overflow-auto bg-white py-20 text-black transition-transform duration-300"
         class:-translate-x-full={showMenu}
