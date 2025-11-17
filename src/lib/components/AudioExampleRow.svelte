@@ -11,7 +11,7 @@
 </script>
 
 <div class="flex flex-col gap-2 md:flex-row md:items-start md:gap-4">
-  <div class="md:shrink-0 md:basis-20">
+  <div class="md:w-20 lg:w-24">
     <p class="text-sm leading-snug md:text-base">
       <span class="inline-block tabular-nums md:block">{trackNumber} — </span>
       <span class="whitespace-pre-line">{title}</span>
