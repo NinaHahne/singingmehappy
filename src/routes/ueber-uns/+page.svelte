@@ -28,7 +28,7 @@
 </section>
 
 <!-- TODO: section erst bei Klick auf "Mehr erfahren" anzeigen -->
-<section class="relative flex flex-col px-4 pb-20 md:flex-row lg:gap-8">
+<section class="relative flex flex-col px-4 pb-12 md:flex-row md:pb-20 lg:gap-8">
   <div
     class="flex h-full flex-col leading-normal md:min-w-[220px] md:items-end md:self-center md:text-right lg:min-w-[300px]"
   ></div>
@@ -70,7 +70,7 @@
 
 <hr class="border-8 border-t border-black" />
 
-<section class="relative flex flex-col gap-4 px-4 py-20 md:flex-row md:justify-between md:px-8 lg:gap-8">
+<section class="relative flex flex-col gap-4 px-4 py-12 md:flex-row md:justify-between md:px-8 md:py-20 lg:gap-8">
   <div class="flex w-full flex-col items-start justify-start">
     <div class="max-w-2xl md:ml-[104px]">
       <h1>Der Chorleiter</h1>
@@ -96,7 +96,7 @@
 
 <hr class="border-8 border-t border-black" />
 
-<section class="relative flex flex-col gap-4 px-8 py-20 md:flex-row lg:gap-8">
+<section class="relative flex flex-col gap-4 px-8 py-12 md:flex-row md:py-20 lg:gap-8">
   <div class="flex h-full flex-col md:ml-[104px] md:min-w-[220px] lg:min-w-[300px]">
     <h1>Unsere<br /> Sängerinnen <br />und Sänger ...</h1>
     <p>und was ihr Herz <br />außer Singen noch <br />höher schlagen lässt.</p>
