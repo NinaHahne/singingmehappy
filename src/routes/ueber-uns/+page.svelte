@@ -43,12 +43,12 @@
     </div>
     <div class="relative max-w-3xl">
       <picture
-        class="float-start mr-[0.5lh] mt-[0.25lh] h-[5.2lh] w-auto md:absolute md:-left-[180px] md:-ml-4 md:mb-auto md:mr-auto md:h-auto md:w-[180px] lg:-ml-8"
+        class="relative float-start mr-[0.5lh] mt-[0.25lh] h-[5.2lh] w-auto md:absolute md:-left-[180px] md:-ml-4 md:mb-auto md:mr-auto md:h-auto md:w-[180px] lg:-ml-8"
       >
         <img
           src="/images/ueber-uns/portrait_Biggi.webp"
           alt="Portrait von Brigitte Asche"
-          class="h-full w-auto object-cover"
+          class="h-full w-auto object-cover md:h-auto md:w-full"
         />
       </picture>
       <p>
