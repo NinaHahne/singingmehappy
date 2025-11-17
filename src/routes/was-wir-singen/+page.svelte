@@ -22,7 +22,7 @@
 
 <section class="flex flex-col px-4 py-12 md:flex-row md:items-start md:gap-4 md:py-20 md:pr-24 lg:gap-8">
   <div class="md:min-w-[220px] md:text-right lg:min-w-[300px]">
-    <h2 class="text-3xl font-normal">Hörbeispiele</h2>
+    <h1 class="text-4xl font-normal">Hörbeispiele</h1>
   </div>
   <AudioExamplesSection />
 </section>
