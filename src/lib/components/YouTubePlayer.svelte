@@ -8,7 +8,7 @@
 </script>
 
 <iframe
-  class="aspect-video w-[288px] max-w-full md:max-w-none"
+  class="aspect-video w-[320px] max-w-full md:max-w-none"
   {src}
   title={title || 'YouTube Video'}
   frameborder="0"

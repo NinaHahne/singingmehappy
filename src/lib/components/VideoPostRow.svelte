@@ -19,7 +19,7 @@
 <article class="flex items-start gap-4 md:gap-8">
   <!-- linker Textblock -->
   <div class="w-[30%] min-w-24 flex-shrink-0 text-sm leading-relaxed md:w-36 md:text-base lg:w-48">
-    <p class="whitespace-pre-line text-sm md:text-base lg:text-lg">
+    <p class="whitespace-pre-line text-sm font-light md:text-base lg:text-lg">
       {post.leftText}
     </p>
   </div>
