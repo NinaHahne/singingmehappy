@@ -98,7 +98,7 @@
 
 <hr class="border-8 border-t border-black" />
 
-<section class="relative flex w-full flex-col gap-4 px-4 py-12 md:flex-row md:px-20 md:py-20 lg:gap-8">
+<section class="relative flex w-full flex-col gap-4 px-4 py-12 md:flex-row md:py-20 md:pl-8 md:pr-20 lg:gap-8">
   <div class="flex h-full flex-col md:ml-[104px] md:min-w-[220px] lg:min-w-[300px]">
     <h1>Unsere<br /> Sängerinnen <br />und Sänger ...</h1>
     <p>und was ihr Herz <br />außer Singen noch <br />höher schlagen lässt.</p>
