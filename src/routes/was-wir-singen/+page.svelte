@@ -1,6 +1,7 @@
 <script lang="ts">
   import HeaderAbsolute from '$lib/components/HeaderAbsolute.svelte';
   import AudioExamplesSection from '$lib/components/AudioExamplesSection.svelte';
+  import VideoExamplesSection from '$lib/components/VideoExamplesSection.svelte';
 </script>
 
 <HeaderAbsolute />
@@ -25,4 +26,13 @@
     <h1 class="text-4xl font-normal">Hörbeispiele</h1>
   </div>
   <AudioExamplesSection />
+</section>
+
+<hr class="border-8 border-t border-black" />
+
+<section class="flex flex-col px-4 pb-20 pt-12 md:flex-row md:items-start md:gap-4 md:pb-32 md:pr-24 lg:gap-8">
+  <div class="md:min-w-[220px] md:text-right lg:min-w-[300px]">
+    <h1 class="text-4xl font-normal">Videos</h1>
+  </div>
+  <VideoExamplesSection />
 </section>
