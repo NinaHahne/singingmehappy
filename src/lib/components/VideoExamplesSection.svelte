@@ -60,7 +60,7 @@ Martin Hagen`,
   ];
 </script>
 
-<section id="videos">
+<section id="videos" class="w-full">
   <div class="mb-4 text-3xl font-normal md:mb-6 lg:mb-8">
     <hr class="border-t border-black/50 md:mt-[0.7lh]" />
   </div>
