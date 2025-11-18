@@ -1,5 +1,7 @@
 <script lang="ts">
   import HeaderAbsolute from '$lib/components/HeaderAbsolute.svelte';
+  import VoiceSection from '$lib/components/choir/VoiceSection.svelte';
+  import { choirSections } from '$lib/data/choir';
 </script>
 
 <HeaderAbsolute />
@@ -96,15 +98,15 @@
 
 <hr class="border-8 border-t border-black" />
 
-<section class="relative flex flex-col gap-4 px-8 py-12 md:flex-row md:py-20 lg:gap-8">
+<section class="relative flex w-full flex-col gap-4 px-4 py-12 md:flex-row md:px-20 md:py-20 lg:gap-8">
   <div class="flex h-full flex-col md:ml-[104px] md:min-w-[220px] lg:min-w-[300px]">
     <h1>Unsere<br /> Sängerinnen <br />und Sänger ...</h1>
     <p>und was ihr Herz <br />außer Singen noch <br />höher schlagen lässt.</p>
   </div>
-  <div class="">
-    <div class="relative max-w-3xl">
-      <!-- TODO: singer component -->
-      <p class="text-xl font-light italic text-gray-600 md:text-2xl">Dieser Abschnitt ist noch in Arbeit.</p>
-    </div>
+  <div class="relative flex w-full flex-col gap-12">
+    {#each choirSections as section}
+      <VoiceSection {section} />
+    {/each}
+    <!-- <p class="text-xl font-light italic text-gray-600 md:text-2xl">Dieser Abschnitt ist noch in Arbeit.</p> -->
   </div>
 </section>
