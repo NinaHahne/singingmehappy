@@ -39,14 +39,14 @@
 
 <section class="relative bg-black pt-4">
   <img
-    src="/images/home/uns-bewegt-jazz.jpg"
-    alt="Jazzchor Gruppe steht zusammen vor einer Fensterwand"
+    src={heroImages[0].src}
+    alt="Jazzchor Gruppe bewegt sich vor einer Fensterwand"
     class="block w-full object-contain"
   />
   <div class="pointer-events-none absolute inset-0 [container-type:size]">
     <p
       id="uns-bewegt-jazz"
-      class="pointer-events-auto absolute bottom-[7%] left-1/2 ml-[1cqw] -translate-x-1/2 text-[2.7cqw] font-normal leading-tight"
+      class="pointer-events-auto absolute left-1/2 top-[15%] ml-[1cqw] -translate-x-1/2 text-[2.7cqw] font-normal leading-tight"
     >
       Uns bewegt <span>Ja</span><span>z</span><span>z</span>
     </p>
@@ -104,7 +104,7 @@
   #uns-bewegt-jazz span {
     position: relative;
     display: inline-block;
-    font-size: 3.7cqw;
+    font-size: 5cqw;
     font-weight: 300;
   }
   #uns-bewegt-jazz span:nth-child(1) {

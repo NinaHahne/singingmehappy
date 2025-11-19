@@ -7,7 +7,7 @@
 <HeaderAbsolute />
 
 <section class="content-wrapper pt-20">
-  <section class="content-section pb-0 md:pb-0">
+  <section class="content-section !pb-0 md:pb-0">
     <div class="left-col">
       <h1 class="text-4xl font-normal">Über Uns</h1>
     </div>
@@ -33,8 +33,8 @@
 
 <!-- TODO: section erst bei Klick auf "Mehr erfahren" anzeigen -->
 <section class="content-wrapper">
-  <section class="content-section pt-0 md:pt-0">
-    <div class="left-col"></div>
+  <section class="content-section !pt-0 md:pt-0">
+    <div class="left-col hidden md:block"></div>
     <div class="">
       <div class="max-w-3xl">
         <p>
@@ -57,15 +57,19 @@
         <p>
           “Singing me happy“ wurde 2015 von unserer Sopranistin Brigitte Asche gegründet, die das Glücksgefühl, das
           viele Menschen und sie selbst beim Singen empfinden, im Chornamen ausgedrückt hat. Seitdem setzt sie sich, in
-          enger Zusammenarbeit mit dem Chorleiter beständig für neue Impulse und ein jazzorientiertes, spannendes
-          Repertoire ein. <br /><br />
-          Wir proben jeden Donnerstag von 19.15 bis 21.15 Uhr in der Nähe des Rüdesheimer Platzes in Wilmersdorf. Derzeit
-          nehmen wir noch eine hohe Sopranistin und einen tiefen Bass auf. Wir sind Mitglied im
+          enger Zusammenarbeit mit der Chorleitung beständig für neue Impulse und gutes Miteinander ein und vor allem
+          dafür, dass „der Laden läuft“, getreu ihres persönlichen Mottos „Keep on running“.
+          <br /><br />
+          Wir proben jeden Donnerstag von 18:30 bis 20:30 Uhr Uhr im IBZ, nahe des Rüdesheimer Platzes in Wilmersdorf. Derzeit
+          sind wir offen für Neuzugänge in allen Stimmgruppen, besonders — wie sollte es anders sein — bei den Männern!
+
+          <!-- TODO: klären, ob Links drinbleiben sollen -->
+          <!-- Wir sind Mitglied im
           <a href="https://www.chorverband-berlin.de/" target="_blank">Chorverband Berlin</a>. <br /><br />
           Ergänzendes über unser Ensemble erfahrt sie im
           <a href="https://www.deutschlandfunkkultur.de/singing-me-happy-der-chor-zum-glueck-100.html" target="_blank"
             >Deutschlandfunk Kultur-Beitrag</a
-          >.
+          >. -->
         </p>
       </div>
     </div>
