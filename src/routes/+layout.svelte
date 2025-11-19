@@ -159,7 +159,7 @@
     </div>
   </nav>
 
-  <main class="relative flex flex-col">
+  <main class="relative flex flex-col items-center">
     {@render children()}
   </main>
 

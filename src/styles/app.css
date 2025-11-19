@@ -97,4 +97,13 @@ body:has(.show-menu) .menu > div > div {
     filter: drop-shadow(0 3px 6px theme('colors.white / 0.3')) drop-shadow(0 6px 12px theme('colors.white / 0.3'))
       drop-shadow(0 12px 24px theme('colors.white / 0.3'));
   }
+  .content-wrapper {
+    @apply w-full max-w-screen-xl;
+  }
+  .content-section {
+    @apply flex flex-col gap-4 px-4 py-12 md:flex-row md:items-start md:py-20 lg:gap-8;
+  }
+  .left-col {
+    @apply md:w-52 md:text-right lg:min-w-64;
+  }
 }
