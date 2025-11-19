@@ -11,14 +11,20 @@
       <p class="font-normal">Wir suchen und<br /> möchten finden</p>
     </div>
     <div class="md:mt-20">
-      <blockquote class="max-w-3xl">
+      <blockquote class="max-w-2xl">
         Derzeit nehmen wir in allen Stimmgruppen noch NeubewerberInnen auf. Besonders glücklich wären wir über eine
-        Mezzosopranistin und einen tiefen Bass
+        Mezzosopranistin und einen tiefen Bass.
       </blockquote>
       <p>(Stand November 2025)</p>
-      <p class="mt-4 font-normal">
+      <p class="mt-4">
         <a href="/kontakt">Kontakt</a>
       </p>
     </div>
   </section>
 </section>
+
+<style lang="postcss">
+  a {
+    @apply text-lg font-normal;
+  }
+</style>

@@ -5,7 +5,7 @@
 <HeaderAbsolute />
 
 <section class="content-wrapper pt-20">
-  <section class="content-section">
+  <section class="content-section md:gap-16">
     <div class="left-col">
       <h1 class="text-4xl font-normal">Konzerte</h1>
     </div>

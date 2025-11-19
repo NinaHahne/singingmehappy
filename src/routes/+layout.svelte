@@ -41,8 +41,8 @@
       { title: 'Start', url: '/' },
       { title: 'Über Uns', url: '/ueber-uns' },
       { title: 'Was wir singen', url: '/was-wir-singen' },
-      { title: 'Nächste Konzerte', url: '/konzerte' },
-      { title: 'Bildergalerie', url: '/bildergalerie' },
+      { title: 'Konzerte', url: '/konzerte' },
+      // { title: 'Bildergalerie', url: '/bildergalerie' },
       { title: 'Aktuelles', url: '/aktuelles' },
       { title: 'Kontakt', url: '/kontakt' },
     ],
@@ -165,10 +165,6 @@
 
   <footer class="relative">
     <div class="flex items-end justify-between bg-black p-4 text-white">
-      <!-- <p class="flex-1 text-left">renderedWithCare</p>
-      <div class="h-5 w-5 flex-none text-center">🌻</div>
-      <p class="flex-1 text-right">"Singing me happy" e.V.</p> -->
-
       <div class="flex flex-col items-start gap-2 text-left md:flex-row md:gap-4">
         {#each navigation?.footerLinks ?? [] as { title, url }}
           <a href={url} class="">
