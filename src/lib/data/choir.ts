@@ -141,30 +141,30 @@ export const choirSections: VoiceSectionData[] = [
   // ---------------------------
   {
     id: 'bariton-bass',
-    title: 'Bariton / Baß',
+    title: 'Bariton / Bass',
     members: [
       {
         id: 'peter',
         name: 'Peter',
         imageSrc: '/images/chor/Peter.webp',
-        imageAlt: 'Peter – Bariton/Baß',
-        subtitle: 'Bariton / Baß',
+        imageAlt: 'Peter – Bariton/Bass',
+        subtitle: 'Bariton / Bass',
         text: 'Hören und Gehör',
       },
       {
         id: 'martin',
         name: 'Martin',
         imageSrc: '/images/chor/Martin.webp',
-        imageAlt: 'Martin – Bariton/Baß',
-        subtitle: 'Bariton / Baß',
+        imageAlt: 'Martin – Bariton/Bass',
+        subtitle: 'Bariton / Bass',
         text: 'Spielen auf allem,\nwas Saiten hat',
       },
       {
         id: 'erich',
         name: 'Erich',
         imageSrc: '/images/chor/Erich.webp',
-        imageAlt: 'Erich – Baß',
-        subtitle: 'Baß',
+        imageAlt: 'Erich – Bass',
+        subtitle: 'Bass',
         text: 'Fußballgucken &\ndabei ein Bier trinken',
       },
     ],
