@@ -62,14 +62,13 @@
           <br /><br />
           Wir proben jeden Donnerstag von 18:30 bis 20:30 Uhr Uhr im IBZ, nahe des Rüdesheimer Platzes in Wilmersdorf. Derzeit
           sind wir offen für Neuzugänge in allen Stimmgruppen, besonders — wie sollte es anders sein — bei den Männern!
-
-          <!-- TODO: klären, ob Links drinbleiben sollen -->
-          <!-- Wir sind Mitglied im
-          <a href="https://www.chorverband-berlin.de/" target="_blank">Chorverband Berlin</a>. <br /><br />
-          Ergänzendes über unser Ensemble erfahrt sie im
+          <br /><br />
+          Wir sind Mitglied im <a href="https://www.chorverband-berlin.de/" target="_blank">Chorverband Berlin</a>.
+          <br />
+          Ergänzendes über unser Ensemble erfahrt ihr im
           <a href="https://www.deutschlandfunkkultur.de/singing-me-happy-der-chor-zum-glueck-100.html" target="_blank"
             >Deutschlandfunk Kultur-Beitrag</a
-          >. -->
+          >.
         </p>
       </div>
     </div>
@@ -80,12 +79,8 @@
 
 <section class="content-wrapper">
   <section class="content-section md:flex-col md:gap-0 md:px-20">
-    <!-- <div class="left-col">
-      <h1>Der Chorleiter</h1>
-    </div> -->
     <h1>Der Chorleiter</h1>
     <section class="relative flex w-full flex-col gap-4 md:flex-row md:gap-8">
-      <!-- TODO: Text austauschen -->
       <p>
         Tobias Christl ist Sänger, Songwriter und erfahrener Gesangspädagoge mit Wurzeln in Jazz, Pop und improvisierter
         Musik. Seine musikalische Laufbahn führte ihn u. a. nach New York, Köln und Weimar, wo er Jazz/Pop-Gesang
