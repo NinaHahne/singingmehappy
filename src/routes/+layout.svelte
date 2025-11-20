@@ -95,11 +95,29 @@
 
 <svelte:head>
   <title>Singing Me Happy - Jazzchor Berlin</title>
-  <meta property="og:title" content="Singing me Happy - Jazzchor Berlin" />
-  <meta property="og:type" content="website" />
+
+  <!-- Primary Meta -->
   <meta name="description" content="Singing me Happy - Jazzchor Berlin" />
+  <link rel="canonical" href="https://singingmehappy.de/" />
   <link rel="icon" type="image/png" href="/favicon.png" />
-  <!-- TODO: ergänzen -->
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Singing Me Happy – Jazzchor Berlin" />
+  <meta property="og:description" content="Singing Me Happy – Jazzchor aus Berlin." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://singingmehappy.de/" />
+  <meta property="og:site_name" content="Singing Me Happy" />
+  <meta property="og:image" content="/images/social-preview.jpg" />
+  <meta property="og:locale" content="de_DE" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Singing Me Happy – Jazzchor Berlin" />
+  <meta name="twitter:description" content="Singing Me Happy – Der Jazzchor aus Berlin." />
+  <meta name="twitter:image" content="/images/social-preview.jpg" />
+
+  <!-- Browser / Theme -->
+  <meta name="theme-color" content="#000000" />
 </svelte:head>
 
 <div

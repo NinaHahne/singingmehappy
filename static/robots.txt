@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Noch unfertige Bereiche blockieren
+Disallow: /bildergalerie/
+
+Sitemap: https://singingmehappy.de/sitemap.xml
