@@ -13,7 +13,7 @@
       <div class="mb-4 text-3xl font-normal md:mb-6 lg:mb-8">
         <hr class="border-t border-black/50 md:mt-[0.7lh]" />
       </div>
-      <div class="flex flex-col gap-8 md:flex-row md:items-start md:gap-16">
+      <div class="flex flex-col gap-4 md:flex-row md:items-start md:gap-16">
         <!-- Linke Spalte -->
         <div class="flex-1 space-y-4">
           <h4>„Singing me happy“ e.V.</h4>
