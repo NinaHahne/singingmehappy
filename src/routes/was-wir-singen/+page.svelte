@@ -7,12 +7,12 @@
   const pressItems = [
     {
       title: 'Deutschlandfunk — Kultur',
-      url: 'https://www.deutschlandfunkkultur.de/...html',
+      url: 'https://www.deutschlandfunkkultur.de/singing-me-happy-der-chor-zum-glueck-100.html',
       date: '01',
     },
     {
       title: 'Chorverband',
-      url: 'http://www.chorverband-berlin.de/',
+      url: 'http://www.chorverband-berlin.de',
       date: '02',
     },
   ];
