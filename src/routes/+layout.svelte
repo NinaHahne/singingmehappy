@@ -42,8 +42,8 @@
       { title: 'Über Uns', url: '/ueber-uns' },
       { title: 'Was wir singen', url: '/was-wir-singen' },
       { title: 'Bildergalerie', url: '/bildergalerie' },
-      { title: 'Konzerte', url: '/konzerte' },
       { title: 'Aktuelles', url: '/aktuelles' },
+      { title: 'Konzerte', url: '/konzerte' },
       { title: 'Kontakt', url: '/kontakt' },
     ],
     footerLinks: [
