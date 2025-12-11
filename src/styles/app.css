@@ -63,6 +63,10 @@ body:has(.show-menu) .menu > div > div {
     @apply text-2xl font-light leading-snug md:text-3xl md:leading-snug;
   }
 
+  aside {
+    @apply text-xl font-light leading-snug md:text-2xl md:leading-snug;
+  }
+
   p,
   a {
     @apply text-lg font-extralight leading-normal md:text-xl xl:text-2xl;
