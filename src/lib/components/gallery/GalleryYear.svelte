@@ -12,7 +12,7 @@
 
 <section id={`y_${year}`} class="year relative flex flex-col lg:flex-row lg:gap-8" class:!pt-0={isFirstYear}>
   <div
-    class="menu-shadow sticky top-20 mb-20 flex w-full flex-shrink-0 justify-end self-start text-7xl leading-none lg:top-[calc(50dvh-0.5em)] lg:mb-0 lg:w-auto lg:justify-start lg:pr-3 lg:text-[200px]"
+    class="menu-shadow sticky top-20 mb-20 flex w-full flex-shrink-0 justify-end self-start text-7xl leading-none lg:top-[calc(50dvh-0.5em)] lg:my-[35px] lg:w-auto lg:justify-start lg:pr-3 lg:text-[140px] xl:text-[180px]"
   >
     <span class="block w-[1em] lg:translate-x-3">{year}</span>
   </div>
