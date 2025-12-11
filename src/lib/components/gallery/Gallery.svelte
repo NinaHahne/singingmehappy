@@ -26,6 +26,6 @@
 
 <style>
   .content-section {
-    @apply gap-0 pt-0 md:flex-col md:pt-20 lg:flex-row;
+    @apply gap-0 pt-0 md:flex-col md:pt-0 lg:flex-row;
   }
 </style>
