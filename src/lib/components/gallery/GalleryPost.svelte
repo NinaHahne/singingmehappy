@@ -19,8 +19,8 @@
   {#if post.title}
     <h3 class="">{post.title}</h3>
   {/if}
-  <section class={`${basePostClass} ${post.postClass ?? ''}`} class:!border-0={isLastYear}>
-    <aside class={`${baseAsideClass} ${post.asideClass ?? 'lg:justify-end'}`}>
+  <section class={`${basePostClass} ${post.postClass ?? ''}`}>
+    <aside class={`${baseAsideClass} ${post.asideClass ?? 'lg:justify-center'}`}>
       {#if post.description}
         <p>{post.description}</p>
       {/if}

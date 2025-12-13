@@ -67,7 +67,7 @@ export const galleryData: GalleryYear[] = [
         id: 'auftritt-neukoellner-hoefe-2024',
         // title: 'Auftritt Neuköllner Höfe',
         description: 'Auftritt Neuköllner Höfe',
-        asideClass: 'lg:max-w-40 lg:justify-start',
+        asideClass: 'lg:max-w-40 lg:justify-start', // Beschreibung schmaler und oben
         items: [
           {
             id: 'auftritt-01',
@@ -88,6 +88,41 @@ export const galleryData: GalleryYear[] = [
             image: '/images/gallery/2024_03_a.jpg',
             alt: 'Wehende Verbeugung',
             caption: 'Wehende Verbeugung',
+            imageClass: 'lg:max-w-lg',
+          },
+        ],
+      },
+      {
+        id: 'fotosession-mit-gesang-am-brunnen-2024',
+        // title: 'Fotosession mit Gesang am Brunnen',
+        description: 'Fotosession mit Gesang am Brunnen',
+        asideClass: 'lg:max-w-40 lg:justify-start',
+        items: [
+          {
+            id: 'brunnen-01',
+            image: '/images/gallery/2024_02_b.png',
+            alt: 'Fotosession mit Gesang am Brunnen',
+            imageClass: 'lg:max-w-lg',
+          },
+          {
+            id: 'brunnen-02',
+            image: '/images/gallery/2024_02_a.jpg',
+            alt: 'Petra, Melanie, Irene, Claudia',
+            caption: 'Petra, Melanie, Irene, Claudia',
+            imageClass: 'max-w-[65%] lg:max-w-xs',
+          },
+        ],
+      },
+      {
+        id: 'gute-stimmung-fete-2024',
+        // title: 'Gute Stimmung Fête 2024',
+        description: 'Gute Stimmung Fête 2024',
+        asideClass: 'lg:max-w-40 lg:justify-center', // Beschreibung schmaler
+        items: [
+          {
+            id: 'stimmung-01',
+            image: '/images/gallery/2024_01.jpg',
+            alt: 'Gute Stimmung Fête 2024',
             imageClass: 'lg:max-w-lg',
           },
         ],
@@ -122,6 +157,129 @@ export const galleryData: GalleryYear[] = [
             alt: 'Kuchen',
             imageClass: 'max-w-[50%] lg:max-w-xs',
             // caption: 'Leckerer Kuchen',
+          },
+        ],
+      },
+      {
+        id: 'fete-de-la-musique-2023',
+        // title: 'Fête de la musique',
+        description: 'Fête de la musique',
+        asideClass: 'lg:max-w-40 lg:justify-center', // Beschreibung schmaler
+        items: [
+          {
+            id: 'fete-01',
+            image: '/images/gallery/2023_03.jpg',
+            alt: 'Fête de la musique',
+            imageClass: 'lg:max-w-lg',
+          },
+        ],
+      },
+      {
+        id: 'lange-nacht-der-choere-2023',
+        // title: 'Lange Nacht der Chöre',
+        description: 'Lange Nacht der Chöre',
+        asideClass: 'lg:max-w-40 lg:justify-center', // Beschreibung schmaler
+        items: [
+          {
+            id: 'lange-nacht-01',
+            image: '/images/gallery/2023_02.jpg',
+            alt: 'Lange Nacht der Chöre',
+            imageClass: 'lg:max-w-lg',
+          },
+        ],
+      },
+      {
+        id: 'vorbereitung-weihnachtskonzert-onkel-tom-ladenpassage-2023',
+        // title: 'Vorbereitung Weihnachtskonzert Onkel-Tom Ladenpassage',
+        description: 'Vorbereitung Weihnachtskonzert Onkel-Tom Ladenpassage',
+        asideClass: 'lg:max-w-44 lg:justify-center', // Beschreibung schmaler
+        items: [
+          {
+            id: 'vorbereitung-01',
+            image: '/images/gallery/2023_01.jpg',
+            alt: 'Vorbereitung Weihnachtskonzert Onkel-Tom Ladenpassage',
+            imageClass: 'lg:max-w-lg',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    year: 22,
+    posts: [
+      {
+        id: 'probentag-2022',
+        // title: 'Probentag',
+        description: 'Probentag',
+        asideClass: 'lg:max-w-44 lg:justify-center', // Beschreibung schmaler
+        items: [
+          {
+            id: 'probentag-01',
+            image: '/images/gallery/2022_04.jpg',
+            alt: 'Probentag',
+            imageClass: 'lg:max-w-lg',
+          },
+        ],
+      },
+      {
+        id: 'fotoshooting-dezember-2022',
+        // title: 'Fotoshooting Dezember',
+        description: 'Fotoshooting Dezember',
+        asideClass: 'lg:max-w-40 lg:justify-start', // Beschreibung schmaler und oben
+        items: [
+          {
+            id: 'fotoshooting-01',
+            image: '/images/gallery/2022_03_b.jpg',
+            alt: 'Fotoshooting Dezember',
+            imageClass: 'lg:max-w-lg',
+          },
+          {
+            id: 'fotoshooting-02',
+            image: '/images/gallery/2022_03_a.jpg',
+            alt: 'Fotoshooting Dezember',
+            imageClass: 'max-w-[50%] lg:max-w-xs',
+            itemClass: 'self-start items-start lg:-mt-20',
+          },
+        ],
+      },
+      {
+        id: 'fete-de-la-musique-2022',
+        // title: 'Auftritt Fête de la musique',
+        description: 'Auftritt Fête de la musique',
+        asideClass: 'lg:max-w-44 lg:justify-center', // Beschreibung schmaler
+        items: [
+          {
+            id: 'probentag-01',
+            image: '/images/gallery/2022_02.jpg',
+            alt: 'Auftritt Fête de la musique',
+            imageClass: 'lg:max-w-lg',
+          },
+        ],
+      },
+      {
+        id: 'auftritt-koerner-park-2022',
+        // title: 'Auftritt Körner Park',
+        description: 'Auftritt Körner Park',
+        asideClass: 'lg:max-w-40 lg:justify-start', // Beschreibung schmaler und oben
+        items: [
+          {
+            id: 'auftritt-01',
+            image: '/images/gallery/2022_01_c.jpg',
+            alt: 'Auftritt Körner Park',
+            imageClass: 'lg:max-w-lg',
+          },
+          {
+            id: 'auftritt-02',
+            image: '/images/gallery/2022_01_b.jpg',
+            alt: 'Auftritt Körner Park',
+            imageClass: 'max-w-[65%] lg:max-w-xs',
+          },
+          {
+            id: 'auftritt-03',
+            image: '/images/gallery/2022_01_a.jpg',
+            alt: 'Auftritt Körner Park',
+            imageClass: 'max-w-[65%] lg:max-w-xs',
+            itemClass: 'self-start items-start lg:-mt-24',
           },
         ],
       },
