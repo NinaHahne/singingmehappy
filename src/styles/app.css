@@ -67,6 +67,10 @@ body:has(.show-menu) .menu > div > div {
     @apply text-xl font-light leading-snug md:text-2xl md:leading-snug;
   }
 
+  figcaption {
+    @apply text-base font-light leading-snug md:text-lg md:leading-snug xl:text-xl;
+  }
+
   p,
   a {
     @apply text-lg font-extralight leading-normal md:text-xl xl:text-2xl;

@@ -17,8 +17,8 @@
     <span class="block w-[1em] lg:translate-x-3">{year}</span>
   </div>
 
-  <div class="flex w-full flex-col gap-4 lg:gap-8">
-    {#each posts as post}
+  <div class="flex w-full flex-col">
+    {#each posts as post (post.id)}
       <GalleryPost {post} {isFirstYear} {isLastYear} />
     {/each}
 
