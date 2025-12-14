@@ -114,16 +114,19 @@ body:has(.show-menu) .menu > div > div {
   .left-col {
     @apply md:w-52 md:flex-shrink-0 md:text-right lg:w-64;
   }
+  .left-col-smaller {
+    @apply md:w-48 lg:w-56;
+  }
 }
 
 @layer components {
   /* erster Post: kein Top-Padding */
-  .post:first-of-type {
+  .year:first-of-type .posts-wrapper:first-of-type .post:first-of-type {
     padding-top: 0;
   }
 
   /* letzter Post: kein Border */
-  .post:last-of-type {
+  .year:last-of-type .posts-wrapper:last-of-type .post:last-of-type {
     border-bottom: 0;
   }
 }

@@ -20,8 +20,7 @@
 
   const derivedId = post.id ?? slugify(`${post.title ?? post.description ?? 'post'}-${year}-${index}`);
 
-  const basePostClass =
-    'post flex w-full flex-col gap-4 border-b border-black py-4 lg:flex-row lg:justify-between lg:py-14';
+  const basePostClass = 'flex w-full flex-col gap-4 lg:flex-row lg:justify-between ';
   const baseAsideClass = 'flex flex-col';
   const baseItemsWrapClass = 'flex w-full flex-col gap-4 lg:gap-8';
   const baseItemClass = 'flex flex-col';
@@ -29,7 +28,7 @@
   const baseCaptionClass = 'mt-2';
 </script>
 
-<section id={derivedId}>
+<section id={derivedId} class="post border-b border-black py-4 lg:py-14">
   {#if post.title}
     <h3 class="">{post.title}</h3>
   {/if}

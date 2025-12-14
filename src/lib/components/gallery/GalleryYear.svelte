@@ -10,12 +10,12 @@
 
 <section id={`y_${year}`} class="year relative flex flex-col lg:flex-row lg:gap-8" class:!pt-0={isFirstYear}>
   <div
-    class="menu-shadow sticky top-20 mb-20 flex w-full flex-shrink-0 justify-end self-start text-7xl leading-none lg:top-[calc(50dvh-0.5em)] lg:my-[35px] lg:w-auto lg:justify-start lg:pr-3 lg:text-[140px] xl:text-[180px]"
+    class="menu-shadow sticky top-20 mb-20 flex w-full flex-shrink-0 justify-end self-start text-6xl leading-none lg:top-[calc(50dvh-0.5em)] lg:my-[35px] lg:w-auto lg:justify-start lg:pr-3 lg:text-[100px] xl:text-[140px]"
   >
     <span class="block w-[1em] lg:translate-x-3">{year}</span>
   </div>
 
-  <div class="flex w-full flex-col">
+  <section class="posts-wrapper flex w-full flex-col">
     {#each posts as post (post.id)}
       <GalleryPost {post} {year} index={posts.indexOf(post)} />
     {/each}
@@ -23,5 +23,5 @@
     {#if isLastYear}
       <div class="mb-[15dvh] md:mb-[26dvh] lg:mb-[calc(50dvh-358px)]"></div>
     {/if}
-  </div>
+  </section>
 </section>

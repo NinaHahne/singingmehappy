@@ -15,7 +15,7 @@ export type GalleryPostItem = {
 };
 
 export type GalleryPost = {
-  id?: string;
+  id?: string; // id muss eindeutig sein / globally unique
   /**
    * Optional: Überschrift innerhalb des Posts (z.B. "Weihnachtsfeier")
    */
@@ -40,12 +40,101 @@ export type GalleryYear = {
   posts: GalleryPost[];
 };
 
+// non-breaking space: \u00A0
+// soft hyphen: \u00AD
+// non-breaking hyphen: \u2011
+
 export const galleryData: GalleryYear[] = [
+  {
+    year: 25,
+    posts: [
+      {
+        id: 'abschied-von-martin-2025',
+        // title: 'Abschied von Martin',
+        description: 'Abschied von Martin',
+        // asideClass: 'lg:max-w-40 lg:justify-center', // Beschreibung schmaler
+        items: [
+          {
+            image: '/images/gallery/2025_09_Sept-25_Abschied_v.Martin.webp',
+            alt: 'Abschied von Martin',
+            imageClass: 'lg:max-w-xl',
+          },
+        ],
+      },
+      {
+        id: '10-jaehriges-jubilaeum-2025',
+        // title: 'Celebration - 10 Jahre Singing me happy',
+        description: 'Celebration - 10\u00A0Jahre Singing\u00A0me\u00A0happy',
+        asideClass: 'lg:max-w-40 lg:justify-start', // Beschreibung schmaler und oben
+        items: [
+          {
+            image: '/images/gallery/2025_05_10-jaehriges_Mai-25_Konzert.webp',
+            alt: 'Celebration - 10 Jahre Singing me happy',
+            imageClass: 'lg:max-w-lg',
+          },
+          {
+            image: '/images/gallery/2025_05_10-jaehriges_Gast_Mando.webp',
+            alt: 'Gast Mando',
+            caption: 'Gast Mando',
+            imageClass: 'lg:max-w-sm',
+            itemClass: 'self-start items-start',
+          },
+          {
+            image: '/images/gallery/2025_05_10-jaehriges_Swingband-Chat-Noir.webp',
+            alt: 'Swingband Chat Noir',
+            caption: 'Swingband Chat Noir',
+            imageClass: 'lg:max-w-sm',
+            itemClass: 'lg:-mt-28 self-end items-end',
+          },
+          {
+            image: '/images/gallery/2025_05_10-jaehriges_Tanzauftritt_1.webp',
+            alt: 'Tanzauftritt',
+            caption: 'Tanzauftritt',
+            // imageClass: 'lg:max-w-sm',
+            itemClass: 'self-start items-start',
+          },
+          {
+            image: '/images/gallery/2025_05_10-jaehriges-Party.webp',
+            alt: 'Tanzparty',
+            caption: 'Tanzparty',
+            // imageClass: 'lg:max-w-sm',
+            itemClass: 'self-end items-end',
+          },
+        ],
+      },
+      {
+        id: 'doppelkonzert-2025',
+        // title: 'Doppelkonzert',
+        description: 'Doppelkonzert',
+        // asideClass: 'lg:max-w-40 lg:justify-center', // Beschreibung schmaler
+        items: [
+          {
+            image: '/images/gallery/2025_04_Doppelkonzert-April-25.webp',
+            alt: 'Doppelkonzert',
+            imageClass: 'lg:max-w-xl',
+          },
+        ],
+      },
+      {
+        id: 'proben-nachsitzung-2025',
+        // title: 'Proben Nachsitzung',
+        description: 'Proben Nachsitzung',
+        // asideClass: 'lg:max-w-40 lg:justify-center', // Beschreibung schmaler
+        items: [
+          {
+            image: '/images/gallery/2025_01_Proben-Nachsitzung_im_Januar_2025.webp',
+            alt: 'Proben Nachsitzung',
+            imageClass: 'lg:max-w-xl',
+          },
+        ],
+      },
+    ],
+  },
   {
     year: 24,
     posts: [
       {
-        id: 'weihnachtsfeier-2024', // id muss eindeutig sein / globally unique
+        id: 'weihnachtsfeier-2024',
         // title: 'Weihnachtsfeier mit Karaoke',
         description: 'Weihnachtsfeier mit Karaoke',
         // postClass: 'lg:py-14',
@@ -56,7 +145,7 @@ export const galleryData: GalleryYear[] = [
             image: '/images/gallery/2024_04.jpg',
             alt: 'Weihnachtsfeier mit Karaoke',
             // caption: 'Wir geben alles!',
-            imageClass: 'lg:max-w-lg',
+            imageClass: 'lg:max-w-xl',
           },
         ],
       },
@@ -95,13 +184,13 @@ export const galleryData: GalleryYear[] = [
           {
             image: '/images/gallery/2024_02_b.png',
             alt: 'Fotosession mit Gesang am Brunnen',
-            imageClass: 'lg:max-w-lg',
+            imageClass: 'lg:max-w-xl',
           },
           {
             image: '/images/gallery/2024_02_a.jpg',
             alt: 'Petra, Melanie, Irene, Claudia',
             caption: 'Petra, Melanie, Irene, Claudia',
-            imageClass: 'max-w-[65%] lg:max-w-xs',
+            imageClass: 'max-w-[65%] lg:max-w-sm',
           },
         ],
       },
@@ -114,7 +203,7 @@ export const galleryData: GalleryYear[] = [
           {
             image: '/images/gallery/2024_01.jpg',
             alt: 'Gute Stimmung Fête 2024',
-            imageClass: 'lg:max-w-lg',
+            imageClass: 'lg:max-w-xl',
           },
         ],
       },
@@ -127,7 +216,7 @@ export const galleryData: GalleryYear[] = [
         id: 'probentag-kuchen-2023',
         // title: 'Probentag mit Kuchen',
         description: 'Probentag mit Kuchen',
-        asideClass: 'lg:max-w-40 lg:justify-center',
+        asideClass: 'lg:max-w-40 lg:justify-start',
         items: [
           {
             image: '/images/gallery/2023_04_c.jpg',
@@ -157,7 +246,7 @@ export const galleryData: GalleryYear[] = [
           {
             image: '/images/gallery/2023_03.jpg',
             alt: 'Fête de la musique',
-            imageClass: 'lg:max-w-lg',
+            imageClass: 'lg:max-w-xl',
           },
         ],
       },
@@ -170,7 +259,7 @@ export const galleryData: GalleryYear[] = [
           {
             image: '/images/gallery/2023_02.jpg',
             alt: 'Lange Nacht der Chöre',
-            imageClass: 'lg:max-w-lg',
+            imageClass: 'lg:max-w-xl',
           },
         ],
       },
@@ -183,7 +272,7 @@ export const galleryData: GalleryYear[] = [
           {
             image: '/images/gallery/2023_01.jpg',
             alt: 'Vorbereitung Weihnachtskonzert Onkel-Tom Ladenpassage',
-            imageClass: 'lg:max-w-lg',
+            imageClass: 'lg:max-w-xl',
           },
         ],
       },
@@ -201,7 +290,7 @@ export const galleryData: GalleryYear[] = [
           {
             image: '/images/gallery/2022_04.jpg',
             alt: 'Probentag',
-            imageClass: 'lg:max-w-lg',
+            imageClass: 'lg:max-w-xl',
           },
         ],
       },
@@ -215,12 +304,13 @@ export const galleryData: GalleryYear[] = [
             image: '/images/gallery/2022_03_b.jpg',
             alt: 'Fotoshooting Dezember',
             imageClass: 'lg:max-w-lg',
+            itemClass: 'self-start items-start',
           },
           {
             image: '/images/gallery/2022_03_a.jpg',
             alt: 'Fotoshooting Dezember',
-            imageClass: 'max-w-[50%] lg:max-w-xs',
-            itemClass: 'self-start items-start lg:-mt-20',
+            imageClass: 'max-w-[50%] lg:max-w-sm',
+            itemClass: 'lg:-mt-20',
           },
         ],
       },
@@ -233,7 +323,7 @@ export const galleryData: GalleryYear[] = [
           {
             image: '/images/gallery/2022_02.jpg',
             alt: 'Auftritt Fête de la musique',
-            imageClass: 'lg:max-w-lg',
+            imageClass: 'lg:max-w-xl',
           },
         ],
       },
@@ -246,7 +336,7 @@ export const galleryData: GalleryYear[] = [
           {
             image: '/images/gallery/2022_01_c.jpg',
             alt: 'Auftritt Körner Park',
-            imageClass: 'lg:max-w-lg',
+            imageClass: 'lg:max-w-xl',
           },
           {
             image: '/images/gallery/2022_01_b.jpg',
