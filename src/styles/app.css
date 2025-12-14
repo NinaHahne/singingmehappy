@@ -115,3 +115,15 @@ body:has(.show-menu) .menu > div > div {
     @apply md:w-52 md:flex-shrink-0 md:text-right lg:w-64;
   }
 }
+
+@layer components {
+  /* erster Post: kein Top-Padding */
+  .post:first-of-type {
+    padding-top: 0;
+  }
+
+  /* letzter Post: kein Border */
+  .post:last-of-type {
+    border-bottom: 0;
+  }
+}

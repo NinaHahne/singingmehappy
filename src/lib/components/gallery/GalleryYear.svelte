@@ -5,8 +5,6 @@
   let { year, posts, isFirstYear, isLastYear } = $props<{
     year: number;
     posts: GalleryPostData[];
-    isFirstYear: boolean;
-    isLastYear: boolean;
   }>();
 </script>
 
@@ -19,7 +17,7 @@
 
   <div class="flex w-full flex-col">
     {#each posts as post (post.id)}
-      <GalleryPost {post} {isFirstYear} {isLastYear} />
+      <GalleryPost {post} {year} index={posts.indexOf(post)} />
     {/each}
 
     {#if isLastYear}

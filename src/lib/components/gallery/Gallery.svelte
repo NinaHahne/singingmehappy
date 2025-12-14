@@ -3,7 +3,7 @@
   import GalleryYear from './GalleryYear.svelte';
 </script>
 
-<section class="gallery content-wrapper">
+<section id="bildergalerie" class="gallery content-wrapper">
   <section class="content-section relative">
     <div
       class="left-col menu-shadow sticky top-20 z-10 -mb-[1lh] mr-[1em] self-end text-right text-7xl leading-none lg:top-[calc(50dvh-0.5em)] lg:my-[35px] lg:mr-0 lg:self-start lg:text-[140px] xl:text-[180px]"
@@ -13,12 +13,7 @@
 
     <div class="year flex w-full flex-col gap-4 lg:gap-0">
       {#each galleryData as yearData, index}
-        <GalleryYear
-          year={yearData.year}
-          posts={yearData.posts}
-          isFirstYear={index === 0}
-          isLastYear={index === galleryData.length - 1}
-        />
+        <GalleryYear year={yearData.year} posts={yearData.posts} />
       {/each}
     </div>
   </section>

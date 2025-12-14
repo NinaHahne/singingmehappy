@@ -1,6 +1,4 @@
 export type GalleryPostItem = {
-  id: string;
-
   image: string;
   alt: string;
 
@@ -17,7 +15,7 @@ export type GalleryPostItem = {
 };
 
 export type GalleryPost = {
-  id: string;
+  id?: string;
   /**
    * Optional: Überschrift innerhalb des Posts (z.B. "Weihnachtsfeier")
    */
@@ -51,11 +49,10 @@ export const galleryData: GalleryYear[] = [
         // title: 'Weihnachtsfeier mit Karaoke',
         description: 'Weihnachtsfeier mit Karaoke',
         // postClass: 'lg:py-14',
-        asideClass: 'lg:max-w-40 lg:justify-end', // Beschreibung schmaler und unten
+        asideClass: 'lg:max-w-40 lg:justify-center', // Beschreibung schmaler
         // itemsWrapClass: 'lg:items-center',
         items: [
           {
-            id: 'karaoke-01',
             image: '/images/gallery/2024_04.jpg',
             alt: 'Weihnachtsfeier mit Karaoke',
             // caption: 'Wir geben alles!',
@@ -70,13 +67,11 @@ export const galleryData: GalleryYear[] = [
         asideClass: 'lg:max-w-40 lg:justify-start', // Beschreibung schmaler und oben
         items: [
           {
-            id: 'auftritt-01',
             image: '/images/gallery/2024_03_c.jpg',
             alt: 'Auftritt Neuköllner Höfe',
             imageClass: 'lg:max-w-lg',
           },
           {
-            id: 'auftritt-02',
             image: '/images/gallery/2024_03_b.jpg',
             alt: 'Nannette, Sarah, Melanie',
             caption: 'Nannette, Sarah, Melanie',
@@ -84,7 +79,6 @@ export const galleryData: GalleryYear[] = [
             itemClass: 'self-start items-start lg:-mt-20',
           },
           {
-            id: 'auftritt-03',
             image: '/images/gallery/2024_03_a.jpg',
             alt: 'Wehende Verbeugung',
             caption: 'Wehende Verbeugung',
@@ -99,13 +93,11 @@ export const galleryData: GalleryYear[] = [
         asideClass: 'lg:max-w-40 lg:justify-start',
         items: [
           {
-            id: 'brunnen-01',
             image: '/images/gallery/2024_02_b.png',
             alt: 'Fotosession mit Gesang am Brunnen',
             imageClass: 'lg:max-w-lg',
           },
           {
-            id: 'brunnen-02',
             image: '/images/gallery/2024_02_a.jpg',
             alt: 'Petra, Melanie, Irene, Claudia',
             caption: 'Petra, Melanie, Irene, Claudia',
@@ -120,7 +112,6 @@ export const galleryData: GalleryYear[] = [
         asideClass: 'lg:max-w-40 lg:justify-center', // Beschreibung schmaler
         items: [
           {
-            id: 'stimmung-01',
             image: '/images/gallery/2024_01.jpg',
             alt: 'Gute Stimmung Fête 2024',
             imageClass: 'lg:max-w-lg',
@@ -139,20 +130,17 @@ export const galleryData: GalleryYear[] = [
         asideClass: 'lg:max-w-40 lg:justify-center',
         items: [
           {
-            id: 'probe-01',
             image: '/images/gallery/2023_04_c.jpg',
             alt: 'Probentag',
             imageClass: 'lg:max-w-lg',
           },
           {
-            id: 'probe-02',
             image: '/images/gallery/2023_04_b.jpg',
             alt: 'Probentag',
             // imageClass: 'lg:max-w-sm',
             itemClass: 'self-start lg:-mt-20',
           },
           {
-            id: 'kuchen-01',
             image: '/images/gallery/2023_04_a.jpg',
             alt: 'Kuchen',
             imageClass: 'max-w-[50%] lg:max-w-xs',
@@ -167,7 +155,6 @@ export const galleryData: GalleryYear[] = [
         asideClass: 'lg:max-w-40 lg:justify-center', // Beschreibung schmaler
         items: [
           {
-            id: 'fete-01',
             image: '/images/gallery/2023_03.jpg',
             alt: 'Fête de la musique',
             imageClass: 'lg:max-w-lg',
@@ -181,7 +168,6 @@ export const galleryData: GalleryYear[] = [
         asideClass: 'lg:max-w-40 lg:justify-center', // Beschreibung schmaler
         items: [
           {
-            id: 'lange-nacht-01',
             image: '/images/gallery/2023_02.jpg',
             alt: 'Lange Nacht der Chöre',
             imageClass: 'lg:max-w-lg',
@@ -195,7 +181,6 @@ export const galleryData: GalleryYear[] = [
         asideClass: 'lg:max-w-44 lg:justify-center', // Beschreibung schmaler
         items: [
           {
-            id: 'vorbereitung-01',
             image: '/images/gallery/2023_01.jpg',
             alt: 'Vorbereitung Weihnachtskonzert Onkel-Tom Ladenpassage',
             imageClass: 'lg:max-w-lg',
@@ -214,7 +199,6 @@ export const galleryData: GalleryYear[] = [
         asideClass: 'lg:max-w-44 lg:justify-center', // Beschreibung schmaler
         items: [
           {
-            id: 'probentag-01',
             image: '/images/gallery/2022_04.jpg',
             alt: 'Probentag',
             imageClass: 'lg:max-w-lg',
@@ -228,13 +212,11 @@ export const galleryData: GalleryYear[] = [
         asideClass: 'lg:max-w-40 lg:justify-start', // Beschreibung schmaler und oben
         items: [
           {
-            id: 'fotoshooting-01',
             image: '/images/gallery/2022_03_b.jpg',
             alt: 'Fotoshooting Dezember',
             imageClass: 'lg:max-w-lg',
           },
           {
-            id: 'fotoshooting-02',
             image: '/images/gallery/2022_03_a.jpg',
             alt: 'Fotoshooting Dezember',
             imageClass: 'max-w-[50%] lg:max-w-xs',
@@ -249,7 +231,6 @@ export const galleryData: GalleryYear[] = [
         asideClass: 'lg:max-w-44 lg:justify-center', // Beschreibung schmaler
         items: [
           {
-            id: 'probentag-01',
             image: '/images/gallery/2022_02.jpg',
             alt: 'Auftritt Fête de la musique',
             imageClass: 'lg:max-w-lg',
@@ -263,19 +244,16 @@ export const galleryData: GalleryYear[] = [
         asideClass: 'lg:max-w-40 lg:justify-start', // Beschreibung schmaler und oben
         items: [
           {
-            id: 'auftritt-01',
             image: '/images/gallery/2022_01_c.jpg',
             alt: 'Auftritt Körner Park',
             imageClass: 'lg:max-w-lg',
           },
           {
-            id: 'auftritt-02',
             image: '/images/gallery/2022_01_b.jpg',
             alt: 'Auftritt Körner Park',
             imageClass: 'max-w-[65%] lg:max-w-xs',
           },
           {
-            id: 'auftritt-03',
             image: '/images/gallery/2022_01_a.jpg',
             alt: 'Auftritt Körner Park',
             imageClass: 'max-w-[65%] lg:max-w-xs',
