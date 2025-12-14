@@ -115,7 +115,7 @@ body:has(.show-menu) .menu > div > div {
     @apply md:w-52 md:flex-shrink-0 md:text-right lg:w-64;
   }
   .left-col-smaller {
-    @apply md:w-48 lg:w-56;
+    @apply md:w-44 lg:w-44;
   }
   h3.bigger-text,
   p.bigger-text,

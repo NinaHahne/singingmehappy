@@ -10,9 +10,9 @@
 
 <section id={`y_${year}`} class="year relative flex flex-col lg:flex-row lg:gap-8" class:!pt-0={isFirstYear}>
   <div
-    class="menu-shadow sticky top-20 mb-20 flex w-full flex-shrink-0 justify-end self-start text-6xl leading-none lg:top-[calc(50dvh-0.5em)] lg:my-[35px] lg:w-auto lg:justify-start lg:pr-3 lg:text-[100px] xl:text-[140px]"
+    class="menu-shadow sticky top-20 mb-20 flex w-full flex-shrink-0 justify-end self-start text-6xl leading-none lg:top-[calc(50dvh-0.5em)] lg:my-[35px] lg:w-auto lg:justify-start lg:pr-3 lg:text-[100px] xl:text-[120px]"
   >
-    <span class="block w-[1em] lg:translate-x-3">{year}</span>
+    <span class="block w-[1em] lg:translate-x-[0.05em]">{year}</span>
   </div>
 
   <section class="posts-wrapper flex w-full flex-col">
