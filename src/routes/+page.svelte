@@ -37,7 +37,7 @@
   </div>
 </section>
 
-<section class="relative bg-black pt-4">
+<!-- <section class="relative bg-black pt-4">
   <img
     src={heroImages[0].src}
     alt="Jazzchor Gruppe bewegt sich vor einer Fensterwand"
@@ -51,13 +51,18 @@
       Uns bewegt <span>Ja</span><span>z</span><span>z</span>
     </p>
   </div>
-</section>
+</section> -->
 
-<section class="relative bg-black pt-4">
+<section class="relative bg-black">
+  <div class="pointer-events-none py-8">
+    <p id="uns-bewegt-jazz" class="bigger-text pointer-events-auto text-center font-light leading-tight text-white">
+      Uns bewegt <span>Ja</span><span>z</span><span>z</span>
+    </p>
+  </div>
   <img src="/images/home/decke.jpg" alt="Decke" class="block w-full object-contain" />
   <div class="pointer-events-none absolute inset-0 [container-type:size]">
     <p
-      class="pointer-events-auto absolute left-1/2 top-[23.5cqw] ml-[17cqw] -translate-x-1/2 whitespace-nowrap text-[2.4cqw] font-normal leading-tight"
+      class="pointer-events-auto absolute bottom-[23.5cqw] left-1/2 ml-[17cqw] -translate-x-1/2 whitespace-nowrap text-[2.4cqw] font-normal leading-tight"
     >
       Wenn es um den gemeinsamen Klang unserer Stimmen geht...
     </p>
@@ -104,8 +109,8 @@
   #uns-bewegt-jazz span {
     position: relative;
     display: inline-block;
-    font-size: 5cqw;
-    font-weight: 300;
+    font-size: 2em;
+    /* font-weight: 300; */
   }
   #uns-bewegt-jazz span:nth-child(1) {
     left: 0.05em;
