@@ -117,6 +117,11 @@ body:has(.show-menu) .menu > div > div {
   .left-col-smaller {
     @apply md:w-48 lg:w-56;
   }
+  h3.bigger-text,
+  p.bigger-text,
+  a.bigger-text {
+    @apply text-xl md:text-2xl xl:text-3xl;
+  }
 }
 
 @layer components {

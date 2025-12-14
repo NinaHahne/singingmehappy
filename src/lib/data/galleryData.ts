@@ -353,4 +353,112 @@ export const galleryData: GalleryYear[] = [
       },
     ],
   },
+  {
+    year: 21,
+    posts: [
+      {
+        id: 'konzert-gendarmenmarkt-2021',
+        // title: 'Konzert Gendarmenmarkt',
+        description: 'Konzert Gendarmenmarkt',
+        asideClass: 'lg:max-w-40 lg:justify-start',
+        items: [
+          {
+            image: '/images/gallery/2021_05_c.webp',
+            alt: 'Konzert Gendarmenmarkt',
+            imageClass: 'lg:max-w-lg',
+          },
+          {
+            image: '/images/gallery/2021_05_b.webp',
+            alt: 'Konzert Gendarmenmarkt',
+            // imageClass: 'lg:max-w-sm',
+            itemClass: 'self-start lg:-mt-20',
+          },
+          {
+            image: '/images/gallery/2021_05_a.webp',
+            alt: 'Glühwein nach dem Konzert',
+            imageClass: 'max-w-[50%] lg:max-w-xs',
+            caption: 'Glühwein nach dem Konzert',
+          },
+        ],
+      },
+      {
+        id: 'weihnachtsfeier-am-kiosk-2021',
+        // title: 'Weihnachtsfeier am "Kiosk"',
+        description: 'Weihnachtsfeier am "Kiosk',
+        asideClass: 'lg:max-w-40 lg:justify-end', // Beschreibung schmaler und unten
+        items: [
+          {
+            image: '/images/gallery/2021_04_b.jpg',
+            alt: 'Weihnachtsfeier am "Kiosk',
+            imageClass: 'lg:max-w-lg',
+            itemClass: 'self-start items-start',
+          },
+          {
+            image: '/images/gallery/2021_04_a.jpg',
+            alt: 'Weihnachtsfeier am "Kiosk',
+            imageClass: 'max-w-[50%] lg:max-w-sm',
+            itemClass: 'lg:-mt-28',
+          },
+        ],
+      },
+      {
+        id: 'auftritt-jagdschloss-grunewald-2021',
+        // title: 'Auftritt Jagdschloß Grunewald',
+        description: 'Auftritt Jagdschloß Grunewald',
+        asideClass: 'lg:max-w-40 lg:justify-start', // Beschreibung schmaler und oben
+        items: [
+          {
+            image: '/images/gallery/2021_03_b.jpg',
+            alt: 'Auftritt Jagdschloß Grunewald',
+            imageClass: 'lg:max-w-sm',
+          },
+          {
+            image: '/images/gallery/2021_03_a.jpg',
+            alt: 'Plakat zum Auftritt',
+            caption: 'Plakat zum Auftritt',
+            imageClass: 'lg:max-w-xs',
+            itemClass: 'self-start items-start lg:-mt-40',
+          },
+        ],
+      },
+      {
+        id: 'auftritt-eroeffnung-chorzentrum-2021',
+        // title: 'Auftritt Eröffnung Chorzentrum',
+        description: 'Auftritt Eröffnung Chorzentrum',
+        asideClass: 'lg:max-w-40 lg:justify-start', // Beschreibung schmaler und oben
+        items: [
+          {
+            image: '/images/gallery/2021_02_c.jpg',
+            alt: 'Einsingen an der Straße vor Chorzentrumseröffnung',
+            caption: 'Einsingen an der Straße vor Chorzentrumseröffnung',
+            // imageClass: 'lg:max-w-lg',
+          },
+          {
+            image: '/images/gallery/2021_02_b.jpg',
+            alt: 'Auftritt Eröffnung Chorzentrum',
+            imageClass: 'max-w-[65%] lg:max-w-xs z-10',
+          },
+          {
+            image: '/images/gallery/2021_02_a.jpg',
+            alt: 'Auftritt Eröffnung Chorzentrum',
+            imageClass: 'lg:max-w-lg',
+            itemClass: 'self-start items-start lg:-mt-32',
+          },
+        ],
+      },
+      {
+        id: 'perspektivgespraech-2021',
+        // title: 'Zufrieden nach dem Perspektivgespräch',
+        description: 'Zufrieden nach dem Perspektivgespräch',
+        // asideClass: 'lg:max-w-44 lg:justify-center', // Beschreibung schmaler
+        items: [
+          {
+            image: '/images/gallery/2021_01.jpg',
+            alt: 'Zufrieden nach dem Perspektivgespräch',
+            imageClass: 'lg:max-w-xl',
+          },
+        ],
+      },
+    ],
+  },
 ];
