@@ -22,9 +22,13 @@
 
 <HeaderAbsolute showAbsoluteLogoLink={true} />
 
-<section class="relative mt-20 w-full md:mt-auto">
+<section class="relative flex h-dvh w-full flex-col justify-around py-20 md:mt-auto lg:block lg:h-auto lg:pb-0">
+  <h2 class="mb-0 py-8 text-center lg:hidden">Musik bewegt</h2>
+  <p class="sr-only">Willkommen beim Jazzchor Singing me happy</p>
+  <p class="sr-only">Animierter Slider mit Bildern des Jazzchors Singing me happy</p>
   <HeroSlider images={heroImages} interval={4500} firstInterval={1000} />
-  <div class="pointer-events-none absolute inset-0 [container-type:size]">
+  <h2 class="mb-0 py-8 text-center lg:hidden">innen und außen</h2>
+  <div class="pointer-events-none absolute inset-0 hidden [container-type:size] lg:block">
     <p
       class="pointer-events-auto absolute left-1/2 top-[17%] -ml-[5.8cqw] -translate-x-1/2 text-center text-[2.8cqw] font-normal"
     >
@@ -53,36 +57,53 @@
   </div>
 </section> -->
 
+<section class="flex h-[100px] w-full items-center justify-center bg-black">
+  <p id="uns-bewegt-jazz" class="text-center text-2xl font-light text-white md:text-2xl xl:text-3xl">
+    Uns bewegt <span>Ja</span><span>z</span><span>z</span>
+  </p>
+</section>
+
 <section class="relative bg-black">
-  <div class="pointer-events-none py-8">
-    <p id="uns-bewegt-jazz" class="bigger-text pointer-events-auto text-center font-light leading-tight text-white">
-      Uns bewegt <span>Ja</span><span>z</span><span>z</span>
-    </p>
-  </div>
-  <img src="/images/home/decke.jpg" alt="Decke" class="block w-full object-contain" />
-  <div class="pointer-events-none absolute inset-0 [container-type:size]">
+  <img
+    src="/images/home/decke.jpg"
+    alt="Decke"
+    class="block aspect-[5/3] w-full object-cover lg:aspect-auto lg:object-contain"
+  />
+  <div
+    class="absolute inset-0 flex items-center justify-center lg:pointer-events-none lg:block lg:[container-type:size]"
+  >
     <p
-      class="pointer-events-auto absolute bottom-[23.5cqw] left-1/2 ml-[17cqw] -translate-x-1/2 whitespace-nowrap text-[2.4cqw] font-normal leading-tight"
+      class="menu-shadow px-4 text-center text-2xl font-normal lg:pointer-events-auto lg:absolute lg:bottom-[23.5cqw] lg:left-1/2 lg:ml-[17cqw] lg:-translate-x-1/2 lg:whitespace-nowrap lg:px-0 lg:text-[2.4cqw] lg:leading-tight"
     >
       Wenn es um den gemeinsamen Klang unserer Stimmen geht...
     </p>
   </div>
 </section>
 
-<section class="relative bg-black pt-4">
+<section class="flex h-[100px] w-full items-center justify-center bg-black lg:hidden">
+  <p class="text-center text-2xl font-light text-white md:text-2xl xl:text-3xl">
+    ...stecken wir alle<br />unter einer Decke
+  </p>
+</section>
+
+<section class="relative bg-black lg:pt-4">
   <img
     src="/images/home/unter-einer-decke.jpg"
     alt="Jazzchor Gruppe steht zusammen unter einer Decke"
     class="block w-full object-contain"
   />
-  <div class="pointer-events-none absolute inset-0 [container-type:size]">
+  <div class="pointer-events-none absolute inset-0 hidden [container-type:size] lg:block">
     <p
-      class="pointer-events-auto absolute left-[4.5cqw] top-[17.5cqw] whitespace-nowrap text-[2.4cqw] font-normal leading-tight"
+      class="menu-shadow pointer-events-auto absolute left-[4.5cqw] top-[17.5cqw] whitespace-nowrap text-[2.4cqw] font-normal leading-tight"
     >
       ...stecken wir alle <br /> unter einer Decke
     </p>
   </div>
 </section>
+
+<!-- <section class="flex h-[100px] w-full items-center justify-center lg:hidden">
+  <p class="text-center text-2xl font-light md:text-2xl xl:text-3xl">unter einer Decke</p>
+</section> -->
 
 <!-- <section class="relative flex flex-col items-center gap-4 p-2 py-16 md:whitespace-nowrap">
   <div class="flex flex-col gap-2 text-4xl md:flex-row">
@@ -109,7 +130,7 @@
   #uns-bewegt-jazz span {
     position: relative;
     display: inline-block;
-    font-size: 2em;
+    font-size: 1.8em;
     /* font-weight: 300; */
   }
   #uns-bewegt-jazz span:nth-child(1) {

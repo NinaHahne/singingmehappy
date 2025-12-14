@@ -85,7 +85,11 @@
 </script>
 
 <!--TODO: add option to pause animation -->
-<div class="relative aspect-[15/9] w-full overflow-hidden" aria-roledescription="Karussell" aria-label="Chor-Fotos">
+<div
+  class="relative aspect-[12/9] w-full overflow-hidden lg:aspect-[15/9]"
+  aria-roledescription="Karussell"
+  aria-label="Chor-Fotos"
+>
   <div class="relative h-full w-full">
     {#if images.length === 0}
       <!-- Fallback, if no images have been configured -->
