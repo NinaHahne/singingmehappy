@@ -461,4 +461,149 @@ export const galleryData: GalleryYear[] = [
       },
     ],
   },
+  {
+    year: 20,
+    posts: [
+      {
+        id: 'probe-franks-herbstgarten-2020',
+        // title: 'Probe Franks Herbstgarten',
+        description: 'Probe Franks Herbstgarten',
+        asideClass: 'lg:max-w-40 lg:justify-start', // Beschreibung schmaler und oben
+        items: [
+          {
+            image: '/images/gallery/2020_06_b.jpg',
+            alt: 'Probe Franks Herbstgarten',
+            imageClass: 'lg:max-w-lg',
+          },
+          {
+            image: '/images/gallery/2020_06_a.jpg',
+            alt: 'Probe Franks Herbstgarten',
+            imageClass: 'max-w-[50%] lg:max-w-xs',
+            itemClass: 'self-start items-start lg:-mt-20',
+          },
+        ],
+      },
+      {
+        id: 'vereinsgruendung-2020',
+        // title: 'Vereinsgründung Dezember 2020 in eisigem Raum',
+        description: 'Vereinsgründung Dezember 2020 in eisigem Raum',
+        asideClass: 'lg:justify-start', // Beschreibung oben
+        items: [
+          {
+            image: '/images/gallery/2020_05_b.jpg',
+            alt: 'Vereinsgründung Dezember 2020 in eisigem Raum',
+            imageClass: 'lg:max-w-sm',
+          },
+          {
+            image: '/images/gallery/2020_05_a.jpg',
+            alt: 'Wunderkerzen nach Vereinsgründung',
+            caption: 'Wunderkerzen nach Vereinsgründung',
+            imageClass: 'max-w-[65%] lg:max-w-sm',
+            itemClass: 'self-start items-start lg:-mt-20',
+          },
+        ],
+      },
+      {
+        id: 'probe-hof-malzfabrik-2020',
+        // title: 'Probe im Hof Malzfabrik',
+        description: 'Probe im Hof Malzfabrik',
+        asideClass: 'lg:justify-start', // Beschreibung oben
+        items: [
+          {
+            image: '/images/gallery/2020_04_b.jpg',
+            alt: 'Probe im Hof Malzfabrik',
+            imageClass: 'lg:max-w-xl',
+          },
+          {
+            image: '/images/gallery/2020_04_a.jpg',
+            alt: 'Wo sind unsere Sängerinnen???',
+            caption: 'Wo sind unsere Sängerinnen???',
+            imageClass: 'max-w-[50%] lg:max-w-xs',
+            itemClass: 'self-start items-start lg:-mt-28',
+          },
+        ],
+      },
+      {
+        id: 'probe-malzfabrik-abstand-2020',
+        // title: 'Probe Malzfabrik',
+        description: 'Probe Malzfabrik',
+        asideClass: 'lg:justify-start', // Beschreibung oben
+        items: [
+          {
+            image: '/images/gallery/2020_03_b.jpg',
+            alt: 'Probe im Hof Malzfabrik',
+            caption: 'Abstand halten!',
+            imageClass: 'max-w-[65%] lg:max-w-sm',
+          },
+          {
+            image: '/images/gallery/2020_03_a.jpg',
+            alt: 'Probe Malzfabrik',
+            imageClass: 'max-w-[65%] lg:max-w-sm',
+            itemClass: 'self-start items-start lg:-mt-28',
+          },
+        ],
+      },
+      {
+        id: 'probe-park-abstandsschild-2020',
+        // title: 'Probe im Park',
+        description: 'Probe als angemeldete Demo im Park mit Abstandsschild',
+        asideClass: 'lg:max-w-40 lg:justify-start', // Beschreibung schmaler und oben
+        items: [
+          {
+            image: '/images/gallery/2020_02_c.jpg',
+            alt: 'Probe im Park',
+            imageClass: 'max-w-[65%] lg:max-w-sm',
+          },
+          {
+            image: '/images/gallery/2020_02_b.jpg',
+            alt: 'Probe im Park',
+            // imageClass: 'max-w-[65%] lg:max-w-sm',
+            itemClass: 'self-start items-start lg:-mt-20',
+          },
+          {
+            image: '/images/gallery/2020_02_a.jpg',
+            alt: 'Konsti & Irene singend im Park',
+            caption: 'Konsti & Irene singend im Park',
+            imageClass: 'max-w-[65%] lg:max-w-sm',
+          },
+        ],
+      },
+      {
+        id: 'probe-im-kita-hof-2020',
+        // title: 'Probe im Kita Hof',
+        description: 'Probe im Kita\u00A0Hof',
+        items: [
+          {
+            image: '/images/gallery/2020_01_b.jpg',
+            alt: 'Probe im Hof Malzfabrik',
+            imageClass: 'lg:max-w-xl',
+          },
+        ],
+      },
+      {
+        id: 'unter-der-bruecke-2020',
+        // title: 'unter der Brücke',
+        description: 'unter der Brücke',
+        items: [
+          {
+            image: '/images/gallery/2020_01_a.jpg',
+            alt: 'unter der Brücke',
+            imageClass: 'lg:max-w-xl',
+          },
+        ],
+      },
+    ],
+  },
+  // {
+  //   year: 2019,
+  //   posts: [
+
+  //   ],
+  // },
+  //   {
+  //   year: 2018,
+  //   posts: [
+
+  //   ],
+  // },
 ];
