@@ -22,7 +22,7 @@
 
 <HeaderAbsolute showAbsoluteLogoLink={true} />
 
-<section class="relative flex h-dvh w-full flex-col justify-around py-20 md:mt-auto lg:block lg:h-auto lg:pb-0">
+<section class="relative flex h-lvh w-full flex-col justify-around py-20 md:mt-auto lg:block lg:h-auto lg:pb-0">
   <h2 class="mb-0 py-8 text-center lg:hidden">Musik bewegt</h2>
   <p class="sr-only">Willkommen beim Jazzchor Singing me happy</p>
   <p class="sr-only">Animierter Slider mit Bildern des Jazzchors Singing me happy</p>
