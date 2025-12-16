@@ -22,10 +22,10 @@
 
   const basePostClass = 'flex w-full flex-col gap-4 lg:flex-row lg:justify-between ';
   const baseAsideClass = 'flex flex-col';
-  const baseItemsWrapClass = 'flex w-full flex-col gap-4 lg:gap-8';
-  const baseItemClass = 'flex flex-col';
+  const baseItemsWrapClass = 'flex w-full gap-4 lg:gap-8';
+  const baseItemClass = 'flex flex-col gap-2';
   const baseImageClass = 'inline-block';
-  const baseCaptionClass = 'mt-2';
+  const baseCaptionClass = 'whitespace-pre-line';
 </script>
 
 <section id={derivedId} class="post border-b border-black py-4 lg:py-14">
@@ -35,10 +35,10 @@
   <section class={`${basePostClass} ${post.postClass ?? ''}`}>
     <aside class={`${baseAsideClass} ${post.asideClass ?? 'lg:justify-center'}`}>
       {#if post.description}
-        <p class="bigger-text">{post.description}</p>
+        <p class="bigger-text whitespace-pre-line">{post.description}</p>
       {/if}
     </aside>
-    <div class={`${baseItemsWrapClass} ${post.itemsWrapClass ?? 'items-end'}`}>
+    <div class={`${baseItemsWrapClass} ${post.itemsWrapClass ?? 'items-end'} ${post.alignItems ?? 'flex-col'}`}>
       {#each post.items as item, i (item.image + i)}
         <figure class={`${baseItemClass} ${item.itemClass ?? 'items-end'}`}>
           <picture class={`${baseImageClass} ${item.imageClass ?? 'max-w-md'}`}>

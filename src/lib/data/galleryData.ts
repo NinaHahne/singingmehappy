@@ -28,6 +28,7 @@ export type GalleryPost = {
 
   /** Mehrere Bilder/Items pro Post */
   items: GalleryPostItem[];
+  alignItems?: string;
 
   /** Styling pro Post */
   postClass?: string;
@@ -43,6 +44,7 @@ export type GalleryYear = {
 // non-breaking space: \u00A0
 // soft hyphen: \u00AD
 // non-breaking hyphen: \u2011
+// new line in description: \n
 
 export const galleryData: GalleryYear[] = [
   {
@@ -164,7 +166,7 @@ export const galleryData: GalleryYear[] = [
             image: '/images/gallery/2024_03_b.jpg',
             alt: 'Nannette, Sarah, Melanie',
             caption: 'Nannette, Sarah, Melanie',
-            imageClass: 'max-w-[50%] lg:max-w-xs',
+            imageClass: 'max-w-[65%] lg:max-w-xs',
             itemClass: 'self-start items-start lg:-mt-20',
           },
           {
@@ -232,7 +234,7 @@ export const galleryData: GalleryYear[] = [
           {
             image: '/images/gallery/2023_04_a.jpg',
             alt: 'Kuchen',
-            imageClass: 'max-w-[50%] lg:max-w-xs',
+            imageClass: 'max-w-[65%] lg:max-w-xs',
             // caption: 'Leckerer Kuchen',
           },
         ],
@@ -309,7 +311,7 @@ export const galleryData: GalleryYear[] = [
           {
             image: '/images/gallery/2022_03_a.jpg',
             alt: 'Fotoshooting Dezember',
-            imageClass: 'max-w-[50%] lg:max-w-sm',
+            imageClass: 'max-w-[65%] lg:max-w-sm',
             itemClass: 'lg:-mt-20',
           },
         ],
@@ -376,7 +378,7 @@ export const galleryData: GalleryYear[] = [
           {
             image: '/images/gallery/2021_05_a.webp',
             alt: 'Glühwein nach dem Konzert',
-            imageClass: 'max-w-[50%] lg:max-w-xs',
+            imageClass: 'max-w-[65%] lg:max-w-xs',
             caption: 'Glühwein nach dem Konzert',
           },
         ],
@@ -396,7 +398,7 @@ export const galleryData: GalleryYear[] = [
           {
             image: '/images/gallery/2021_04_a.jpg',
             alt: 'Weihnachtsfeier am "Kiosk',
-            imageClass: 'max-w-[50%] lg:max-w-sm',
+            imageClass: 'max-w-[65%] lg:max-w-sm',
             itemClass: 'lg:-mt-28',
           },
         ],
@@ -478,7 +480,7 @@ export const galleryData: GalleryYear[] = [
           {
             image: '/images/gallery/2020_06_a.jpg',
             alt: 'Probe Franks Herbstgarten',
-            imageClass: 'max-w-[50%] lg:max-w-xs',
+            imageClass: 'max-w-[65%] lg:max-w-xs',
             itemClass: 'self-start items-start lg:-mt-20',
           },
         ],
@@ -518,7 +520,7 @@ export const galleryData: GalleryYear[] = [
             image: '/images/gallery/2020_04_a.jpg',
             alt: 'Wo sind unsere Sängerinnen???',
             caption: 'Wo sind unsere Sängerinnen???',
-            imageClass: 'max-w-[50%] lg:max-w-xs',
+            imageClass: 'max-w-[65%] lg:max-w-xs',
             itemClass: 'self-start items-start lg:-mt-28',
           },
         ],
@@ -594,14 +596,142 @@ export const galleryData: GalleryYear[] = [
       },
     ],
   },
-  // {
-  //   year: 2019,
-  //   posts: [
-
-  //   ],
-  // },
+  {
+    year: 19,
+    posts: [
+      {
+        id: 'weihnachtsfeier-2019',
+        // title: 'Weihnachtsfeier mit frisch gebackenen Eltern',
+        description: 'Weihnachtsfeier mit frisch gebackenen Eltern',
+        asideClass: 'lg:max-w-52 lg:justify-center',
+        items: [
+          {
+            image: '/images/gallery/2019_07_c.jpg',
+            alt: 'Viele Weihnachtssterne',
+            caption: 'Viele Weihnachtssterne',
+            imageClass: 'max-w-[65%] lg:max-w-xs',
+            itemClass: 'self-start items-start',
+          },
+          {
+            image: '/images/gallery/2019_07_b.jpg',
+            alt: 'Weihnachtsfeier mit frisch gebackenen Eltern',
+            imageClass: 'max-w-[65%] lg:max-w-sm',
+            // itemClass: 'lg:-mt-28',
+          },
+          {
+            image: '/images/gallery/2019_07_a.jpg',
+            alt: 'Peter schenkt selbstgebackene Stolle!',
+            caption: 'Peter schenkt selbstgebackene Stolle!',
+            imageClass: 'max-w-[65%] lg:max-w-xs',
+            itemClass: 'self-start items-start',
+          },
+        ],
+      },
+      {
+        id: 'weihnachtskonzert-im-weinladen-2019',
+        // title: 'Weihnachtskonzert im Weinladen',
+        description: 'Weihnachtskonzert im Weinladen',
+        asideClass: 'lg:max-w-44 lg:justify-center',
+        items: [
+          {
+            image: '/images/gallery/2019_06.jpg',
+            alt: 'Weihnachtskonzert im Weinladen',
+            imageClass: 'lg:max-w-lg',
+            // itemClass: 'self-start items-start',
+          },
+        ],
+      },
+      {
+        id: 'tor-1-zum-glueck-2019',
+        // title: 'TOR 1 ZUM GLÜCK',
+        description: 'TOR 1 ZUM GLÜCK',
+        asideClass: 'lg:justify-start',
+        items: [
+          {
+            image: '/images/gallery/2019_05_b.webp',
+            alt: '...noch Zeit bis zum Konzert!',
+            caption: '...noch Zeit bis zum Konzert!',
+            // imageClass: 'lg:max-w-lg',
+            // itemClass: 'items-end !flex-row-reverse',
+            captionClass: 'lg:max-w-[100px]',
+          },
+          {
+            image: '/images/gallery/2019_05_a.webp',
+            alt: 'Konzert draußen und drinnen',
+            caption: 'Konzert draußen und drinnen',
+            imageClass: 'max-w-[65%] lg:max-w-sm',
+            itemClass: 'self-start items-start lg:-mt-36',
+          },
+        ],
+      },
+      {
+        id: 'probentag-im-sommer-ida-2019',
+        // title: 'Probentag im Sommer -schon mit Ida-',
+        description: 'Probentag im Sommer\n-schon mit Ida-',
+        // asideClass: 'lg:max-w-44 lg:justify-center',
+        items: [
+          {
+            image: '/images/gallery/2019_04.jpg',
+            alt: 'Probentag im Sommer -schon mit Ida-',
+            // imageClass: 'lg:max-w-lg',
+            // itemClass: 'self-start items-start',
+          },
+        ],
+      },
+      {
+        id: 'probentag-im-sommer-2019',
+        // title: 'Probentag im Sommer',
+        description: 'Probentag im Sommer',
+        asideClass: 'lg:justify-start',
+        alignItems: 'flex-col lg:flex-row',
+        items: [
+          {
+            image: '/images/gallery/2019_03_a.jpg',
+            alt: 'Iggi Konsti und Frank',
+            imageClass: 'max-w-[65%] lg:max-w-sm',
+            itemClass: 'lg:mt-36',
+          },
+          {
+            image: '/images/gallery/2019_03_b.jpg',
+            alt: 'Probentag im Sommer',
+            imageClass: 'max-w-[65%] lg:max-w-sm',
+            caption: 'Iggi, Konsti und Frank',
+            itemClass: 'lg:self-start lg:items-start self-end items-end',
+          },
+        ],
+      },
+      {
+        id: 'konzert-landesvertretung-baden-wuerttemberg-2019',
+        // title: 'Konzert Landesvertretung Baden-Württemberg',
+        description: 'Einsingen fürs Konzert Landesvertretung Baden-Württemberg',
+        // asideClass: 'lg:max-w-56 lg:justify-center',
+        items: [
+          {
+            image: '/images/gallery/2019_02.jpg',
+            alt: 'Einsingen fürs Konzert Landesvertretung Baden-Württemberg',
+            imageClass: 'lg:max-w-xl',
+            // itemClass: 'self-start items-start',
+          },
+        ],
+      },
+      {
+        id: 'crelle-chorfest-2019',
+        // title: 'Auftritt beim Crelle- Chorfest',
+        description: 'Auftritt beim Crelle- Chorfest',
+        asideClass: 'lg:justify-center',
+        items: [
+          {
+            image: '/images/gallery/2019_01.webp',
+            alt: 'Auftritt beim Crelle- Chorfest',
+            imageClass: 'max-w-[65%] lg:max-w-xs',
+            itemClass: 'self-center items-center',
+          },
+        ],
+      },
+    ],
+  },
   //   {
-  //   year: 2018,
+  //   year: 18,
   //   posts: [
 
   //   ],
