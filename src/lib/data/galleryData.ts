@@ -730,10 +730,69 @@ export const galleryData: GalleryYear[] = [
       },
     ],
   },
-  //   {
-  //   year: 18,
-  //   posts: [
-
-  //   ],
-  // },
+  {
+    year: 18,
+    posts: [
+      {
+        id: 'chorfahrt-2018',
+        // title: 'Chorfahrt mit zwei fleißigen Probentagen',
+        description: 'Chorfahrt mit zwei fleißigen Probentagen',
+        asideClass: 'lg:max-w-40 lg:justify-start',
+        items: [
+          {
+            image: '/images/gallery/2018_02_c.jpg',
+            alt: 'Chorfahrt mit zwei fleißigen Probentagen',
+            // imageClass: 'max-w-[65%] lg:max-w-sm',
+          },
+          {
+            image: '/images/gallery/2018_02_b.jpg',
+            alt: 'Chorfahrt mit zwei fleißigen Probentagen',
+            imageClass: 'max-w-[65%] lg:max-w-sm',
+            itemClass: 'self-start items-start lg:-mt-20 z-10',
+          },
+          {
+            image: '/images/gallery/2018_02_a.jpg',
+            alt: 'Wir mochten Schwanenwerder sehr!',
+            caption: 'Wir mochten Schwanenwerder sehr!',
+            imageClass: 'max-w-[65%] lg:max-w-xs',
+            itemClass: 'lg:-mt-20',
+          },
+        ],
+      },
+      {
+        id: 'erstes-konzert-2018',
+        // title: '1. Konzert mit Martin im Weinladen',
+        description: '1. Konzert mit Martin\nim Weinladen',
+        asideClass: 'lg:justify-start flex-shrink-0',
+        items: [
+          {
+            image: '/images/gallery/2018_01_d.jpg',
+            alt: 'Mut antrinken vor dem ersten Konzert',
+            caption: 'Mut antrinken vor dem ersten Konzert',
+            imageClass: 'max-w-[65%] lg:max-w-xs',
+          },
+          {
+            image: '/images/gallery/2018_01_c.jpg',
+            alt: '1. Konzert mit Martin im Weinladen',
+            imageClass: 'lg:max-w-lg',
+            itemClass: 'self-start items-start',
+          },
+          {
+            image: '/images/gallery/2018_01_b.jpg',
+            alt: 'Buffet nach gelungenem Auftritt',
+            caption: 'Buffet nach gelungenem Auftritt',
+            imageClass: 'max-w-[65%] lg:max-w-sm',
+            itemClass: 'lg:-mt-20',
+          },
+          {
+            image: '/images/gallery/2018_01_a.jpg',
+            alt: 'Wir freuen uns und stoßen an!',
+            caption: 'Wir freuen uns und stoßen an!',
+            // imageClass: 'max-w-[65%] lg:max-w-sm',
+            itemClass: 'self-start items-start',
+          },
+        ],
+      },
+    ],
+  },
 ];
