@@ -30,7 +30,7 @@
 
 <section id={derivedId} class="post border-b border-black py-4 lg:py-14">
   {#if post.title}
-    <h3 class="bigger-text mb-4 lg:mb-8">{post.title}</h3>
+    <h3 class="bigger-text mb-4 lg:mb-8 lg:whitespace-pre-line">{post.title}</h3>
   {/if}
   <section class={`${basePostClass} ${post.postClass ?? ''}`}>
     <aside class={`${baseAsideClass} ${post.asideClass ?? 'lg:justify-center'}`}>

@@ -52,32 +52,34 @@ export const galleryData: GalleryYear[] = [
     posts: [
       {
         id: 'abschied-von-martin-2025',
-        // title: 'Abschied von Martin',
-        description: 'Abschied von Martin',
-        // asideClass: 'lg:max-w-40 lg:justify-center', // Beschreibung schmaler
+        title: 'Abschied von Martin',
+        description:
+          'Tränen und Trennungsschmerz\n\n Vor dem Auseinandergehen ein Hauch von freudiger Aufbruchstimmung und der Geschmack von Neubeginn',
+        asideClass: 'lg:max-w-48 lg:justify-center', // Beschreibung schmaler
         items: [
           {
             image: '/images/gallery/2025_09_Sept-25_Abschied_v.Martin.webp',
             alt: 'Abschied von Martin',
+            // caption: 'Vor dem Auseinandergehen ein Hauch von freudiger Aufbruchstimmung und der Geschmack von Neubegin',
             imageClass: 'lg:max-w-xl',
           },
         ],
       },
       {
         id: '10-jaehriges-jubilaeum-2025',
-        // title: 'Celebration - 10 Jahre Singing me happy',
-        description: 'Celebration - 10\u00A0Jahre Singing\u00A0me\u00A0happy',
-        asideClass: 'lg:max-w-40 lg:justify-start', // Beschreibung schmaler und oben
+        title: 'Unser großer Tag:',
+        description: '10\u00A0Jahre “Singing\u00A0me\u00A0happy“ \nKonzert und Party!',
+        asideClass: 'lg:max-w-44 lg:justify-start', // Beschreibung schmaler und oben
         items: [
           {
             image: '/images/gallery/2025_05_10-jaehriges_Mai-25_Konzert.webp',
             alt: 'Celebration - 10 Jahre Singing me happy',
-            imageClass: 'lg:max-w-lg',
+            imageClass: 'lg:max-w-3xl',
           },
           {
             image: '/images/gallery/2025_05_10-jaehriges_Gast_Mando.webp',
-            alt: 'Gast Mando',
-            caption: 'Gast Mando',
+            alt: 'Gast Beatboxweltmeister Mando',
+            caption: 'Gast Beatboxweltmeister Mando',
             imageClass: 'lg:max-w-sm',
             itemClass: 'self-start items-start',
           },
@@ -90,8 +92,8 @@ export const galleryData: GalleryYear[] = [
           },
           {
             image: '/images/gallery/2025_05_10-jaehriges_Tanzauftritt_1.webp',
-            alt: 'Tanzauftritt',
-            caption: 'Tanzauftritt',
+            alt: 'Tanzauftritt von "Les Belles Magnifiques"',
+            caption: "Tanzauftritt ' Les Belles Magnifiques '",
             // imageClass: 'lg:max-w-sm',
             itemClass: 'self-start items-start',
           },
@@ -106,8 +108,8 @@ export const galleryData: GalleryYear[] = [
       },
       {
         id: 'doppelkonzert-2025',
-        // title: 'Doppelkonzert',
-        description: 'Doppelkonzert',
+        title: 'Doppelkonzert mit\n Neuer Jazzchor Berlin',
+        description: 'Tolles Konzert und schöne Begegnung',
         // asideClass: 'lg:max-w-40 lg:justify-center', // Beschreibung schmaler
         items: [
           {
@@ -119,14 +121,14 @@ export const galleryData: GalleryYear[] = [
       },
       {
         id: 'proben-nachsitzung-2025',
-        // title: 'Proben Nachsitzung',
-        description: 'Proben Nachsitzung',
+        title: 'Proben Nachsitzung',
+        description: 'Endlich wieder in unserer alten Stammkneipe!',
         // asideClass: 'lg:max-w-40 lg:justify-center', // Beschreibung schmaler
         items: [
           {
             image: '/images/gallery/2025_01_Proben-Nachsitzung_im_Januar_2025.webp',
             alt: 'Proben Nachsitzung',
-            imageClass: 'lg:max-w-xl',
+            imageClass: 'lg:max-w-lg',
           },
         ],
       },
@@ -137,8 +139,8 @@ export const galleryData: GalleryYear[] = [
     posts: [
       {
         id: 'weihnachtsfeier-2024',
-        // title: 'Weihnachtsfeier mit Karaoke',
-        description: 'Weihnachtsfeier mit Karaoke',
+        title: 'Weihnachtsfeier mit Karaoke',
+        description: 'Wir waren ziemlich laut !',
         // postClass: 'lg:py-14',
         asideClass: 'lg:max-w-40 lg:justify-center', // Beschreibung schmaler
         // itemsWrapClass: 'lg:items-center',
@@ -179,8 +181,8 @@ export const galleryData: GalleryYear[] = [
       },
       {
         id: 'fotosession-mit-gesang-am-brunnen-2024',
-        // title: 'Fotosession mit Gesang am Brunnen',
-        description: 'Fotosession mit Gesang am Brunnen',
+        title: 'Fotosession mit\nGesang am Brunnen',
+        description: 'Wir erregen Aufmerksamkeit',
         asideClass: 'lg:max-w-40 lg:justify-start',
         items: [
           {
@@ -199,7 +201,7 @@ export const galleryData: GalleryYear[] = [
       {
         id: 'gute-stimmung-fete-2024',
         // title: 'Gute Stimmung Fête 2024',
-        description: 'Gute Stimmung Fête 2024',
+        description: 'Gute Stimmung Fête 2024\nParochialkirche',
         asideClass: 'lg:max-w-40 lg:justify-center', // Beschreibung schmaler
         items: [
           {
@@ -242,7 +244,7 @@ export const galleryData: GalleryYear[] = [
       {
         id: 'fete-de-la-musique-2023',
         // title: 'Fête de la musique',
-        description: 'Fête de la musique',
+        description: 'Fête de la musique\nMagdalenenkirche',
         asideClass: 'lg:max-w-40 lg:justify-center', // Beschreibung schmaler
         items: [
           {
@@ -255,13 +257,13 @@ export const galleryData: GalleryYear[] = [
       {
         id: 'lange-nacht-der-choere-2023',
         // title: 'Lange Nacht der Chöre',
-        description: 'Lange Nacht der Chöre',
+        description: 'Lange Nacht der Chöre\nReformationskirche',
         asideClass: 'lg:max-w-40 lg:justify-center', // Beschreibung schmaler
         items: [
           {
             image: '/images/gallery/2023_02.jpg',
             alt: 'Lange Nacht der Chöre',
-            imageClass: 'lg:max-w-xl',
+            imageClass: 'lg:max-w-lg',
           },
         ],
       },
@@ -360,18 +362,18 @@ export const galleryData: GalleryYear[] = [
     posts: [
       {
         id: 'konzert-gendarmenmarkt-2021',
-        // title: 'Konzert Gendarmenmarkt',
-        description: 'Konzert Gendarmenmarkt',
+        // title: 'Weihnachtskonzert Gendarmenmarkt',
+        description: 'Weihnachtskonzert Gendarmenmarkt',
         asideClass: 'lg:max-w-40 lg:justify-start',
         items: [
           {
             image: '/images/gallery/2021_05_c.webp',
-            alt: 'Konzert Gendarmenmarkt',
+            alt: 'Weihnachtskonzert Gendarmenmarkt',
             imageClass: 'lg:max-w-lg',
           },
           {
             image: '/images/gallery/2021_05_b.webp',
-            alt: 'Konzert Gendarmenmarkt',
+            alt: 'Weihnachtskonzert Gendarmenmarkt',
             // imageClass: 'lg:max-w-sm',
             itemClass: 'self-start lg:-mt-20',
           },
@@ -385,19 +387,19 @@ export const galleryData: GalleryYear[] = [
       },
       {
         id: 'weihnachtsfeier-am-kiosk-2021',
-        // title: 'Weihnachtsfeier am "Kiosk"',
-        description: 'Weihnachtsfeier am "Kiosk',
-        asideClass: 'lg:max-w-40 lg:justify-end', // Beschreibung schmaler und unten
+        // title: 'Weihnachtsfeier am Kiosk',
+        description: 'Corona\u2011angemessen:\nFreiluft-Weihnachtsfeier am "Kiosk',
+        asideClass: 'lg:max-w-48 lg:justify-end', // Beschreibung schmaler und unten
         items: [
           {
             image: '/images/gallery/2021_04_b.jpg',
-            alt: 'Weihnachtsfeier am "Kiosk',
+            alt: 'Weihnachtsfeier am Kiosk',
             imageClass: 'lg:max-w-lg',
             itemClass: 'self-start items-start',
           },
           {
             image: '/images/gallery/2021_04_a.jpg',
-            alt: 'Weihnachtsfeier am "Kiosk',
+            alt: 'Weihnachtsfeier am Kiosk',
             imageClass: 'max-w-[65%] lg:max-w-sm',
             itemClass: 'lg:-mt-28 self-end items-end',
           },
@@ -425,9 +427,9 @@ export const galleryData: GalleryYear[] = [
       },
       {
         id: 'auftritt-eroeffnung-chorzentrum-2021',
-        // title: 'Auftritt Eröffnung Chorzentrum',
-        description: 'Auftritt Eröffnung Chorzentrum',
-        asideClass: 'lg:max-w-40 lg:justify-start', // Beschreibung schmaler und oben
+        // title: 'Auftritt bei der Eröffnung des Neuen Chorzentrums Berlin',
+        description: 'Auftritt bei der Eröffnung des Neuen Chorzentrums Berlin',
+        asideClass: 'lg:max-w-48 lg:justify-start', // Beschreibung schmaler und oben
         items: [
           {
             image: '/images/gallery/2021_02_c.jpg',
@@ -437,12 +439,12 @@ export const galleryData: GalleryYear[] = [
           },
           {
             image: '/images/gallery/2021_02_b.jpg',
-            alt: 'Auftritt Eröffnung Chorzentrum',
+            alt: 'Auftritt bei der Eröffnung des Neuen Chorzentrums Berlin',
             imageClass: 'max-w-[65%] lg:max-w-xs z-10',
           },
           {
             image: '/images/gallery/2021_02_a.jpg',
-            alt: 'Auftritt Eröffnung Chorzentrum',
+            alt: 'Auftritt bei der Eröffnung des Neuen Chorzentrums Berlin',
             imageClass: 'lg:max-w-lg',
             itemClass: 'self-start items-start lg:-mt-32',
           },
@@ -468,18 +470,18 @@ export const galleryData: GalleryYear[] = [
     posts: [
       {
         id: 'probe-franks-herbstgarten-2020',
-        // title: 'Probe Franks Herbstgarten',
-        description: 'Probe Franks Herbstgarten',
+        // title: 'Probe in Franks Herbstgarten',
+        description: 'Probe in Franks Herbstgarten',
         asideClass: 'lg:max-w-40 lg:justify-start', // Beschreibung schmaler und oben
         items: [
           {
             image: '/images/gallery/2020_06_b.jpg',
-            alt: 'Probe Franks Herbstgarten',
+            alt: 'Probe in Franks Herbstgarten',
             imageClass: 'lg:max-w-lg',
           },
           {
             image: '/images/gallery/2020_06_a.jpg',
-            alt: 'Probe Franks Herbstgarten',
+            alt: 'Probe in Franks Herbstgarten',
             imageClass: 'max-w-[65%] lg:max-w-xs',
             itemClass: 'self-start items-start lg:-mt-20',
           },
@@ -487,13 +489,13 @@ export const galleryData: GalleryYear[] = [
       },
       {
         id: 'vereinsgruendung-2020',
-        // title: 'Vereinsgründung Dezember 2020 in eisigem Raum',
-        description: 'Vereinsgründung Dezember 2020 in eisigem Raum',
-        asideClass: 'lg:justify-start', // Beschreibung oben
+        // title: 'Vereinsgründung Dezember 2020 in eisiger Kantine mit geöffneten  Fenstern und Türen',
+        description: 'Vereinsgründung Dezember 2020 in eisiger Kantine mit geöffneten  Fenstern und Türen',
+        asideClass: 'lg:max-w-48 lg:justify-start', // Beschreibung oben
         items: [
           {
             image: '/images/gallery/2020_05_b.jpg',
-            alt: 'Vereinsgründung Dezember 2020 in eisigem Raum',
+            alt: 'Vereinsgründung Dezember 2020 in eisiger Kantine mit geöffneten  Fenstern und Türen',
             imageClass: 'lg:max-w-sm',
           },
           {
@@ -601,20 +603,21 @@ export const galleryData: GalleryYear[] = [
     posts: [
       {
         id: 'weihnachtsfeier-2019',
-        // title: 'Weihnachtsfeier mit frisch gebackenen Eltern',
-        description: 'Weihnachtsfeier mit frisch gebackenen Eltern',
-        asideClass: 'lg:max-w-52 lg:justify-center',
+        // title: 'Weihnachtsfeier',
+        description: 'Weihnachtsfeier',
+        asideClass: 'lg:max-w-52 lg:justify-start',
         items: [
           {
             image: '/images/gallery/2019_07_c.jpg',
             alt: 'Viele Weihnachtssterne',
-            caption: 'Viele Weihnachtssterne',
+            caption: 'mit vielen Weihnachtssternen',
             imageClass: 'max-w-[65%] lg:max-w-xs',
             itemClass: 'self-start items-start',
           },
           {
             image: '/images/gallery/2019_07_b.jpg',
-            alt: 'Weihnachtsfeier mit frisch gebackenen Eltern',
+            alt: 'frisch gebackene Eltern',
+            caption: '... und frisch gebackenen Eltern!',
             imageClass: 'max-w-[65%] lg:max-w-sm',
             // itemClass: 'lg:-mt-28 self-end items-end',
           },
@@ -761,19 +764,19 @@ export const galleryData: GalleryYear[] = [
       },
       {
         id: 'erstes-konzert-2018',
-        // title: '1. Konzert mit Martin im Weinladen',
-        description: '1. Konzert mit Martin\nim Weinladen',
-        asideClass: 'lg:justify-start flex-shrink-0',
+        // title: 'Unser erstes Konzert mit Martin im Weinladen',
+        description: 'Unser erstes Konzert mit Martin\nim Weinladen',
+        asideClass: 'lg:justify-start',
         items: [
           {
             image: '/images/gallery/2018_01_d.jpg',
-            alt: 'Mut antrinken vor dem ersten Konzert',
-            caption: 'Mut antrinken vor dem ersten Konzert',
+            alt: 'Mut antrinken vor dem Konzert',
+            caption: 'Mut antrinken vor dem Konzert',
             imageClass: 'max-w-[65%] lg:max-w-xs',
           },
           {
             image: '/images/gallery/2018_01_c.jpg',
-            alt: '1. Konzert mit Martin im Weinladen',
+            alt: 'Unser erstes Konzert mit Martin im Weinladen',
             imageClass: 'lg:max-w-lg',
             itemClass: 'self-start items-start',
           },
