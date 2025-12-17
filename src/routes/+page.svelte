@@ -35,7 +35,7 @@
       Musik bewegt
     </p>
 
-    <p class="pointer-events-auto absolute bottom-[8%] left-1/2 ml-[9.8cqw] -translate-x-1/2 text-[2.4cqw] font-normal">
+    <p class="pointer-events-auto absolute bottom-[8%] left-1/2 ml-[12cqw] -translate-x-1/2 text-[2.4cqw] font-normal">
       innen und außen
     </p>
   </div>
@@ -57,9 +57,9 @@
   </div>
 </section> -->
 
-<section class="flex h-[100px] w-full items-center justify-center bg-black">
-  <p id="uns-bewegt-jazz" class="text-center text-2xl font-light text-white md:text-2xl xl:text-3xl">
-    Uns bewegt <span>Ja</span><span>z</span><span>z</span>
+<section class="flex h-[100px] w-full items-center justify-center bg-black lg:h-[120px]">
+  <p id="uns-bewegt-jazz" class="text-center text-3xl font-light text-white md:text-3xl xl:text-4xl">
+    <span>Uns</span> <span>bewegt</span> <span>Ja</span><span>z</span><span>z</span>
   </p>
 </section>
 
@@ -130,21 +130,30 @@
   #uns-bewegt-jazz span {
     position: relative;
     display: inline-block;
-    font-size: 1.8em;
-    /* font-weight: 300; */
   }
   #uns-bewegt-jazz span:nth-child(1) {
-    left: 0.05em;
-    top: 0.07em;
+    font-size: 1.3em;
+    margin-right: 0.2em;
   }
   #uns-bewegt-jazz span:nth-child(2) {
+    font-size: 0.8em;
+    margin-right: 0.1em;
+  }
+  #uns-bewegt-jazz span:nth-child(3) {
+    left: 0.05em;
+    top: 0.07em;
+    font-size: 1.8em;
+  }
+  #uns-bewegt-jazz span:nth-child(4) {
     left: 0.04em;
     bottom: 0.15em;
     transform: rotate(-12deg);
+    font-size: 1.8em;
   }
-  #uns-bewegt-jazz span:nth-child(3) {
+  #uns-bewegt-jazz span:nth-child(5) {
     left: 0.06em;
     top: 0.07em;
     transform: rotate(-4deg);
+    font-size: 1.8em;
   }
 </style>

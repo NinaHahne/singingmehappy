@@ -17,7 +17,7 @@
       <div class="space-y-3">
         <h4 class="">1. Verantwortlicher für die Datenverarbeitung</h4>
 
-        <p>Brigitte Asche / „Singing me happy“ e.V.</p>
+        <p>Brigitte Asche / "Singing me happy" e.V.</p>
 
         <div class="space-y-1">
           <p>Adresse:</p>

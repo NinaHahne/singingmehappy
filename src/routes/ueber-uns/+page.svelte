@@ -63,12 +63,17 @@
           Wir proben jeden Donnerstag von 18:30 bis 20:30 Uhr Uhr im IBZ, nahe des Rüdesheimer Platzes in Wilmersdorf. Derzeit
           sind wir offen für Neuzugänge in allen Stimmgruppen, besonders — wie sollte es anders sein — bei den Männern!
           <br /><br />
-          Wir sind Mitglied im <a href="https://www.chorverband-berlin.de/" target="_blank">Chorverband Berlin</a>.
-          <br />
           Ergänzendes über unser Ensemble erfahrt ihr im
           <a href="https://www.deutschlandfunkkultur.de/singing-me-happy-der-chor-zum-glueck-100.html" target="_blank"
             >Deutschlandfunk Kultur-Beitrag</a
           >.
+          <br /><br />
+          Wir sind Mitglied im <a href="https://www.chorverband-berlin.de/" target="_blank">Chorverband Berlin</a>.
+          <img
+            src="/images/CVB_Logo_2018_1c_schwarz-scaled.jpg"
+            alt="Logo Chorverband Berlin"
+            class="ml-4 inline h-16 w-auto"
+          />
         </p>
       </div>
     </div>
@@ -95,8 +100,9 @@
         authentisch und mit Freude zu entfalten – egal ob beim Singen nach Noten, beim Improvisieren oder beim Entdecken
         neuer Klangmöglichkeiten. Was für ihn zählt: Neugier, Klang, Gemeinschaft – und Spaß am Singen.
         <br /><br />
-        Tobias übernahm im November 2025 die Chorleitung von “Singing me happy“. Seine Energie und gute Laune setzt er dazu
-        ein, die große eigene Leidenschaft für Musik zu teilen und den “Funken“ überspringen zu lassen.
+        Nach 7 Jahren erfolgreicher Zusammenarbeit mit Martin Hagen übernahm Tobias im November 2025 die Chorleitung. Seine
+        Energie und gute Laune setzt er dazu ein, die große eigene Leidenschaft für Musik zu teilen und den “Funken“ überspringen
+        zu lassen.
       </p>
       <div
         class="sticky top-20 flex h-auto w-[75%] flex-shrink-0 flex-col items-end self-end md:h-[12lh] md:w-auto md:self-start"

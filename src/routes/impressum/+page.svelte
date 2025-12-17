@@ -16,7 +16,7 @@
       <div class="flex flex-col gap-4 md:flex-row md:items-start md:gap-16">
         <!-- Linke Spalte -->
         <div class="flex-1 space-y-4">
-          <h4>„Singing me happy“ e.V.</h4>
+          <h4>"Singing me happy" e.V.</h4>
 
           <div class="space-y-1">
             <p>c/o Brigitte Asche</p>
@@ -73,7 +73,7 @@
             <p>Ali Ghandschi,</p>
             <p>Werner Scholz</p>
             <p>und Mitglieder von</p>
-            <p>„Singing me happy“</p>
+            <p>"Singing me happy"</p>
           </div>
         </div>
       </div>
