@@ -35,12 +35,12 @@
 
 <HeaderAbsolute showAbsoluteLogoLink={true} />
 
-<div class="relative flex h-svh w-full flex-col overflow-hidden lg:block lg:h-auto">
+<div class="relative flex min-h-svh w-full flex-col overflow-hidden lg:block lg:min-h-0">
   <section class="relative flex w-full flex-shrink-0 flex-col items-start pt-20 md:mt-auto lg:block lg:items-stretch">
     <p class="sr-only">Willkommen beim Jazzchor Singing me happy</p>
     <p class="sr-only">Animierter Slider mit Bildern des Jazzchors Singing me happy</p>
     <p
-      class="mb-0 mt-20 -translate-x-full pl-4 text-left text-xl font-extralight leading-8 opacity-0 transition-all duration-[1.2s] ease-in-out md:text-2xl lg:hidden"
+      class="mb-0 mt-[min(5rem,10vh)] -translate-x-full pl-4 text-left text-xl font-extralight leading-8 opacity-0 transition-all duration-[1.2s] ease-in-out md:text-2xl lg:hidden"
       class:opacity-100={showMusicMoves}
       class:translate-x-0={showMusicMoves}
     >
@@ -94,7 +94,7 @@
     </div>
   </section> -->
 
-  <section class="flex h-full w-full items-center justify-center pb-8 lg:h-[120px] lg:bg-black lg:pb-0">
+  <section class="flex h-full w-full items-center justify-center py-10 lg:h-[120px] lg:bg-black lg:py-0">
     <p
       id="uns-bewegt-jazz"
       class={`text-center text-3xl font-light text-black md:text-3xl lg:text-white xl:text-4xl hero-${heroIndex}`}
