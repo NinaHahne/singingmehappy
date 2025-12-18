@@ -35,12 +35,12 @@
 
 <HeaderAbsolute showAbsoluteLogoLink={true} />
 
-<div class="relative flex min-h-svh w-full flex-col overflow-hidden lg:block lg:min-h-0">
+<div class="relative flex w-full flex-col overflow-hidden lg:block">
   <section class="relative flex w-full flex-shrink-0 flex-col items-start pt-20 md:mt-auto lg:block lg:items-stretch">
     <p class="sr-only">Willkommen beim Jazzchor Singing me happy</p>
     <p class="sr-only">Animierter Slider mit Bildern des Jazzchors Singing me happy</p>
     <p
-      class="mb-0 mt-[min(5rem,10vh)] -translate-x-full pl-4 text-left text-xl font-extralight leading-8 opacity-0 transition-all duration-[1.2s] ease-in-out md:text-2xl lg:hidden"
+      class="mb-0 mt-[min(5rem,8vh)] -translate-x-full pl-4 text-left text-xl font-extralight leading-8 opacity-0 transition-all duration-[1.2s] ease-in-out md:text-2xl lg:hidden"
       class:opacity-100={showMusicMoves}
       class:translate-x-0={showMusicMoves}
     >
@@ -55,9 +55,11 @@
       onIndexChange={(i) => (heroIndex = i)}
     />
     <p
-      class="mb-0 translate-y-full self-end pr-4 text-right text-xl font-extralight leading-8 opacity-0 transition-all delay-1000 duration-1000 ease-in-out md:text-2xl lg:hidden"
+      class="mb-0 self-end pr-4 text-right text-xl font-extralight leading-8 transition-all delay-1000 duration-1000 ease-in-out md:text-2xl lg:hidden"
+      class:opacity-0={!showMusicMoves}
+      class:translate-y-full={!showMusicMoves}
       class:opacity-100={showMusicMoves}
-      class:-translate-y-0={showMusicMoves}
+      class:translate-y-0={showMusicMoves}
     >
       innen und außen
     </p>
