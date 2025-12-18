@@ -1,6 +1,7 @@
 <!-- Homepage / Landing page / index -->
 
 <script lang="ts">
+  import { onMount, onDestroy } from 'svelte';
   import HeaderAbsolute from '$lib/components/HeaderAbsolute.svelte';
   import HeroSlider from '$lib/components/HeroSlider.svelte';
 
@@ -14,12 +15,18 @@
   let debugHero = false;
   let debugHeroIndex = $state(0);
 
+  let showMusicMoves = $state(false);
+
   const heroImages = [
     { src: '/images/hero/JAZZCHOR_1.jpg', alt: 'Jazzchor Singing me happy' },
     { src: '/images/hero/JAZZCHOR_2.jpg', alt: 'Jazzchor Singing me happy' },
     { src: '/images/hero/JAZZCHOR_3.jpg', alt: 'Jazzchor Singing me happy' },
     { src: '/images/hero/JAZZCHOR_4.jpg', alt: 'Jazzchor Singing me happy' },
   ];
+
+  onMount(() => {
+    showMusicMoves = true;
+  });
 </script>
 
 <svelte:head>
@@ -39,9 +46,21 @@
     debugIndex={debugHeroIndex}
     onIndexChange={(i) => (heroIndex = i)}
   />
-  <div class="flex h-full flex-col items-center justify-center lg:hidden">
-    <p class="bigger-text mb-0 text-center font-extralight lg:hidden">Musik bewegt</p>
-    <p class="bigger-text mb-0 text-center font-extralight lg:hidden">innen und außen</p>
+  <div class="flex h-full w-full flex-col items-center justify-center gap-1 lg:hidden">
+    <p
+      class="bigger-text mb-0 -translate-y-full text-center font-extralight opacity-0 transition-all duration-1000 ease-in-out lg:hidden"
+      class:opacity-100={showMusicMoves}
+      class:translate-y-0={showMusicMoves}
+    >
+      Musik bewegt
+    </p>
+    <p
+      class="bigger-text mb-0 translate-y-full text-center font-extralight opacity-0 transition-all delay-1000 duration-1000 ease-in-out lg:hidden"
+      class:opacity-100={showMusicMoves}
+      class:-translate-y-0={showMusicMoves}
+    >
+      innen und außen
+    </p>
   </div>
   <div class="pointer-events-none absolute inset-0 hidden [container-type:size] lg:block">
     <p
