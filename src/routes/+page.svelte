@@ -8,6 +8,12 @@
     toggleMenuIfOpen: () => void;
   }>();
 
+  let heroIndex = $state(0); // currently displayed hero image index for other animations/transitions based on index
+
+  // 🔧 Debug controls
+  let debugHero = false;
+  let debugHeroIndex = $state(0);
+
   const heroImages = [
     { src: '/images/hero/JAZZCHOR_1.jpg', alt: 'Jazzchor Singing me happy' },
     { src: '/images/hero/JAZZCHOR_2.jpg', alt: 'Jazzchor Singing me happy' },
@@ -25,7 +31,14 @@
 <section class="relative flex h-[calc(100svh-100px)] w-full flex-col pt-20 md:mt-auto lg:block lg:h-auto">
   <p class="sr-only">Willkommen beim Jazzchor Singing me happy</p>
   <p class="sr-only">Animierter Slider mit Bildern des Jazzchors Singing me happy</p>
-  <HeroSlider images={heroImages} interval={4500} firstInterval={1000} />
+  <HeroSlider
+    images={heroImages}
+    interval={4500}
+    firstInterval={1000}
+    debugStatic={debugHero}
+    debugIndex={debugHeroIndex}
+    onIndexChange={(i) => (heroIndex = i)}
+  />
   <div class="flex h-full flex-col items-center justify-center lg:hidden">
     <p class="bigger-text mb-0 text-center font-extralight lg:hidden">Musik bewegt</p>
     <p class="bigger-text mb-0 text-center font-extralight lg:hidden">innen und außen</p>
@@ -60,8 +73,11 @@
 </section> -->
 
 <section class="flex h-[100px] w-full items-center justify-center bg-black lg:h-[120px]">
-  <p id="uns-bewegt-jazz" class="text-center text-3xl font-light text-white md:text-3xl xl:text-4xl">
-    <span>Uns</span> <span>bewegt</span> <span>Ja</span><span>z</span><span>z</span>
+  <p
+    id="uns-bewegt-jazz"
+    class={`text-center text-3xl font-light text-white md:text-3xl xl:text-4xl hero-${heroIndex}`}
+  >
+    <span>Uns</span> <span>bewegt</span> <span>J</span><span>a</span><span>z</span><span>z</span>
   </p>
 </section>
 
@@ -128,10 +144,28 @@
   </div>
 </section> -->
 
+{#if debugHero}
+  <div class="fixed bottom-[100px] left-4 z-50 rounded bg-black/70 px-3 py-2 text-sm text-white">
+    <div class="mb-1 font-mono text-red-400">Hero debug</div>
+
+    <div class="flex gap-2">
+      {#each heroImages as _, i}
+        <button
+          onclick={() => (debugHeroIndex = i)}
+          class={`rounded px-2 py-1 ${heroIndex === i ? 'bg-white text-black' : 'bg-white/20'}`}
+        >
+          {i}
+        </button>
+      {/each}
+    </div>
+  </div>
+{/if}
+
 <style>
   #uns-bewegt-jazz span {
     position: relative;
     display: inline-block;
+    transition: transform 1s ease-in-out;
   }
   #uns-bewegt-jazz span:nth-child(1) {
     font-size: 1.3em;
@@ -141,21 +175,76 @@
     font-size: 0.8em;
     margin-right: 0.1em;
   }
+
+  /* moving "Jazz" */
+
+  /* HeroSlider index 0 */
   #uns-bewegt-jazz span:nth-child(3) {
-    left: 0.05em;
-    top: 0.07em;
+    /* "J" */
     font-size: 1.8em;
   }
   #uns-bewegt-jazz span:nth-child(4) {
-    left: 0.04em;
-    bottom: 0.15em;
-    transform: rotate(-12deg);
+    /* "a" */
     font-size: 1.8em;
   }
   #uns-bewegt-jazz span:nth-child(5) {
-    left: 0.06em;
-    top: 0.07em;
-    transform: rotate(-4deg);
+    /* "z" */
     font-size: 1.8em;
+  }
+  #uns-bewegt-jazz span:nth-child(6) {
+    /* "z" */
+    font-size: 1.8em;
+  }
+
+  /* HeroSlider index 1 */
+  #uns-bewegt-jazz.hero-1 span:nth-child(3) {
+    /* "J" */
+    transform: translate(-0.01em, 0.07em) rotate(0deg);
+  }
+  #uns-bewegt-jazz.hero-1 span:nth-child(4) {
+    /* "a" */
+    transform: translate(0.04em, 0.07em) rotate(0deg);
+  }
+  #uns-bewegt-jazz.hero-1 span:nth-child(5) {
+    /* "z" */
+    transform: translate(0.04em, -0.15em) rotate(-12deg);
+  }
+  #uns-bewegt-jazz.hero-1 span:nth-child(6) {
+    /* "z" */
+    transform: translate(0.06em, 0.07em) rotate(-4deg);
+  }
+  /* HeroSlider index 2 */
+  #uns-bewegt-jazz.hero-2 span:nth-child(3) {
+    /* "J" */
+    transform: translate(-0.02em, 0.1em) rotate(4deg);
+  }
+  #uns-bewegt-jazz.hero-2 span:nth-child(4) {
+    /* "a" */
+    transform: translate(0.01em, -0.1em) rotate(-8deg);
+  }
+  #uns-bewegt-jazz.hero-2 span:nth-child(5) {
+    /* "z" */
+    transform: translate(0.02em, 0.08em) rotate(6deg);
+  }
+  #uns-bewegt-jazz.hero-2 span:nth-child(6) {
+    /* "z" */
+    transform: translate(0.01em, -0.1em) rotate(-4deg);
+  }
+  /* HeroSlider index 3 */
+  #uns-bewegt-jazz.hero-3 span:nth-child(3) {
+    /* "J" */
+    transform: translate(0em, 0.05em) rotate(-4deg);
+  }
+  #uns-bewegt-jazz.hero-3 span:nth-child(4) {
+    /* "a" */
+    transform: translate(0.01em, 0.1em) rotate(8deg);
+  }
+  #uns-bewegt-jazz.hero-3 span:nth-child(5) {
+    /* "z" */
+    transform: translate(-0.03em, -0.1em) rotate(-6deg);
+  }
+  #uns-bewegt-jazz.hero-3 span:nth-child(6) {
+    /* "z" */
+    transform: translate(-0.02em, 0.1em) rotate(4deg);
   }
 </style>

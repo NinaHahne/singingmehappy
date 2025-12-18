@@ -6,7 +6,21 @@
     alt?: string;
   };
 
-  let { images = [] as HeroImage[], interval = 4500, firstInterval = interval } = $props();
+  let {
+    images = [] as HeroImage[],
+    interval = 4500,
+    firstInterval = interval,
+    onIndexChange,
+    debugIndex,
+    debugStatic = false,
+  } = $props<{
+    images?: HeroImage[];
+    interval?: number;
+    firstInterval?: number;
+    onIndexChange?: (index: number) => void;
+    debugIndex?: number;
+    debugStatic?: boolean;
+  }>();
 
   let currentIndex = $state(0);
   let isPaused = $state(false);
@@ -52,6 +66,7 @@
   function next() {
     if (images.length === 0) return;
     currentIndex = (currentIndex + 1) % images.length;
+    emitIndex();
   }
 
   function restartTimer() {
@@ -64,12 +79,30 @@
   function goTo(index: number) {
     if (index === currentIndex || index < 0 || index >= images.length) return;
     currentIndex = index;
-
+    emitIndex();
     // Reset timer so that the rhythm starts fresh after manual change
     restartTimer();
   }
 
+  function emitIndex() {
+    onIndexChange?.(currentIndex);
+  }
+
+  // 🔧 DEBUG: externer Index überschreibt alles
+  $effect(() => {
+    if (debugStatic && typeof debugIndex === 'number') {
+      currentIndex = Math.max(0, Math.min(debugIndex, images.length - 1));
+      emitIndex();
+    }
+  });
+
   onMount(() => {
+    // Debug-Modus → kein Autoplay
+    if (debugStatic) {
+      emitIndex();
+      return;
+    }
+    emitIndex();
     if (images.length > 1) {
       startFirstTimer();
     }
