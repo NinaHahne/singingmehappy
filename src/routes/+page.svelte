@@ -22,12 +22,14 @@
 
 <HeaderAbsolute showAbsoluteLogoLink={true} />
 
-<section class="relative flex h-svh w-full flex-col justify-around py-20 md:mt-auto lg:block lg:h-auto lg:pb-0">
-  <h2 class="mb-0 py-8 text-center lg:hidden">Musik bewegt</h2>
+<section class="relative flex h-[calc(100svh-100px)] w-full flex-col pt-20 md:mt-auto lg:block lg:h-auto">
   <p class="sr-only">Willkommen beim Jazzchor Singing me happy</p>
   <p class="sr-only">Animierter Slider mit Bildern des Jazzchors Singing me happy</p>
   <HeroSlider images={heroImages} interval={4500} firstInterval={1000} />
-  <h2 class="mb-0 py-8 text-center lg:hidden">innen und außen</h2>
+  <div class="flex h-full flex-col items-center justify-center lg:hidden">
+    <p class="bigger-text mb-0 text-center font-extralight lg:hidden">Musik bewegt</p>
+    <p class="bigger-text mb-0 text-center font-extralight lg:hidden">innen und außen</p>
+  </div>
   <div class="pointer-events-none absolute inset-0 hidden [container-type:size] lg:block">
     <p
       class="pointer-events-auto absolute left-1/2 top-[17%] -ml-[5.8cqw] -translate-x-1/2 text-center text-[2.8cqw] font-normal"
