@@ -35,70 +35,75 @@
 
 <HeaderAbsolute showAbsoluteLogoLink={true} />
 
-<section class="relative flex h-[calc(100svh-100px)] w-full flex-col pt-20 md:mt-auto lg:block lg:h-auto">
-  <p class="sr-only">Willkommen beim Jazzchor Singing me happy</p>
-  <p class="sr-only">Animierter Slider mit Bildern des Jazzchors Singing me happy</p>
-  <HeroSlider
-    images={heroImages}
-    interval={4500}
-    firstInterval={1000}
-    debugStatic={debugHero}
-    debugIndex={debugHeroIndex}
-    onIndexChange={(i) => (heroIndex = i)}
-  />
-  <div class="flex h-full w-full flex-col items-center justify-center gap-1 lg:hidden">
+<div class="relative flex h-svh w-full flex-col overflow-hidden lg:block lg:h-auto">
+  <section class="relative flex w-full flex-shrink-0 flex-col items-start pt-20 md:mt-auto lg:block lg:items-stretch">
+    <p class="sr-only">Willkommen beim Jazzchor Singing me happy</p>
+    <p class="sr-only">Animierter Slider mit Bildern des Jazzchors Singing me happy</p>
     <p
-      class="bigger-text mb-0 -translate-y-full text-center font-extralight opacity-0 transition-all duration-1000 ease-in-out lg:hidden"
+      class="mb-0 mt-20 -translate-x-full pl-4 text-left text-xl font-extralight leading-8 opacity-0 transition-all duration-[1.2s] ease-in-out md:text-2xl lg:hidden"
       class:opacity-100={showMusicMoves}
-      class:translate-y-0={showMusicMoves}
+      class:translate-x-0={showMusicMoves}
     >
       Musik bewegt
     </p>
+    <HeroSlider
+      images={heroImages}
+      interval={4500}
+      firstInterval={1000}
+      debugStatic={debugHero}
+      debugIndex={debugHeroIndex}
+      onIndexChange={(i) => (heroIndex = i)}
+    />
     <p
-      class="bigger-text mb-0 translate-y-full text-center font-extralight opacity-0 transition-all delay-1000 duration-1000 ease-in-out lg:hidden"
+      class="mb-0 translate-y-full self-end pr-4 text-right text-xl font-extralight leading-8 opacity-0 transition-all delay-1000 duration-1000 ease-in-out md:text-2xl lg:hidden"
       class:opacity-100={showMusicMoves}
       class:-translate-y-0={showMusicMoves}
     >
       innen und außen
     </p>
-  </div>
-  <div class="pointer-events-none absolute inset-0 hidden [container-type:size] lg:block">
-    <p
-      class="pointer-events-auto absolute left-1/2 top-[17%] -ml-[5.8cqw] -translate-x-1/2 text-center text-[2.8cqw] font-normal"
-    >
-      Musik bewegt
-    </p>
+    <!-- <div class="flex h-full w-full flex-col items-center justify-center gap-1 lg:hidden">
+    </div> -->
+    <div class="pointer-events-none absolute inset-0 hidden [container-type:size] lg:block">
+      <p
+        class="pointer-events-auto absolute left-1/2 top-[17%] -ml-[5.8cqw] -translate-x-1/2 text-center text-[2.8cqw] font-normal"
+      >
+        Musik bewegt
+      </p>
 
-    <p class="pointer-events-auto absolute bottom-[8%] left-1/2 ml-[12cqw] -translate-x-1/2 text-[2.4cqw] font-normal">
-      innen und außen
-    </p>
-  </div>
-</section>
+      <p
+        class="pointer-events-auto absolute bottom-[8%] left-1/2 ml-[12cqw] -translate-x-1/2 text-[2.4cqw] font-normal"
+      >
+        innen und außen
+      </p>
+    </div>
+  </section>
 
-<!-- <section class="relative bg-black pt-4">
-  <img
-    src={heroImages[0].src}
-    alt="Jazzchor Gruppe bewegt sich vor einer Fensterwand"
-    class="block w-full object-contain"
-  />
-  <div class="pointer-events-none absolute inset-0 [container-type:size]">
+  <!-- <section class="relative bg-black pt-4">
+    <img
+      src={heroImages[0].src}
+      alt="Jazzchor Gruppe bewegt sich vor einer Fensterwand"
+      class="block w-full object-contain"
+    />
+    <div class="pointer-events-none absolute inset-0 [container-type:size]">
+      <p
+        id="uns-bewegt-jazz"
+        class="pointer-events-auto absolute left-1/2 top-[15%] ml-[1cqw] -translate-x-1/2 text-[2.7cqw] font-normal leading-tight"
+      >
+        Uns bewegt <span>Ja</span><span>z</span><span>z</span>
+      </p>
+    </div>
+  </section> -->
+
+  <section class="flex h-full w-full items-center justify-center pb-8 lg:h-[120px] lg:bg-black lg:pb-0">
     <p
       id="uns-bewegt-jazz"
-      class="pointer-events-auto absolute left-1/2 top-[15%] ml-[1cqw] -translate-x-1/2 text-[2.7cqw] font-normal leading-tight"
+      class={`text-center text-3xl font-light text-black md:text-3xl lg:text-white xl:text-4xl hero-${heroIndex}`}
+      class:no-transform={!debugHero && !showMusicMoves}
     >
-      Uns bewegt <span>Ja</span><span>z</span><span>z</span>
+      <span>Uns</span> <span>bewegt</span> <span>J</span><span>a</span><span>z</span><span>z</span>
     </p>
-  </div>
-</section> -->
-
-<section class="flex h-[100px] w-full items-center justify-center bg-black lg:h-[120px]">
-  <p
-    id="uns-bewegt-jazz"
-    class={`text-center text-3xl font-light text-white md:text-3xl xl:text-4xl hero-${heroIndex}`}
-  >
-    <span>Uns</span> <span>bewegt</span> <span>J</span><span>a</span><span>z</span><span>z</span>
-  </p>
-</section>
+  </section>
+</div>
 
 <section class="relative bg-black">
   <img
@@ -110,15 +115,15 @@
     class="absolute inset-0 flex items-center justify-center lg:pointer-events-none lg:block lg:[container-type:size]"
   >
     <p
-      class="menu-shadow px-4 text-center text-2xl font-normal lg:pointer-events-auto lg:absolute lg:bottom-[23.5cqw] lg:left-1/2 lg:ml-[17cqw] lg:-translate-x-1/2 lg:whitespace-nowrap lg:px-0 lg:text-[2.4cqw] lg:leading-tight"
+      class="menu-shadow px-4 text-center text-2xl font-light lg:pointer-events-auto lg:absolute lg:bottom-[23.5cqw] lg:left-1/2 lg:ml-[17cqw] lg:-translate-x-1/2 lg:whitespace-nowrap lg:px-0 lg:text-[2.4cqw] lg:font-normal lg:leading-tight"
     >
       Wenn es um den gemeinsamen Klang unserer Stimmen geht...
     </p>
   </div>
 </section>
 
-<section class="flex h-[100px] w-full items-center justify-center bg-black lg:hidden">
-  <p class="text-center text-2xl font-light text-white md:text-2xl xl:text-3xl">
+<section class="flex h-[100px] w-full items-center justify-center lg:hidden">
+  <p class="text-center text-2xl font-light md:text-2xl xl:text-3xl">
     ...stecken wir alle<br />unter einer Decke
   </p>
 </section>
@@ -197,73 +202,85 @@
 
   /* moving "Jazz" */
 
-  /* HeroSlider index 0 */
-  #uns-bewegt-jazz span:nth-child(3) {
-    /* "J" */
-    font-size: 1.8em;
-  }
-  #uns-bewegt-jazz span:nth-child(4) {
-    /* "a" */
-    font-size: 1.8em;
-  }
-  #uns-bewegt-jazz span:nth-child(5) {
-    /* "z" */
-    font-size: 1.8em;
-  }
+  #uns-bewegt-jazz span:nth-child(3),
+  #uns-bewegt-jazz span:nth-child(4),
+  #uns-bewegt-jazz span:nth-child(5),
   #uns-bewegt-jazz span:nth-child(6) {
-    /* "z" */
+    /* "J", "a", "z", "z" */
     font-size: 1.8em;
   }
 
+  #uns-bewegt-jazz.no-transform span {
+    transform: none !important;
+  }
+
+  /* HeroSlider index 0 */
+  #uns-bewegt-jazz.hero-0 span:nth-child(3) {
+    /* "J" */
+    transform: translate(-0.01em, 0.02em) rotate(0deg);
+  }
+  #uns-bewegt-jazz.hero-0 span:nth-child(4) {
+    /* "a" */
+    transform: translate(0.01em, 0.03em) rotate(0deg);
+  }
+  #uns-bewegt-jazz.hero-0 span:nth-child(5) {
+    /* "z" */
+    transform: translate(0.03em, -0.03em) rotate(-5deg);
+  }
+  #uns-bewegt-jazz.hero-0 span:nth-child(6) {
+    /* "z" */
+    transform: translate(0.06em, 0.04em) rotate(-7deg);
+  }
   /* HeroSlider index 1 */
   #uns-bewegt-jazz.hero-1 span:nth-child(3) {
     /* "J" */
-    transform: translate(-0.01em, 0.07em) rotate(0deg);
+    transform: translate(-0.02em, 0.1em) rotate(4deg);
   }
   #uns-bewegt-jazz.hero-1 span:nth-child(4) {
     /* "a" */
-    transform: translate(0.04em, 0.07em) rotate(0deg);
+    transform: translate(0.01em, -0.1em) rotate(-8deg);
   }
   #uns-bewegt-jazz.hero-1 span:nth-child(5) {
     /* "z" */
-    transform: translate(0.04em, -0.15em) rotate(-12deg);
+    transform: translate(0.02em, 0.08em) rotate(6deg);
   }
   #uns-bewegt-jazz.hero-1 span:nth-child(6) {
     /* "z" */
-    transform: translate(0.06em, 0.07em) rotate(-4deg);
+    transform: translate(0.01em, -0.1em) rotate(-4deg);
   }
   /* HeroSlider index 2 */
   #uns-bewegt-jazz.hero-2 span:nth-child(3) {
     /* "J" */
-    transform: translate(-0.02em, 0.1em) rotate(4deg);
+    transform: translate(0em, 0.05em) rotate(-4deg);
   }
   #uns-bewegt-jazz.hero-2 span:nth-child(4) {
     /* "a" */
-    transform: translate(0.01em, -0.1em) rotate(-8deg);
+    transform: translate(0.01em, 0.1em) rotate(8deg);
   }
   #uns-bewegt-jazz.hero-2 span:nth-child(5) {
     /* "z" */
-    transform: translate(0.02em, 0.08em) rotate(6deg);
+    transform: translate(-0.03em, -0.1em) rotate(-6deg);
   }
   #uns-bewegt-jazz.hero-2 span:nth-child(6) {
     /* "z" */
-    transform: translate(0.01em, -0.1em) rotate(-4deg);
+    transform: translate(-0.02em, 0.1em) rotate(4deg);
   }
+
   /* HeroSlider index 3 */
   #uns-bewegt-jazz.hero-3 span:nth-child(3) {
     /* "J" */
-    transform: translate(0em, 0.05em) rotate(-4deg);
+    transform: translate(-0.02em, 0.1em) rotate(4deg);
   }
   #uns-bewegt-jazz.hero-3 span:nth-child(4) {
     /* "a" */
-    transform: translate(0.01em, 0.1em) rotate(8deg);
+    transform: translate(0.01em, -0.1em) rotate(-8deg);
   }
   #uns-bewegt-jazz.hero-3 span:nth-child(5) {
     /* "z" */
-    transform: translate(-0.03em, -0.1em) rotate(-6deg);
+    transform: translate(0.02em, 0.08em) rotate(6deg);
   }
   #uns-bewegt-jazz.hero-3 span:nth-child(6) {
     /* "z" */
-    transform: translate(-0.02em, 0.1em) rotate(4deg);
+    transform: translate(0.01em, -0.1em) rotate(-4deg);
   }
 </style>

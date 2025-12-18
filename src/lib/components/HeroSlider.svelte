@@ -119,7 +119,7 @@
 
 <!--TODO: add option to pause animation -->
 <div
-  class="relative aspect-[12/10] w-full flex-shrink-0 overflow-hidden lg:aspect-[15/9]"
+  class="relative aspect-[12/10] w-full overflow-hidden lg:aspect-[15/9]"
   aria-roledescription="Karussell"
   aria-label="Chor-Fotos"
 >
