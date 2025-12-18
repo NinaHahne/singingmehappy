@@ -35,12 +35,14 @@
 
 <HeaderAbsolute showAbsoluteLogoLink={true} />
 
-<div class="relative flex w-full flex-col overflow-hidden lg:block">
-  <section class="relative flex w-full flex-shrink-0 flex-col items-start pt-20 md:mt-auto lg:block lg:items-stretch">
+<div class="relative flex h-svh min-h-[580px] w-full flex-col justify-center pt-20 lg:block lg:h-auto lg:pt-0">
+  <section
+    class="relative flex w-full flex-shrink-0 flex-col items-start overflow-hidden md:mt-auto lg:block lg:items-stretch"
+  >
     <p class="sr-only">Willkommen beim Jazzchor Singing me happy</p>
     <p class="sr-only">Animierter Slider mit Bildern des Jazzchors Singing me happy</p>
     <p
-      class="mb-0 mt-[min(5rem,8vh)] -translate-x-full pl-4 text-left text-xl font-extralight leading-8 opacity-0 transition-all duration-[1.2s] ease-in-out md:text-2xl lg:hidden"
+      class="mb-0 -translate-x-full pl-4 text-left text-xl font-extralight leading-8 opacity-0 transition-all duration-[1.2s] ease-in-out md:text-2xl lg:hidden"
       class:opacity-100={showMusicMoves}
       class:translate-x-0={showMusicMoves}
     >
@@ -80,26 +82,10 @@
     </div>
   </section>
 
-  <!-- <section class="relative bg-black pt-4">
-    <img
-      src={heroImages[0].src}
-      alt="Jazzchor Gruppe bewegt sich vor einer Fensterwand"
-      class="block w-full object-contain"
-    />
-    <div class="pointer-events-none absolute inset-0 [container-type:size]">
-      <p
-        id="uns-bewegt-jazz"
-        class="pointer-events-auto absolute left-1/2 top-[15%] ml-[1cqw] -translate-x-1/2 text-[2.7cqw] font-normal leading-tight"
-      >
-        Uns bewegt <span>Ja</span><span>z</span><span>z</span>
-      </p>
-    </div>
-  </section> -->
-
-  <section class="flex h-full w-full items-center justify-center py-10 lg:h-[120px] lg:bg-black lg:py-0">
+  <section class="flex w-full items-center justify-center py-10 lg:h-[120px] lg:bg-black lg:py-0">
     <p
       id="uns-bewegt-jazz"
-      class={`text-center text-3xl font-light text-black md:text-3xl lg:text-white xl:text-4xl hero-${heroIndex}`}
+      class={`flex-shrink-0 text-center text-3xl font-light text-black md:text-3xl lg:text-white xl:text-4xl hero-${heroIndex}`}
     >
       <span>Uns</span> <span>bewegt</span>
       <span id="jazz" class={`hero-${heroIndex}`} class:no-transform={!showMusicMoves}
