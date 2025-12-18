@@ -35,10 +35,10 @@
 
 <HeaderAbsolute showAbsoluteLogoLink={true} />
 
-<div class="relative flex h-svh min-h-[580px] w-full flex-col justify-center pt-20 lg:block lg:h-auto lg:pt-0">
-  <section
-    class="relative flex w-full flex-shrink-0 flex-col items-start overflow-hidden md:mt-auto lg:block lg:items-stretch"
-  >
+<div
+  class="relative flex h-svh min-h-[580px] w-full flex-col justify-center overflow-hidden pt-20 lg:block lg:h-auto lg:pt-0"
+>
+  <section class="relative flex w-full flex-shrink-0 flex-col items-start md:mt-auto lg:block lg:items-stretch">
     <p class="sr-only">Willkommen beim Jazzchor Singing me happy</p>
     <p class="sr-only">Animierter Slider mit Bildern des Jazzchors Singing me happy</p>
     <p
