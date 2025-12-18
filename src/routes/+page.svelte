@@ -98,9 +98,11 @@
     <p
       id="uns-bewegt-jazz"
       class={`text-center text-3xl font-light text-black md:text-3xl lg:text-white xl:text-4xl hero-${heroIndex}`}
-      class:no-transform={!debugHero && !showMusicMoves}
     >
-      <span>Uns</span> <span>bewegt</span> <span>J</span><span>a</span><span>z</span><span>z</span>
+      <span>Uns</span> <span>bewegt</span>
+      <span id="jazz" class={`hero-${heroIndex}`} class:no-transform={!showMusicMoves}
+        ><span>J</span><span>a</span><span>z</span><span>z</span></span
+      >
     </p>
   </section>
 </div>
@@ -169,7 +171,7 @@
 </section> -->
 
 {#if debugHero}
-  <div class="fixed bottom-[100px] left-4 z-50 rounded bg-black/70 px-3 py-2 text-sm text-white">
+  <div class="fixed bottom-4 left-4 z-50 rounded bg-black/70 px-3 py-2 text-sm text-white">
     <div class="mb-1 font-mono text-red-400">Hero debug</div>
 
     <div class="flex gap-2">
@@ -189,97 +191,98 @@
   #uns-bewegt-jazz span {
     position: relative;
     display: inline-block;
-    transition: transform 1s ease-in-out;
   }
-  #uns-bewegt-jazz span:nth-child(1) {
+  #uns-bewegt-jazz > span:nth-child(1) {
     font-size: 1.3em;
     margin-right: 0.2em;
   }
-  #uns-bewegt-jazz span:nth-child(2) {
+  #uns-bewegt-jazz > span:nth-child(2) {
     font-size: 0.8em;
     margin-right: 0.1em;
   }
 
   /* moving "Jazz" */
 
-  #uns-bewegt-jazz span:nth-child(3),
-  #uns-bewegt-jazz span:nth-child(4),
-  #uns-bewegt-jazz span:nth-child(5),
-  #uns-bewegt-jazz span:nth-child(6) {
+  #jazz > span {
     /* "J", "a", "z", "z" */
     font-size: 1.8em;
+    transition: transform 2.25s ease-in-out;
   }
 
-  #uns-bewegt-jazz.no-transform span {
+  /* #jazz.no-transform > span {
     transform: none !important;
-  }
+  } */
 
   /* HeroSlider index 0 */
-  #uns-bewegt-jazz.hero-0 span:nth-child(3) {
+  #jazz.hero-0 span:nth-child(1) {
     /* "J" */
-    transform: translate(-0.01em, 0.02em) rotate(0deg);
+    /* transform: scale(1.5); */
+    transform: translate(-0.01em, 0.08em) rotate(0deg);
   }
-  #uns-bewegt-jazz.hero-0 span:nth-child(4) {
+  #jazz.hero-0 span:nth-child(2) {
     /* "a" */
-    transform: translate(0.01em, 0.03em) rotate(0deg);
+    /* transform: scale(1.5); */
+    transform: translate(0.01em, 0.04em) rotate(0deg);
   }
-  #uns-bewegt-jazz.hero-0 span:nth-child(5) {
+  #jazz.hero-0 span:nth-child(3) {
     /* "z" */
-    transform: translate(0.03em, -0.03em) rotate(-5deg);
+    /* transform: scale(1.5); */
+    transform: translate(0em, -0.15em) rotate(-12deg);
   }
-  #uns-bewegt-jazz.hero-0 span:nth-child(6) {
+  #jazz.hero-0 span:nth-child(4) {
     /* "z" */
-    transform: translate(0.06em, 0.04em) rotate(-7deg);
+    /* transform: scale(1.5); */
+    transform: translate(0.02em, 0.04em) rotate(-4deg);
   }
   /* HeroSlider index 1 */
-  #uns-bewegt-jazz.hero-1 span:nth-child(3) {
+  #jazz.hero-1 span:nth-child(1) {
     /* "J" */
     transform: translate(-0.02em, 0.1em) rotate(4deg);
   }
-  #uns-bewegt-jazz.hero-1 span:nth-child(4) {
+  #jazz.hero-1 span:nth-child(2) {
     /* "a" */
     transform: translate(0.01em, -0.1em) rotate(-8deg);
   }
-  #uns-bewegt-jazz.hero-1 span:nth-child(5) {
+  #jazz.hero-1 span:nth-child(3) {
     /* "z" */
     transform: translate(0.02em, 0.08em) rotate(6deg);
   }
-  #uns-bewegt-jazz.hero-1 span:nth-child(6) {
+  #jazz.hero-1 span:nth-child(4) {
     /* "z" */
     transform: translate(0.01em, -0.1em) rotate(-4deg);
   }
   /* HeroSlider index 2 */
-  #uns-bewegt-jazz.hero-2 span:nth-child(3) {
+  #jazz.hero-2 span:nth-child(1) {
     /* "J" */
     transform: translate(0em, 0.05em) rotate(-4deg);
   }
-  #uns-bewegt-jazz.hero-2 span:nth-child(4) {
+  #jazz.hero-2 span:nth-child(2) {
     /* "a" */
     transform: translate(0.01em, 0.1em) rotate(8deg);
   }
-  #uns-bewegt-jazz.hero-2 span:nth-child(5) {
+  #jazz.hero-2 span:nth-child(3) {
     /* "z" */
     transform: translate(-0.03em, -0.1em) rotate(-6deg);
   }
-  #uns-bewegt-jazz.hero-2 span:nth-child(6) {
+  #jazz.hero-2 span:nth-child(4) {
     /* "z" */
     transform: translate(-0.02em, 0.1em) rotate(4deg);
   }
 
   /* HeroSlider index 3 */
-  #uns-bewegt-jazz.hero-3 span:nth-child(3) {
+  #jazz.hero-3 span:nth-child(1) {
     /* "J" */
     transform: translate(-0.02em, 0.1em) rotate(4deg);
   }
-  #uns-bewegt-jazz.hero-3 span:nth-child(4) {
+  #jazz.hero-3 span:nth-child(2) {
     /* "a" */
     transform: translate(0.01em, -0.1em) rotate(-8deg);
   }
-  #uns-bewegt-jazz.hero-3 span:nth-child(5) {
+  #jazz.hero-3 span:nth-child(3) {
     /* "z" */
     transform: translate(0.02em, 0.08em) rotate(6deg);
   }
-  #uns-bewegt-jazz.hero-3 span:nth-child(6) {
+  #jazz.hero-3 span:nth-child(4) {
     /* "z" */
     transform: translate(0.01em, -0.1em) rotate(-4deg);
   }
