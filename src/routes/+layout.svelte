@@ -39,17 +39,17 @@
   let navigation = {
     navLinks: [
       { title: 'Start', url: '/' },
-      { title: 'Über Uns', url: '/ueber-uns' },
-      { title: 'Was wir singen', url: '/was-wir-singen' },
-      { title: 'Bildergalerie', url: '/bildergalerie' },
-      { title: 'Aktuelles', url: '/aktuelles' },
-      { title: 'Konzerte', url: '/konzerte' },
-      { title: 'Kontakt', url: '/kontakt' },
+      { title: 'Über Uns', url: '/ueber-uns/' },
+      { title: 'Was wir singen', url: '/was-wir-singen/' },
+      { title: 'Bildergalerie', url: '/bildergalerie/' },
+      { title: 'Aktuelles', url: '/aktuelles/' },
+      { title: 'Konzerte', url: '/konzerte/' },
+      { title: 'Kontakt', url: '/kontakt/' },
     ],
     footerLinks: [
-      { title: 'Impressum', url: '/impressum' },
-      { title: 'Kontakt', url: '/kontakt' },
-      { title: 'Datenschutz', url: '/datenschutz' },
+      { title: 'Impressum', url: '/impressum/' },
+      { title: 'Kontakt', url: '/kontakt/' },
+      { title: 'Datenschutz', url: '/datenschutz/' },
     ],
   };
 
