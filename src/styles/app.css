@@ -122,6 +122,46 @@ body:has(.show-menu) .menu > div > div {
   a.bigger-text {
     @apply text-xl md:text-2xl xl:text-3xl;
   }
+
+  @keyframes pulse-bpm {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.08);
+    }
+  }
+
+  .pulse-100bpm {
+    animation: pulse-bpm 0.6s ease-in-out infinite;
+    transform-origin: center;
+    will-change: transform;
+  }
+
+  .pulse-200bpm {
+    animation: pulse 0.3s ease-in-out infinite;
+    transform-origin: center;
+    will-change: transform;
+  }
+
+  @keyframes pulse-snappy {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    15% {
+      transform: scale(1.1);
+    }
+    30% {
+      transform: scale(1.02);
+    }
+  }
+
+  .pulse-200bpm-snappy {
+    animation: pulse-snappy 0.3s linear infinite;
+    transform-origin: center;
+  }
 }
 
 @layer components {
