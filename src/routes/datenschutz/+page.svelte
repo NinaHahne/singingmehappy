@@ -152,7 +152,7 @@
 
         <p>Bei Fragen zur Verarbeitung personenbezogener Daten kannst du uns jederzeit kontaktieren:</p>
 
-        <p>Brigitte Asche / „Singing me happy“ e.V.</p>
+        <p>Brigitte Asche / "Singing me happy" e.V.</p>
 
         <div class="space-y-1">
           <p>E-Mail: <a href="mailto:info@singingmehappy.de" class="underline">info@singingmehappy.de</a></p>
