@@ -56,6 +56,7 @@ export const galleryData: GalleryYear[] = [
         description:
           'Tränen und Trennungsschmerz\n\n Vor dem Auseinandergehen ein Hauch von freudiger Aufbruchstimmung und der Geschmack von Neubeginn',
         asideClass: 'lg:max-w-48 lg:justify-center', // Beschreibung schmaler
+        postClass: 'flex-col-reverse lg:flex-row',
         items: [
           {
             image: '/images/gallery/2025_09_Sept-25_Abschied_v.Martin.webp',
@@ -69,7 +70,7 @@ export const galleryData: GalleryYear[] = [
         id: '10-jaehriges-jubilaeum-2025',
         title: 'Unser großer Tag:',
         description: '10\u00A0Jahre “Singing\u00A0me\u00A0happy“ \nKonzert und Party!',
-        asideClass: 'lg:max-w-44 lg:justify-start', // Beschreibung schmaler und oben
+        asideClass: 'lg:max-w-56 lg:justify-start', // Beschreibung schmaler und oben
         items: [
           {
             image: '/images/gallery/2025_05_10-jaehriges_Mai-25_Konzert.webp',
@@ -389,7 +390,7 @@ export const galleryData: GalleryYear[] = [
         id: 'weihnachtsfeier-am-kiosk-2021',
         // title: 'Weihnachtsfeier am Kiosk',
         description: 'Corona\u2011angemessen:\nFreiluft-Weihnachtsfeier am "Kiosk',
-        asideClass: 'lg:max-w-48 lg:justify-end', // Beschreibung schmaler und unten
+        asideClass: 'lg:max-w-60 lg:justify-end', // Beschreibung schmaler und unten
         items: [
           {
             image: '/images/gallery/2021_04_b.jpg',
@@ -551,7 +552,7 @@ export const galleryData: GalleryYear[] = [
         id: 'probe-park-abstandsschild-2020',
         // title: 'Probe im Park',
         description: 'Probe als angemeldete Demo im Park mit Abstandsschild',
-        asideClass: 'lg:max-w-40 lg:justify-start', // Beschreibung schmaler und oben
+        asideClass: 'lg:max-w-44 lg:justify-start', // Beschreibung schmaler und oben
         items: [
           {
             image: '/images/gallery/2020_02_c.jpg',
