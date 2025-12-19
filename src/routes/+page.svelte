@@ -41,13 +41,6 @@
   <section class="relative flex w-full flex-shrink-0 flex-col items-start md:mt-auto lg:block lg:items-stretch">
     <p class="sr-only">Willkommen beim Jazzchor Singing me happy</p>
     <p class="sr-only">Animierter Slider mit Bildern des Jazzchors Singing me happy</p>
-    <p
-      class="mb-0 -translate-x-full pl-4 text-left text-xl font-extralight leading-8 opacity-0 transition-all duration-[1.2s] ease-in-out md:text-2xl lg:hidden"
-      class:opacity-100={showMusicMoves}
-      class:translate-x-0={showMusicMoves}
-    >
-      Musik bewegt
-    </p>
     <HeroSlider
       images={heroImages}
       interval={4500}
@@ -56,26 +49,16 @@
       debugIndex={debugHeroIndex}
       onIndexChange={(i) => (heroIndex = i)}
     />
-    <p
-      class="mb-0 self-end pr-4 text-right text-xl font-extralight leading-8 transition-all delay-1000 duration-1000 ease-in-out md:text-2xl lg:hidden"
-      class:opacity-0={!showMusicMoves}
-      class:translate-y-full={!showMusicMoves}
-      class:opacity-100={showMusicMoves}
-      class:translate-y-0={showMusicMoves}
-    >
-      innen und außen
-    </p>
-    <!-- <div class="flex h-full w-full flex-col items-center justify-center gap-1 lg:hidden">
-    </div> -->
-    <div class="pointer-events-none absolute inset-0 hidden [container-type:size] lg:block">
+    <p class="mb-0 self-end pr-4 text-right text-xl font-extralight leading-8 md:text-2xl lg:hidden">innen und außen</p>
+    <div class="pointer-events-none absolute inset-0 [container-type:size]">
       <p
-        class="pointer-events-auto absolute left-1/2 top-[17%] -ml-[5.8cqw] -translate-x-1/2 text-center text-[2.8cqw] font-normal"
+        class="pointer-events-auto absolute left-[10cqw] top-[5cqw] text-center text-xl font-extralight leading-8 lg:left-1/2 lg:top-[17%] lg:-ml-[5.8cqw] lg:-translate-x-1/2 lg:text-[2.8cqw] lg:font-normal lg:leading-tight"
       >
         Musik bewegt
       </p>
 
       <p
-        class="pointer-events-auto absolute bottom-[8%] left-1/2 ml-[12cqw] -translate-x-1/2 text-[2.4cqw] font-normal"
+        class="pointer-events-auto absolute bottom-[8%] left-1/2 ml-[12cqw] hidden -translate-x-1/2 text-[2.4cqw] font-normal lg:block lg:leading-tight"
       >
         innen und außen
       </p>
@@ -85,7 +68,7 @@
   <section class="flex w-full items-center justify-center py-10 lg:h-[120px] lg:bg-black lg:py-0">
     <p
       id="uns-bewegt-jazz"
-      class={`flex-shrink-0 text-center text-3xl font-light text-black md:text-3xl lg:text-white xl:text-4xl hero-${heroIndex}`}
+      class={`flex-shrink-0 text-center text-2xl font-light text-black md:text-3xl lg:text-white xl:text-4xl hero-${heroIndex}`}
     >
       <span>Uns</span> <span>bewegt</span>
       <span id="jazz" class={`hero-${heroIndex}`} class:no-transform={!showMusicMoves}
@@ -99,30 +82,29 @@
   <img
     src="/images/home/decke.jpg"
     alt="Decke"
-    class="block aspect-[5/3] w-full object-cover lg:aspect-auto lg:object-contain"
+    class="block aspect-[24/17] w-full object-cover lg:aspect-auto lg:object-contain"
   />
   <div
-    class="absolute inset-0 flex items-center justify-center lg:pointer-events-none lg:block lg:[container-type:size]"
+    class="absolute inset-0 flex flex-col items-center justify-around lg:pointer-events-none lg:block lg:[container-type:size]"
   >
     <p
       class="menu-shadow px-4 text-center text-2xl font-light lg:pointer-events-auto lg:absolute lg:bottom-[23.5cqw] lg:left-1/2 lg:ml-[17cqw] lg:-translate-x-1/2 lg:whitespace-nowrap lg:px-0 lg:text-[2.4cqw] lg:font-normal lg:leading-tight"
     >
       Wenn es um den gemeinsamen Klang unserer Stimmen geht...
     </p>
+    <p class="menu-shadow text-center text-2xl font-light md:text-2xl lg:hidden xl:text-3xl">
+      ...stecken wir alle unter einer Decke
+    </p>
   </div>
 </section>
 
-<section class="flex h-[100px] w-full items-center justify-center lg:hidden">
-  <p class="text-center text-2xl font-light md:text-2xl xl:text-3xl">
-    ...stecken wir alle<br />unter einer Decke
-  </p>
-</section>
+<hr class="w-full border-4 border-t border-black lg:hidden" />
 
 <section class="relative bg-black lg:pt-4">
   <img
     src="/images/home/unter-einer-decke.jpg"
     alt="Jazzchor Gruppe steht zusammen unter einer Decke"
-    class="block w-full object-contain"
+    class="block aspect-[24/17] w-full object-cover lg:aspect-auto lg:object-contain"
   />
   <div class="pointer-events-none absolute inset-0 hidden [container-type:size] lg:block">
     <p
@@ -132,10 +114,6 @@
     </p>
   </div>
 </section>
-
-<!-- <section class="flex h-[100px] w-full items-center justify-center lg:hidden">
-  <p class="text-center text-2xl font-light md:text-2xl xl:text-3xl">unter einer Decke</p>
-</section> -->
 
 <!-- <section class="relative flex flex-col items-center gap-4 p-2 py-16 md:whitespace-nowrap">
   <div class="flex flex-col gap-2 text-4xl md:flex-row">
