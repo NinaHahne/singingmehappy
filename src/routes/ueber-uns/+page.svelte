@@ -109,7 +109,7 @@
       >
         <picture class="w-full md:h-full md:w-auto">
           <img
-            src="/images/ueber-uns/portrait_Tobias_Foto_Dovile Sermokas.webp"
+            src="/images/ueber-uns/portrait_Tobias_Foto_Dovile_Sermokas.webp"
             alt="Portrait von Tobias Christl"
             class="w-full md:h-full md:w-auto"
           />
