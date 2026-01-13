@@ -82,7 +82,7 @@
 
 <hr class="w-full border-8 border-t border-black" />
 
-<section class="content-wrapper">
+<section id="chorleiter" class="content-wrapper">
   <section class="content-section md:flex-col md:gap-0 md:px-20">
     <h1>Der Chorleiter</h1>
     <section class="relative flex w-full flex-col gap-4 md:flex-row md:gap-8">
