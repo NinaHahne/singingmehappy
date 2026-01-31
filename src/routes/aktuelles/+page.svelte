@@ -12,10 +12,10 @@
     </div>
     <div class="md:mt-20">
       <blockquote class="max-w-2xl">
-        Derzeit nehmen wir in allen Stimmgruppen noch NeubewerberInnen auf. Besonders glücklich wären wir über eine
-        Mezzosopranistin und einen tiefen Bass.
+        Derzeit nehmen wir in allen Stimmgruppen noch NeubewerberInnen auf. Besonders glücklich wären wir über
+        Sopranistinnen 1 und 2 und einen tiefen Bass.
       </blockquote>
-      <p>(Stand November 2025)</p>
+      <p>(Stand Januar 2026)</p>
       <p class="mt-4">
         <a href="/kontakt">Kontakt</a>
       </p>
