@@ -24,7 +24,7 @@
   };
 </script>
 
-<article class="flex flex-col gap-6 border-t border-black/20 pt-8 md:gap-8">
+<article class="flex flex-col gap-6 border-t border-black/50 pt-8 md:gap-8">
   <div class="flex flex-col gap-4">
     <div class="flex flex-col gap-1">
       <p class="text-lg font-normal capitalize">
@@ -43,7 +43,7 @@
           <img
             src={urlFor(concert.flyerImage).width(800).fit('max').auto('format').url()}
             alt={concert.flyerImage.alt || concert.title || 'Flyer zum Konzert'}
-            class="h-auto w-full"
+            class="my-2 h-auto w-full md:my-4"
             loading="lazy"
             sizes="(max-width: 767px) 100vw, 600px"
           />
