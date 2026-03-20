@@ -15,14 +15,17 @@
   const getScrollbarWidth = () => {
     // Scrollbar-Breite ermitteln
     const e = document.createElement('div');
-    (e.style.visibility = 'hidden'), (e.style.width = '100px'), document.body.append(e);
+    e.style.visibility = 'hidden';
+    e.style.width = '100px';
+    document.body.append(e);
     const t = e.offsetWidth;
     e.style.overflow = 'scroll';
     const o = document.createElement('div');
-    (o.style.width = '100%'), e.append(o);
+    o.style.width = '100%';
+    e.append(o);
     const d = o.offsetWidth;
     e.remove();
-    document.body.style.setProperty('--scrollbar-width', t - d + 'px');
+    document.body.style.setProperty('--scrollbar-width', `${t - d}px`);
   };
 
   let container: HTMLElement;
@@ -34,7 +37,7 @@
   };
 
   let showMenu: boolean = $state(false);
-  let showNavigation = $state(false);
+  // let showNavigation = $state(false);
 
   let navigation = {
     navLinks: [
@@ -62,7 +65,9 @@
   };
 
   const toggleMenuIfOpen = () => {
-    !showMenu || toggleMenu();
+    if (showMenu) {
+      toggleMenu();
+    }
   };
 
   // Provide the toggleMenuIfOpen function to child components via context
@@ -84,7 +89,7 @@
       resizeObserver.observe(container);
     }
 
-    showNavigation = true;
+    // showNavigation = true;
   });
 
   onDestroy(() => {

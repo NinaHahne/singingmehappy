@@ -1,18 +1,20 @@
 <!-- Homepage / Landing page / index -->
 
 <script lang="ts">
-  import { onMount, onDestroy } from 'svelte';
+  import { onMount } from 'svelte';
+  import { page } from '$app/state';
+  import { hasDebugFlag } from '$lib/utils/debug';
   import HeaderAbsolute from '$lib/components/HeaderAbsolute.svelte';
   import HeroSlider from '$lib/components/HeroSlider.svelte';
 
-  let { toggleMenuIfOpen } = $props<{
-    toggleMenuIfOpen: () => void;
-  }>();
+  // let { toggleMenuIfOpen } = $props<{
+  //   toggleMenuIfOpen: () => void;
+  // }>();
 
   let heroIndex = $state(0); // currently displayed hero image index for other animations/transitions based on index
 
   // 🔧 Debug controls
-  let debugHero = false;
+  const debugHero = $derived(hasDebugFlag(page.url.searchParams, 'hero'));
   let debugHeroIndex = $state(0);
 
   let showMusicMoves = $state(false);
@@ -141,7 +143,7 @@
     <div class="mb-1 font-mono text-red-400">Hero debug</div>
 
     <div class="flex gap-2">
-      {#each heroImages as _, i}
+      {#each heroImages.map((_, i) => i) as i}
         <button
           onclick={() => (debugHeroIndex = i)}
           class={`rounded px-2 py-1 ${heroIndex === i ? 'bg-white text-black' : 'bg-white/20'}`}
