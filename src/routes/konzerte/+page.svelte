@@ -2,6 +2,7 @@
   import HeaderAbsolute from '$lib/components/HeaderAbsolute.svelte';
   import { urlFor } from '$lib/sanity/image';
   import { PortableText } from '@portabletext/svelte';
+  import PortableTextLink from '$lib/components/sanity/PortableTextLink.svelte';
   import type { Concert } from '$lib/types/concert';
 
   let { data } = $props<{
@@ -20,19 +21,11 @@
     }).format(new Date(dateString));
   }
 
-  // const portableTextComponents = {
-  //   marks: {
-  //     link: (props: { children?: import('svelte').Snippet; value?: { href?: string } }) => ({
-  //       component: 'a',
-  //       props: {
-  //         href: props.value?.href,
-  //         target: '_blank',
-  //         rel: 'noreferrer noopener',
-  //         class: 'underline decoration-1 underline-offset-4 transition-opacity duration-200 hover:opacity-70',
-  //       },
-  //     }),
-  //   },
-  // };
+  const portableTextComponents = {
+    marks: {
+      link: PortableTextLink,
+    },
+  };
 </script>
 
 <HeaderAbsolute />
@@ -58,7 +51,7 @@
 
       {#if data.pastConcerts.length > 0}
         <section class="flex flex-col gap-8">
-          <h2 class="text-2xl font-normal">Archiv</h2>
+          <h3>Archiv</h3>
 
           <div class="flex flex-col gap-12">
             {#each data.pastConcerts as concert (concert._id)}
@@ -88,8 +81,8 @@
                       </div>
                     {/if}
                     {#if concert.description?.length}
-                      <div class="prose max-w-none prose-p:my-3 prose-a:no-underline">
-                        <PortableText value={concert.description} />
+                      <div class="prose max-w-none text-black prose-p:my-3">
+                        <PortableText value={concert.description} components={portableTextComponents} />
                       </div>
                     {/if}
                   </div>
@@ -111,8 +104,10 @@
                         Karte öffnen
                       </a>
                     {/if}
-
-                    {#if concert.links?.length}
+                  </div>
+                  {#if concert.links?.length}
+                    <div class="flex flex-col gap-2">
+                      <h4>Links:</h4>
                       {#each concert.links as link}
                         <a
                           href={link.url}
@@ -123,8 +118,8 @@
                           {link.label}
                         </a>
                       {/each}
-                    {/if}
-                  </div>
+                    </div>
+                  {/if}
                 </div>
               </article>
             {/each}
