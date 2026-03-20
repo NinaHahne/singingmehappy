@@ -7,7 +7,7 @@
     trackUrl: string;
   }>();
 
-  const trackNumber = index.toString().padStart(2, '0');
+  const trackNumber = $derived(index.toString().padStart(2, '0'));
 </script>
 
 <div class="flex flex-col gap-2 md:flex-row md:items-start md:gap-4">

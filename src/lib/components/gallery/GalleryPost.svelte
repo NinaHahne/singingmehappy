@@ -18,7 +18,10 @@
       .replace(/[^a-z0-9]+/g, '-')
       .replace(/^-+|-+$/g, '');
 
-  const derivedId = post.id ?? slugify(`${post.title ?? post.description ?? 'post'}-${year}-${index}`);
+  const derivedId = $derived(() => {
+    const base = post.title ?? post.description ?? 'post';
+    return post.id ?? slugify(`${base}-${year}-${index}`);
+  });
 
   const basePostClass = 'flex w-full flex-col gap-4 lg:flex-row lg:justify-between ';
   const baseAsideClass = 'flex flex-col';
@@ -28,7 +31,7 @@
   const baseCaptionClass = 'whitespace-pre-line';
 </script>
 
-<section id={derivedId} class="post border-b border-black py-4 lg:py-14">
+<section id={derivedId()} class="post border-b border-black py-4 lg:py-14">
   {#if post.title}
     <h3 class="bigger-text mb-4 lg:mb-8 lg:whitespace-pre-line">{post.title}</h3>
   {/if}

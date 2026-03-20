@@ -4,7 +4,7 @@
     title?: string;
   }>();
 
-  const src = `https://www.youtube.com/embed/${videoId}?rel=0`;
+  const src = $derived(`https://www.youtube.com/embed/${videoId}?rel=0`);
 </script>
 
 <iframe
