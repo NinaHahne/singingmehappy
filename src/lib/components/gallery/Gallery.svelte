@@ -12,7 +12,7 @@
     </div>
 
     <div class="flex w-full flex-col gap-4 lg:gap-0">
-      {#each galleryData as yearData, index}
+      {#each galleryData as yearData}
         <GalleryYear year={yearData.year} posts={yearData.posts} />
       {/each}
     </div>
