@@ -2,8 +2,6 @@
 
 <script lang="ts">
   import { onMount } from 'svelte';
-  import { page } from '$app/state';
-  import { hasDebugFlag } from '$lib/utils/debug';
   import HeaderAbsolute from '$lib/components/HeaderAbsolute.svelte';
   import HeroSlider from '$lib/components/HeroSlider.svelte';
 
@@ -14,7 +12,7 @@
   let heroIndex = $state(0); // currently displayed hero image index for other animations/transitions based on index
 
   // 🔧 Debug controls
-  const debugHero = $derived(hasDebugFlag(page.url.searchParams, 'hero'));
+  let debugHero = $state(false);
   let debugHeroIndex = $state(0);
 
   let showMusicMoves = $state(false);
@@ -28,6 +26,21 @@
 
   onMount(() => {
     showMusicMoves = true;
+
+    /**
+     * Returns true if a debug flag is active via URL
+     * Examples:
+     * ?debug=hero
+     * ?debug=hero,menu
+     */
+
+    const params = new URLSearchParams(window.location.search);
+    debugHero =
+      params
+        .get('debug')
+        ?.split(',')
+        .map((value) => value.trim())
+        .includes('hero') ?? false;
   });
 </script>
 
