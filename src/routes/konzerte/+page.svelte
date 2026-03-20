@@ -20,7 +20,7 @@
       <picture class="flex w-full justify-center md:justify-end">
         <img
           src="/images/singing-me-happy.jpg"
-          alt="Singing Me Happy"
+          alt="Zeichnung vier singender Köpfe mit den Worten 'Singing me happy'"
           class="my-6 max-w-40 md:my-8 md:-mr-4 md:max-w-60"
         />
       </picture>
