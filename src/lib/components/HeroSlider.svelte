@@ -148,9 +148,10 @@
     <!-- Indicator dots -->
     <div class="pointer-events-none absolute bottom-4 left-0 right-0 flex justify-center">
       <div class="flex gap-2 rounded-full px-3 py-1">
-        {#each images as _image, index}
+        {#each images as image, index}
           <button
             type="button"
+            title={image.src}
             class="pointer-events-auto h-3 w-3 rounded-full border border-white/70 bg-white transition-transform duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lipstick"
             class:opacity-50={index !== currentIndex}
             class:scale-110={index === currentIndex}
