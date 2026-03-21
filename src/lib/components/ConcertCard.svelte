@@ -1,7 +1,7 @@
 <script lang="ts">
   import { PortableText } from '@portabletext/svelte';
   import PortableTextLink from '$lib/components/sanity/PortableTextLink.svelte';
-  import { urlFor } from '$lib/sanity/image';
+  import { buildImageUrl, buildSrcSet } from '$lib/sanity/image';
   import type { Concert } from '$lib/types/concert';
 
   let { concert } = $props<{
@@ -22,6 +22,8 @@
       link: PortableTextLink,
     },
   };
+
+  const flyerWidths = [320, 480, 640, 800, 1200];
 </script>
 
 <article class="flex flex-col gap-6 border-t border-black/50 pt-8 md:gap-8">
@@ -41,11 +43,13 @@
       {#if concert.flyerImage?.asset}
         <div class="w-full max-w-[400px]">
           <img
-            src={urlFor(concert.flyerImage).width(800).fit('max').auto('format').url()}
+            src={buildImageUrl(concert.flyerImage, 640)}
+            srcset={buildSrcSet(concert.flyerImage, flyerWidths)}
+            sizes="(max-width: 767px) 100vw, 400px"
             alt={concert.flyerImage.alt || concert.title || 'Flyer zum Konzert'}
-            class="my-2 h-auto w-full md:my-4"
+            class="h-auto w-full"
             loading="lazy"
-            sizes="(max-width: 767px) 100vw, 600px"
+            decoding="async"
           />
         </div>
       {/if}
