@@ -1,15 +1,20 @@
 <script lang="ts">
+  import { buildImageUrl, buildSrcSet } from '$lib/sanity/image';
   import type { ChoirMember } from '$lib/types/choir';
 
   let { member } = $props<{
     member: ChoirMember;
   }>();
+
+  const widths = [320, 480, 640, 800, 1200];
 </script>
 
 <article class="flex w-[calc(50%-0.5rem)] flex-col gap-1 text-left md:w-[120px]">
   <img
-    src={member.imageSrc}
-    alt={member.imageAlt ?? member.name}
+    src={buildImageUrl(member.image, 640)}
+    srcset={buildSrcSet(member.image, widths)}
+    sizes="(max-width: 767px) 100vw, (max-width: 1279px) 50vw, 400px"
+    alt={member.image.alt}
     loading="lazy"
     decoding="async"
     class="mb-3 aspect-[3/4] w-full object-cover"

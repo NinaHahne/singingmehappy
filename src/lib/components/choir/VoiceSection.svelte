@@ -16,7 +16,7 @@
   </header>
 
   <div class="flex flex-wrap gap-4">
-    {#each section.members as member (member.id)}
+    {#each section.members as member (member._id)}
       <ChoirMemberCard {member} />
     {/each}
   </div>

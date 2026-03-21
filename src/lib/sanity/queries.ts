@@ -19,3 +19,18 @@ export const concertsQuery = `
     }
   }
 `;
+
+export const choirMembersQuery = `
+  *[_type == "choirMember"] | order(voiceType asc, sortOrder asc) {
+    _id,
+    name,
+    voiceType,
+    subtitle,
+    text,
+    sortOrder,
+    image {
+      asset,
+      alt
+    }
+  }
+`;

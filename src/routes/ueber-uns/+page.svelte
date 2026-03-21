@@ -1,7 +1,10 @@
 <script lang="ts">
   import HeaderAbsolute from '$lib/components/HeaderAbsolute.svelte';
   import VoiceSection from '$lib/components/choir/VoiceSection.svelte';
-  import { choirSections } from '$lib/data/choir';
+  // import { choirSections } from '$lib/data/choir';
+  import type { PageData } from './$types';
+
+  let { data } = $props<{ data: PageData }>();
 </script>
 
 <HeaderAbsolute />
@@ -128,7 +131,7 @@
     <p>und was ihr Herz <br />außer Singen noch <br />höher schlagen lässt.</p>
   </div>
   <div class="relative flex w-full flex-col gap-12">
-    {#each choirSections as section}
+    {#each data.choirSections as section (section.id)}
       <VoiceSection {section} />
     {/each}
     <!-- <p class="text-xl font-light italic text-gray-600 md:text-2xl">Dieser Abschnitt ist noch in Arbeit.</p> -->
