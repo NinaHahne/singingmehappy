@@ -4,6 +4,7 @@ import { newsQuery } from '$lib/sanity/queries';
 
 type NewsData = {
   title?: string;
+  intro?: string;
   content?: unknown[];
   _updatedAt: string;
 };

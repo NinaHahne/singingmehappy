@@ -26,7 +26,12 @@
   <section class="content-section md:gap-16">
     <div class="left-col">
       <h1 class="text-4xl font-normal md:mb-0 md:h-20">Aktuelles</h1>
-      <p class="font-normal">Wir suchen und<br /> möchten finden</p>
+      <!-- <p class="font-normal">Wir suchen und<br /> möchten finden</p> -->
+      {#if data.news?.intro}
+        <p class="whitespace-pre-line font-normal">
+          {data.news?.intro}
+        </p>
+      {/if}
     </div>
     <div class="md:mt-20">
       {#if data.news?.content?.length}
