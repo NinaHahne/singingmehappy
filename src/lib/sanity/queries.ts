@@ -34,3 +34,17 @@ export const choirMembersQuery = `
     }
   }
 `;
+
+export const newsQuery = `
+  *[_id == "news"][0]{
+    _id,
+    title,
+    content[]{
+      ...,
+      markDefs[]{
+        ...
+      }
+    },
+    _updatedAt
+  }
+`;
