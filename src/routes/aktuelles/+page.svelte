@@ -2,6 +2,7 @@
   import HeaderAbsolute from '$lib/components/HeaderAbsolute.svelte';
   import { PortableText } from '@portabletext/svelte';
   import PortableTextLink from '$lib/components/sanity/PortableTextLink.svelte';
+  import { replaceProtectedSpaces } from '$lib/utils/portableText';
   import type { PageData } from './$types';
 
   let { data } = $props<{ data: PageData }>();
@@ -18,6 +19,8 @@
       year: 'numeric',
     }).format(new Date(dateString));
   }
+
+  const newsContent = $derived(replaceProtectedSpaces(data.news?.content));
 </script>
 
 <HeaderAbsolute />
@@ -42,7 +45,7 @@
         <div
           class="prose max-w-2xl text-black prose-h1:text-4xl prose-h1:font-semibold prose-h2:text-3xl prose-h2:font-semibold prose-h3:text-2xl prose-p:text-2xl prose-p:font-light prose-p:leading-snug prose-a:text-2xl prose-a:font-light prose-a:leading-snug prose-p:md:text-3xl prose-p:md:leading-snug prose-a:md:text-3xl prose-a:md:leading-snug"
         >
-          <PortableText value={data.news.content} components={portableTextComponents} />
+          <PortableText value={newsContent} components={portableTextComponents} />
         </div>
       {/if}
       {#if data.news?._updatedAt}

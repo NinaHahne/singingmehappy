@@ -1,6 +1,7 @@
 <script lang="ts">
   import { PortableText } from '@portabletext/svelte';
   import PortableTextLink from '$lib/components/sanity/PortableTextLink.svelte';
+  import { replaceProtectedSpaces } from '$lib/utils/portableText';
   import { buildImageUrl, buildSrcSet } from '$lib/sanity/image';
   import type { Concert } from '$lib/types/concert';
 
@@ -56,7 +57,7 @@
 
       {#if concert.description?.length}
         <div class="prose max-w-none text-black prose-p:my-3">
-          <PortableText value={concert.description} components={portableTextComponents} />
+          <PortableText value={replaceProtectedSpaces(concert.description)} components={portableTextComponents} />
         </div>
       {/if}
     </div>
