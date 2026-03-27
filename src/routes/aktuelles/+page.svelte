@@ -38,10 +38,6 @@
     </div>
     <div class="md:mt-20">
       {#if data.news?.content?.length}
-        <!-- <blockquote class="max-w-2xl">
-          Derzeit nehmen wir in allen Stimmgruppen noch NeubewerberInnen auf. Besonders glücklich wären wir über
-          Sopranistinnen 1 und 2 und einen tiefen Bass.
-        </blockquote> -->
         <div
           class="prose max-w-2xl text-black prose-h1:text-4xl prose-h1:font-semibold prose-h2:text-3xl prose-h2:font-semibold prose-h3:text-2xl prose-p:text-2xl prose-p:font-light prose-p:leading-snug prose-a:text-2xl prose-a:font-light prose-a:leading-snug prose-p:md:text-3xl prose-p:md:leading-snug prose-a:md:text-3xl prose-a:md:leading-snug"
         >
