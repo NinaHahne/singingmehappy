@@ -103,8 +103,8 @@
         authentisch und mit Freude zu entfalten – egal ob beim Singen nach Noten, beim Improvisieren oder beim Entdecken
         neuer Klangmöglichkeiten. Was für ihn zählt: Neugier, Klang, Gemeinschaft – und Spaß am Singen.
         <br /><br />
-        Nach 7 Jahren erfolgreicher Zusammenarbeit mit Martin Hagen übernahm Tobias im November 2025 die Chorleitung. Seine
-        Energie und gute Laune setzt er dazu ein, die große eigene Leidenschaft für Musik zu teilen und den “Funken“ überspringen
+        Nach 7 Jahren erfolgreicher Zusammenarbeit mit Martin Hagen übernimmt Tobias ab sofort die Chorleitung. Seine Energie
+        und gute Laune setzt er dazu ein, die große eigene Leidenschaft für Musik zu teilen und den “Funken“ überspringen
         zu lassen.
       </p>
       <div
